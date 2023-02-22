@@ -12,9 +12,9 @@ RSpec.describe 'Landing page', type: :feature do
       it 'should have a button to login' do
         visit root_path
 
-        expect(page).to have_button 'login'
+        expect(page).to have_button 'Login'
 
-        click_button 'login'
+        click_button 'Login'
 
         expect(current_path).to eq(login_path)
       end

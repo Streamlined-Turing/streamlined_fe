@@ -1,5 +1,5 @@
-# Product Name
-> Short blurb about what your product does.
+# Streamlined
+> The goal of this project is to create a successful web application from a student-led project idea. Our team will create an app that will solve a real world problem, and allow users to authenticate with a third-party service, and consume at least two other apis.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]

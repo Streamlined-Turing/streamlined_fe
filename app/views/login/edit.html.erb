@@ -1,8 +1,8 @@
 <h2>Welcome to Streamlined</h2>
 
 <%= form_with url: onboarding_path, method: :patch, local: true do |f| %>
-  <%= f.label :user_name, 'Please enter a username' %>
-  <%= f.text_field :user_name %>
+  <%= f.label :username, 'Please enter a username' %>
+  <%= f.text_field :username %>
 
   <%= f.submit %>
 <% end %>

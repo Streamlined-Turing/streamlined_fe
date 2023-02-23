@@ -15,8 +15,8 @@ class UserService
     parse(response)
   end
 
-  def self.onboard(current_user, user_name)
-    current_user['user_name'] = user_name
+  def self.onboard(current_user, username)
+    current_user['username'] = username
     response = conn.patch('/users') do |req|
       req.body = current_user.to_json
     end

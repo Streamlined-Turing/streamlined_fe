@@ -4,14 +4,14 @@ class LoginController < ApplicationController
   def create
     user_data = request.env['omniauth.auth']
     user_json = UserSerializer.serialize(user_data)
-    user = UserFacade.login(user_json)
+    @user = UserFacade.login(user_json)
 
-    if user[:user_name] == ''
-      session[:user] = user
-      redirect_to onboarding_path
-    else
-      session[:user] = user
+    if self.onboarded?
+      session[:user] = @user
       redirect_to dashboard_path
+    else
+      session[:user] = @user
+      redirect_to onboarding_path
     end
   end
 
@@ -19,9 +19,15 @@ class LoginController < ApplicationController
   end
 
   def update
-    user = UserFacade.onboard(current_user, params[:user_name])
+    user = UserFacade.onboard(current_user, params[:username])
 
     session[:user] = user
     redirect_to dashboard_path
+  end
+
+  private
+
+  def onboarded?
+    @user[:username] != ''
   end
 end

@@ -20,6 +20,7 @@ RSpec.describe UserService do
     expect(response[:data][:type]).to eq('user')
     expect(response[:data][:attributes][:uid]).to eq('104505147435508023263')
     expect(response[:data][:attributes][:full_name]).to eq('Alex Pitzel')
+    expect(response[:data][:attributes][:user_name]).to eq('pitzelalex')
     expect(response[:data][:attributes][:email]).to eq('pitzelalex@gmail.com')
     expect(response[:data][:attributes][:first_name]).to eq('Alex')
     expect(response[:data][:attributes][:last_name]).to eq('Pitzel')

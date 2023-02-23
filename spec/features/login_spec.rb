@@ -9,21 +9,22 @@ RSpec.describe 'Login Page', type: :feature do
 
       it 'redirect to landing and have session id' do
         stub_request(:post, 'http://localhost:5000/users')
-        .to_return(status: 201,
-                   body: File.read('spec/fixtures/alex_login_response.json'),
-                   headers: {})
+          .to_return(status: 201,
+                     body: File.read('spec/fixtures/alex_login_response.json'),
+                     headers: {})
 
-        OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-                                                                             provider: 'google',
-                                                                             uid: '123545',
-                                                                             info: {
-                                                                               email: 'me@me.com',
-                                                                               name: 'Bono'
-                                                                             },
-                                                                             credentials: {
-                                                                               token: '555'
-                                                                             }
-                                                                           })
+        OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(
+          { 'provider' => 'google_oauth2',
+            'uid' => '104505147435508023263',
+            'info' =>
+           { 'name' => 'Alex Pitzel',
+             'email' => 'pitzelalex@gmail.com',
+             'unverified_email' => 'pitzelalex@gmail.com',
+             'email_verified' => true,
+             'first_name' => 'Alex',
+             'last_name' => 'Pitzel',
+             'image' => 'https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c' } }
+        )
 
         visit login_path
         expect(page).to have_button 'Continue With Google'

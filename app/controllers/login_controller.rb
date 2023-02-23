@@ -5,8 +5,8 @@ class LoginController < ApplicationController
     user_data = request.env['omniauth.auth']
     user_json = UserSerializer.serialize(user_data)
 
-    user_id = UserFacade.login(user_json)
-    session[:user_id] = user_id
-    redirect_to root_path
+    user = UserFacade.login(user_json)
+    session[:user] = user
+    redirect_to dashboard_path
   end
 end

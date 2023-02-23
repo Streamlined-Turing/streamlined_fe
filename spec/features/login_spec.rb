@@ -31,8 +31,8 @@ RSpec.describe 'Login Page', type: :feature do
 
         click_button 'Continue With Google'
 
-        expect(current_path).to eq root_path
-        expect(page).to have_content('User ID: 1')
+        expect(current_path).to eq dashboard_path
+        expect(page).to have_content('pitzelalex')
       end
     end
   end

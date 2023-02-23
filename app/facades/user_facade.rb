@@ -1,6 +1,7 @@
 class UserFacade
 
   def self.format(data)
+    # This is for using a struc
     # User = Struct.new(:id, :google_id, :full_name, :user_name, :email, :first_name, :last_name, :image)
 
     # user = User.new(

@@ -7,9 +7,9 @@ class UserService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def self.login(json)
+  def self.login(user_data)
     response = conn.post('/users') do |req|
-      req.body = json
+      req.body = user_data.to_json
     end
 
     parse(response)

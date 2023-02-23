@@ -7,6 +7,7 @@ class LoginController < ApplicationController
     user = UserFacade.login(user_json)
 
     if user[:user_name] == ''
+      session[:user] = user
       redirect_to onboarding_path
     else
       session[:user] = user
@@ -15,6 +16,12 @@ class LoginController < ApplicationController
   end
 
   def edit
+  end
 
+  def update
+    user = UserFacade.onboard(current_user, params[:user_name])
+
+    session[:user] = user
+    redirect_to dashboard_path
   end
 end

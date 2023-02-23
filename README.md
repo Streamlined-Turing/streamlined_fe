@@ -1,78 +1,53 @@
-# Streamlined
-> The goal of this project is to create a successful web application from a student-led project idea. Our team will create an app that will solve a real world problem, and allow users to authenticate with a third-party service, and consume at least two other apis.
+# StreamLined
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+## Project Overview
+The goal of this project is to create a successful web application from a student-led project idea. Our team has created an app to solve a real world problem, allows users to authenticate with a third-party service, and consume at least two other apis.
 
-One to two paragraph statement about your product and what it does.
+## About StreamLined
+StreamLined is a tool to track movies and TV shows a user would like to watch, are currently watching, and also track media a user has watched. Once a user has created a StreamLined account, they will have access to a dashboard with three default lists to categorize their media: 'Currently Watching', 'Want to Watch', and 'Watched'. The user will be able to search for movies and TV shows by title, view the media details, and save to the appropriate list in their dashboard. Once a user has finished watching their show or movie, the user will be able to provide reviews and ratings. Users of this app will be to set their streaming services and search for their desired media based on the streaming service available to the user.
 
-![](header.png)
+## Learning Goals
+* Authenticate via OAuth
+* Further front end development; utilize Bootstrap.
+* Build app using Service Oriented Architecture
+* Utilize Webmock and VCR for front end testing
 
-## Installation
+## Setup
+This project requires Ruby 2.7.4 
 
-OS X & Linux:
+1. Fork and clone this repository.
+2. CD into the root directory.
+3. `bundle install`
+4. To run this server, enter `rails s`
+5. WILL ALSO NEED TO OPEN BE ??
+6. Open a browser window and go to http://localhost:3000 to start viewing and adding media to your user lists!
 
-```sh
-npm install my-crazy-module --save
+## Deployment
+
+This project is hosted on [ ]
+
+## Built With
+```
+Ruby on Rails
+Bootstrap
+Webmock
+VCR
+RSpec
+Heroku
 ```
 
-Windows:
+## Moving Forward
+*what is currently not working, but would like to add as features*
 
-```sh
-edit autoexec.bat
-```
+## Contributors 
 
-## Usage example
+* Nigel Aung-Myint: [Github](https://github.com/Pocketzs) | [LinkedIn](https://www.linkedin.com/in/nigel-aung-myint-719254254/)
+* Thomas Casady: [Github](https://github.com/Tscasady) | [LinkedIn](https://www.linkedin.com/in/thomas-casady-00b71a255/)
+* Kerynn Davis: [Github](https://github.com/Kerynn) | [LinkedIn](https://www.linkedin.com/in/kerynn-davis/)
+* Joe King: [Github](https://github.com/this-is-joeking) | [LinkedIn](https://www.linkedin.com/in/king-joseph/)
+* Alex Pitzel: [Github](https://github.com/pitzelalex) | [LinkedIn](https://www.linkedin.com/in/alex-pitzel-231619235/)
+* Kelsie Porter: [Github](https://github.com/KelsiePorter) | [LinkedIn](https://www.linkedin.com/in/kelsie-porter/)
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
-
-## Release History
-
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
-
-## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
-## Contributing
-
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+## API Credits 
+* [Watchmode](https://api.watchmode.com/)
+* API Credit (2)

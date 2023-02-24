@@ -12,7 +12,7 @@ RSpec.describe UserService do
     end
 
     it 'can get details about a user from the back end' do
-      stub_request(:post, 'http://localhost:5000/users')
+      stub_request(:post, 'http://localhost:5000/api/v1/users')
         .to_return(status: 201,
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})
@@ -44,7 +44,7 @@ RSpec.describe UserService do
     end
 
     it 'updates the user entry and gets the details' do
-      stub_request(:patch, 'http://localhost:5000/users')
+      stub_request(:patch, 'http://localhost:5000/api/v1/users')
         .to_return(status: 201,
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})

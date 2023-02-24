@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe UserFacade do
   describe '#login' do
     it 'can return a hash of user details' do
-      stub_request(:post, 'http://localhost:5000/users')
+      stub_request(:post, 'http://localhost:5000/api/v1/users')
         .to_return(status: 201,
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})
@@ -31,7 +31,7 @@ RSpec.describe UserFacade do
 
   describe '#onboard' do
     it 'can return a hash of user details' do
-      stub_request(:patch, 'http://localhost:5000/users')
+      stub_request(:patch, 'http://localhost:5000/api/v1/users')
         .to_return(status: 201,
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})
@@ -61,7 +61,7 @@ RSpec.describe UserFacade do
 
   describe '#onboard' do
     it 'can return a hash of user details' do
-      stub_request(:patch, 'http://localhost:5000/users')
+      stub_request(:patch, 'http://localhost:5000/api/v1/users')
         .to_return(status: 201,
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})

@@ -4,8 +4,7 @@ class LoginController < ApplicationController
   end
 
   def create
-    require 'pry'; binding.pry
-    user_data = JWT.decode(params[:credentials], nil, false) 
+    user_data = JWT.decode(params[:credential], nil, false) 
     @user = UserFacade.login(user_data)
 
     if self.onboarded?

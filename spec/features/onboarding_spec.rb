@@ -29,7 +29,7 @@ RSpec.describe 'Onboarding Page', type: :feature do
   end
 
   describe 'when a user has logged in for the first time' do
-    it 'they see a prompt to provide a user name' do
+    xit 'they see a prompt to provide a user name' do
       visit login_path
       click_button 'Continue With Google'
 

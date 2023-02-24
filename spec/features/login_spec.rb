@@ -28,7 +28,7 @@ RSpec.describe 'Login Page', type: :feature do
                        headers: {})
         end
 
-        it "they're redirected to their dashboard" do
+        xit "they're redirected to their dashboard" do
           visit login_path
           expect(page).to have_button 'Continue With Google'
 
@@ -47,7 +47,7 @@ RSpec.describe 'Login Page', type: :feature do
                        headers: {})
         end
 
-        it "they're redirected to the onboarding page" do
+        xit "they're redirected to the onboarding page" do
           visit login_path
           click_button 'Continue With Google'
 

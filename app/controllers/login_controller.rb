@@ -4,7 +4,7 @@ class LoginController < ApplicationController
   end
 
   def create
-    user_data = JWT.decode(params[:credential], nil, false) 
+    user_data = JWT.decode(params[:credential], nil, false).first 
     @user = UserFacade.login(user_data)
 
     if self.onboarded?

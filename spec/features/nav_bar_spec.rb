@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "The logout feature", type: :feature do
+  # TODO: Describe block string is not accurate
   describe 'when the user clicks logout' do
     before :each do
       @user = {id: 1, username: 'test'}

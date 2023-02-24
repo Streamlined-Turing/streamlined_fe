@@ -1,19 +1,7 @@
 class UserFacade
 
   def self.format(data)
-    # This is for using a struc
-    # User = Struct.new(:id, :uid, :full_name, :username, :email, :first_name, :last_name, :image)
-
-    # user = User.new(
-    #   data[:id],
-    #   data[:attributes][:uid],
-    #   data[:attributes][:full_name],
-    #   data[:attributes][:username],
-    #   data[:attributes][:email],
-    #   data[:attributes][:first_name],
-    #   data[:attributes][:last_name],
-    #   data[:attributes][:image]
-    # )
+    # TODO: Consider a Struct or PORO for User data.
 
     {
       id: data[:id],

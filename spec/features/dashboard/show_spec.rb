@@ -24,6 +24,16 @@ RSpec.describe 'user show page', type: :feature do
       expect(page.find('img')[:src]).to eq user[:picture]
     end
 
-    it 'has a button to edit my profile'
+    it 'has a button to edit my profile' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+
+      visit dashboard_path
+
+      expect(page).to have_button('Edit Profile')
+
+      click_button 'Edit Profile'
+
+      expect(current_path).to eq dashboard_edit_path
+    end
   end
 end

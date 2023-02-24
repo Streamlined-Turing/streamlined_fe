@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#show'
   get '/onboarding', to: 'login#edit'
   patch '/onboarding', to: 'login#update'
+
+  resources :media, only: [:show]
 end
 

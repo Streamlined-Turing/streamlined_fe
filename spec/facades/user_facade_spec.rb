@@ -67,9 +67,9 @@ RSpec.describe UserFacade do
                    headers: {})
 
       current_user = { 'id' => '1',
-                       'google_id' => '104505147435508023263',
+                       'uid' => '104505147435508023263',
                        'full_name' => 'Alex Pitzel',
-                       'user_name' => '',
+                       'username' => '',
                        'email' => 'pitzelalex@gmail.com',
                        'first_name' => 'Alex',
                        'last_name' => 'Pitzel',
@@ -79,9 +79,9 @@ RSpec.describe UserFacade do
 
       expect(user).to be_a Hash
       expect(user[:id]).to eq('1')
-      expect(user[:google_id]).to eq('104505147435508023263')
+      expect(user[:uid]).to eq('104505147435508023263')
       expect(user[:full_name]).to eq('Alex Pitzel')
-      expect(user[:user_name]).to eq('pitzelalex')
+      expect(user[:username]).to eq('pitzelalex')
       expect(user[:email]).to eq('pitzelalex@gmail.com')
       expect(user[:first_name]).to eq('Alex')
       expect(user[:last_name]).to eq('Pitzel')

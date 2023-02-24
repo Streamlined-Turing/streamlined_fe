@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get '/login', to: 'login#index'
   get '/auth/google_oauth2', as: :google_login
-  get '/auth/google_oauth2/callback', to: 'login#create'
+  post '/auth/google_oauth2/callback', to: 'login#create'
 
   get '/search', to: 'search#index'
 end
+

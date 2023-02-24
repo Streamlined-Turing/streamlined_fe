@@ -1,7 +1,10 @@
 class LoginController < ApplicationController
-  def index; end
+  skip_before_action :verify_authenticity_token
+  def index
+  end
 
   def create
+    require 'pry'; binding.pry
     user_data = request.env['omniauth.auth']
     user_json = UserSerializer.serialize(user_data)
 

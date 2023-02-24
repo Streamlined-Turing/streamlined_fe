@@ -8,8 +8,8 @@ class UserService
   end
 
   def self.login(user_data)
-    response = conn.post('/users') do |req|
-      req.body = user_data.to_json
+    response = conn.post('/api/v1/users') do |req|
+      req.params = user_data
     end
 
     parse(response)
@@ -17,8 +17,8 @@ class UserService
 
   def self.onboard(current_user, username)
     current_user['username'] = username
-    response = conn.patch('/users') do |req|
-      req.body = current_user.to_json
+    response = conn.patch('/api/v1/users') do |req|
+      req.params = current_user
     end
 
     parse(response)

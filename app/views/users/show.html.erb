@@ -2,3 +2,5 @@
 <p>Username: <%= current_user[:username] %></p>
 <p>Email: <%= current_user[:email] %></p>
 <p>Name: <%= current_user[:name] %></p>
+
+<%= button_to 'Edit Profile', dashboard_edit_path, method: :get, local: true %>

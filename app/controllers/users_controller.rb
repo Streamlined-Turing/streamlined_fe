@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
   before_action :fetch_user, only: %i[show]
 
-  def show
-    require 'pry'; binding.pry
-  end
+  def show; end
+
+  def edit; end
 
   private
 

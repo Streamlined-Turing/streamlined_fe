@@ -1,6 +1,21 @@
 <% if current_user %>
-  <%= button_to 'Logout',  %>
+  <%= button_to 'Logout', logout_path %>
 <% else %>
-  <%= button_to 'Continue with Google' %>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <div id="g_id_onload"
+       data-client_id="790343586716-g46mji3tfutee34bp1r2eqkkjvf57bpr.apps.googleusercontent.com"
+       data-context="use"
+       data-ux_mode="redirect"
+       data-login_uri="auth/google_oauth2/callback"
+       data-auto_prompt="false">
+  </div>
+  <div class="g_id_signin"
+       data-type="standard"
+       data-shape="rectangular"
+       data-theme="outline"
+       data-text="signin_with"
+       data-size="large"
+       data-logo_alignment="left">
+  </div>
 <% end %>
 

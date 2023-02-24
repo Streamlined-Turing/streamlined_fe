@@ -1,6 +1,6 @@
-# StreamLined
+![Stream](https://user-images.githubusercontent.com/111480866/221071732-a158eadf-22ac-4b41-9418-171ef6b6c654.png)
 
-## Project Overview
+# StreamLined Frontend Service
 The goal of this project is to create a successful web application from a student-led project idea. Our team has created an app to solve a real world problem, allows users to authenticate with a third-party service, and consume at least two other apis. This project has been developed using Service Oriented Architecture. The backend repo is available [here](https://github.com/Streamlined-Turing/streamlined_be).
 
 ## About StreamLined
@@ -38,6 +38,9 @@ RSpec
 Heroku
 ```
 
+## Json Contract for Users
+![Screen Shot 2023-02-23 at 5 08 47 PM](https://user-images.githubusercontent.com/111480866/221071818-dd80a9c1-df3d-4840-afbd-6323cb49d8cb.png)
+
 ## Moving Forward
 *what is currently not working, but would like to add as features*
 
@@ -52,4 +55,4 @@ Heroku
 
 ## API Credits 
 * [Watchmode](https://api.watchmode.com/)
-* API Credit (2)
+* [The Movie Database](https://developers.themoviedb.org/3/getting-started/introduction)

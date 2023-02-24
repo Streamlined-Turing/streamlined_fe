@@ -2,6 +2,7 @@ class UserFacade
 
   def self.format(data)
     # TODO: Consider a Struct or PORO for User data.
+    # TODO: Sends raw data to BE, doesn't user this method? 
 
     {
       id: data[:id],
@@ -16,7 +17,7 @@ class UserFacade
   end
 
   def self.login(user_data)
-    format(UserService.login(user_data)[:data])
+    UserService.login(user_data)
   end
 
   def self.onboard(current_user, username)

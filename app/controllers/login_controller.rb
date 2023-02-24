@@ -5,9 +5,8 @@ class LoginController < ApplicationController
 
   def create
     require 'pry'; binding.pry
-    user_data = request.env['omniauth.auth']
-    user_json = UserSerializer.serialize(user_data)
-    @user = UserFacade.login(user_json)
+    user_data = JWT.decode(params[:credentials], nil, false) 
+    @user = UserFacade.login(user_data)
 
     if self.onboarded?
       session[:user] = @user

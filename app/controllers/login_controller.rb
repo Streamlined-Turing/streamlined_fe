@@ -26,6 +26,11 @@ class LoginController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def destroy
+    session[:user] = nil
+    redirect_to root_path
+  end
+
   private
 
   def onboarded?

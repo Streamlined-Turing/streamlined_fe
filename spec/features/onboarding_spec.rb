@@ -2,25 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Onboarding Page', type: :feature do
   before(:each) do
-    OmniAuth.config.test_mode = true
-
-    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(
-      { 'provider' => 'google_oauth2',
-        'uid' => '104505147435508023263',
-        'info' =>
-      { 'name' => 'Alex Pitzel',
-        'email' => 'pitzelalex@gmail.com',
-        'unverified_email' => 'pitzelalex@gmail.com',
-        'email_verified' => true,
-        'first_name' => 'Alex',
-        'last_name' => 'Pitzel',
-        'image' => 'https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c' } }
-    )
-
-    stub_request(:post, 'http://localhost:5000/users')
-            .to_return(status: 201,
-                       body: File.read('spec/fixtures/alex_first_login_response.json'),
-                       headers: {})
+    user = {id: 1, name: 'test'} 
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
     stub_request(:patch, 'http://localhost:5000/users')
             .to_return(status: 201,
@@ -29,9 +12,8 @@ RSpec.describe 'Onboarding Page', type: :feature do
   end
 
   describe 'when a user has logged in for the first time' do
-    xit 'they see a prompt to provide a user name' do
-      visit login_path
-      click_button 'Continue With Google'
+    it 'they see a prompt to provide a user name' do
+      visit onboarding_path 
 
       expect(page).to have_content('Welcome to Streamlined')
       expect(page).to have_content('Please enter a username')

@@ -9,14 +9,10 @@ RSpec.describe 'Landing page', type: :feature do
         expect(page).to have_content('Streamlined')
       end
 
-      xit 'should have a button to Sign in with Google' do
+      it 'should have a button to Sign in with Google' do
         visit root_path
 
-        expect(page).to have_button 'Login'
-
-        click_button 'Login'
-
-        expect(current_path).to eq(login_path)
+        expect(page).to have_css '.g_id_signin'
       end
     end
   end

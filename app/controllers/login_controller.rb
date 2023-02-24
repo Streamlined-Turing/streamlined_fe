@@ -7,9 +7,30 @@ class LoginController < ApplicationController
     require 'pry'; binding.pry
     user_data = request.env['omniauth.auth']
     user_json = UserSerializer.serialize(user_data)
+    @user = UserFacade.login(user_json)
 
-    user_id = UserFacade.login(user_json)
-    session[:user_id] = user_id
-    redirect_to root_path
+    if self.onboarded?
+      session[:user] = @user
+      redirect_to dashboard_path
+    else
+      session[:user] = @user
+      redirect_to onboarding_path
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    user = UserFacade.onboard(current_user, params[:username])
+
+    session[:user] = user
+    redirect_to dashboard_path
+  end
+
+  private
+
+  def onboarded?
+    @user[:username] != ''
   end
 end

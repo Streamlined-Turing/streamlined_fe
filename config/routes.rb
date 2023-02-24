@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   post '/auth/google_oauth2/callback', to: 'login#create'
 
   get '/search', to: 'search#index'
+  get '/dashboard', to: 'users#show'
+  get '/onboarding', to: 'login#edit'
+  patch '/onboarding', to: 'login#update'
 end
 

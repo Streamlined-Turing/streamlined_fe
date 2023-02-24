@@ -1,1 +1,4 @@
-<%= current_user['username'] %>
+<img src=<%= current_user[:picture] %> alt="profile picture">
+<p>Username: <%= current_user[:username] %></p>
+<p>Email: <%= current_user[:email] %></p>
+<p>Name: <%= current_user[:name] %></p>

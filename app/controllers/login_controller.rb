@@ -1,10 +1,11 @@
 class LoginController < ApplicationController
-  def index; end
+  skip_before_action :verify_authenticity_token
+  def index
+  end
 
   def create
-    user_data = request.env['omniauth.auth']
-    user_json = UserSerializer.serialize(user_data)
-    @user = UserFacade.login(user_json)
+    user_data = JWT.decode(params[:credential], nil, false) 
+    @user = UserFacade.login(user_data)
 
     if self.onboarded?
       session[:user] = @user
@@ -23,6 +24,11 @@ class LoginController < ApplicationController
 
     session[:user] = user
     redirect_to dashboard_path
+  end
+
+  def destroy
+    session[:user] = nil
+    redirect_to root_path
   end
 
   private

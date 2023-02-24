@@ -1,6 +1,6 @@
 class UserService
   def self.conn
-    Faraday.new(url: 'http://localhost:5000')
+    Faraday.new(service_params)
   end
 
   def self.parse(response)
@@ -8,8 +8,8 @@ class UserService
   end
 
   def self.login(user_data)
-    response = conn.post('/users') do |req|
-      req.body = user_data.to_json
+    response = conn.post('/api/v1/users') do |req|
+      req.body = user_data
     end
 
     parse(response)
@@ -17,10 +17,18 @@ class UserService
 
   def self.onboard(current_user, username)
     current_user['username'] = username
-    response = conn.patch('/users') do |req|
-      req.body = current_user.to_json
+    response = conn.patch('/api/v1/users') do |req|
+      req.body = current_user
     end
 
     parse(response)
+  end
+
+  private
+
+  def self.service_params
+    {
+      url: 'http://localhost:5000',
+    }
   end
 end

@@ -1,3 +1,7 @@
+# StreamLined
+
+## Project Overview
+The goal of this project is to create a successful web application from a student-led project idea. Our team has created an app to solve a real world problem, allows users to authenticate with a third-party service, and consume at least two other apis.
 ![Stream](https://user-images.githubusercontent.com/111480866/221071732-a158eadf-22ac-4b41-9418-171ef6b6c654.png)
 
 # StreamLined Frontend Service
@@ -16,6 +20,12 @@ StreamLined is a tool to track movies and TV shows a user would like to watch, a
 This project requires Ruby 2.7.4 
 
 1. Fork and clone this repository.
+2. CD into the root directory.
+3. `bundle install`
+4. To run this server, enter `rails s`
+5. WILL ALSO NEED TO OPEN BE ??
+6. Open a browser window and go to http://localhost:3000 to start viewing and adding media to your user lists!
+
 2. `cd` into the root directory.
 3. `bundle install`
 4. To run this server, enter `rails s`
@@ -38,6 +48,21 @@ RSpec
 Heroku
 ```
 
+## Moving Forward
+*what is currently not working, but would like to add as features*
+
+## Contributors 
+
+* Nigel Aung-Myint: [Github](https://github.com/Pocketzs) | [LinkedIn](https://www.linkedin.com/in/nigel-aung-myint-719254254/)
+* Thomas Casady: [Github](https://github.com/Tscasady) | [LinkedIn](https://www.linkedin.com/in/thomas-casady-00b71a255/)
+* Kerynn Davis: [Github](https://github.com/Kerynn) | [LinkedIn](https://www.linkedin.com/in/kerynn-davis/)
+* Joe King: [Github](https://github.com/this-is-joeking) | [LinkedIn](https://www.linkedin.com/in/king-joseph/)
+* Alex Pitzel: [Github](https://github.com/pitzelalex) | [LinkedIn](https://www.linkedin.com/in/alex-pitzel-231619235/)
+* Kelsie Porter: [Github](https://github.com/KelsiePorter) | [LinkedIn](https://www.linkedin.com/in/kelsie-porter/)
+
+## API Credits 
+* [Watchmode](https://api.watchmode.com/)
+* API Credit (2)
 ## Json Contract for Users
 ![Screen Shot 2023-02-23 at 5 08 47 PM](https://user-images.githubusercontent.com/111480866/221071818-dd80a9c1-df3d-4840-afbd-6323cb49d8cb.png)
 

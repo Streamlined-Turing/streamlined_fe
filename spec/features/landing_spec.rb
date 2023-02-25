@@ -6,7 +6,7 @@ RSpec.describe 'Landing page', type: :feature do
       it 'should display the app name' do
         visit root_path
 
-        expect(page).to have_content('Streamlined')
+        expect(page).to have_content('StreamLined')
       end
 
       it 'should have a button to Sign in with Google' do

@@ -47,23 +47,5 @@ RSpec.describe 'Media Search' do
         # expect(current_path).to eq 
       end
     end
-
-    xit 'has a maximum of 15 results' do 
-      visit root_path
-
-      fill_in "query", with: "bad"
-      click_button "Search"
-
-      expect(current_path).to eq search_path
-      expect(page).to have_css('div.media', maximum: 15)
-
-      visit root_path
-
-      fill_in "query", with: "ba"
-      click_button "Search"
-
-      expect(current_path).to eq search_path
-      expect(page).to have_css('div.media', maximum: 15)
-    end
   end 
 end

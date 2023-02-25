@@ -24,7 +24,7 @@
         "attributes": {
                 "id": 456789,
                 "title": "Bad Times",
-                "audience_score": 9.3,
+                "audience_score": 8,
                 "rating": "TV-MA",
                 "type": "movie",
                 "description": "Such a good movie",
@@ -33,7 +33,7 @@
                 "runtime": 120,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
+                "poster": "https://cdn.watchmode.com/posters/03168281_poster_w185.jpg"}
         }
    ] 
 }

@@ -6,8 +6,8 @@ class LoginController < ApplicationController
   def create
     user_data = JWT.decode(params[:credential], nil, false).first
     @user = UserFacade.login(user_data)
-
     session[:user] = @user
+
     if self.onboarded?
       redirect_to dashboard_path
     else
@@ -33,6 +33,6 @@ class LoginController < ApplicationController
   private
 
   def onboarded?
-    @user[:username] != ''
+    @user[:username] != nil
   end
 end

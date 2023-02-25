@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Media Service' do 
   describe '.media_search' do 
     before(:each) do 
-      stub_request(:get, "http://localhost:5000/api/v1/search?q=bad")
+      stub_request(:get, "http://localhost:5000/api/v1/media?q=bad")
         .to_return(status: 200, body: File.read('./spec/fixtures/search_movies_response.json'), headers: {})
     end
 

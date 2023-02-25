@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Media Search' do 
 
   before :each do 
-    stub_request(:get, "http://localhost:5000/api/v1/search?q=bad")
+    stub_request(:get, "http://localhost:5000/api/v1/media?q=bad")
       .to_return(status: 200, body: File.read('./spec/fixtures/search_movies_response.json'), headers: {})
   end
 
@@ -32,30 +32,38 @@ RSpec.describe 'Media Search' do
         expect(page).to have_content('Audience Score: 8')
       end 
     end
-  end
 
-  xit 'has a maximum of 15 results' do 
-    visit root_path
+    it 'has a link to each media show page' do 
+      visit root_path
 
-    fill_in "query", with: "bad"
-    click_button "Search"
+      fill_in "query", with: "bad"
+      click_button "Search"
 
-    expect(current_path).to eq search_path
-    expect(page).to have_css('div.media', maximum: 15)
+      expect(current_path).to eq search_path
+      
+      within "#media_3173903" do 
+        expect(page).to have_link('Breaking Bad')
+        # click_link 'Breaking Bad'
+        # expect(current_path).to eq 
+      end
+    end
 
-    visit root_path
+    xit 'has a maximum of 15 results' do 
+      visit root_path
 
-    fill_in "query", with: "ba"
-    click_button "Search"
+      fill_in "query", with: "bad"
+      click_button "Search"
 
-    expect(current_path).to eq search_path
-    expect(page).to have_css('div.media', maximum: 15)
-  end
+      expect(current_path).to eq search_path
+      expect(page).to have_css('div.media', maximum: 15)
 
-  xit 'has a link to each media show page' do 
+      visit root_path
 
-  end
-  
-  # xit 'test case insensative ?? '
+      fill_in "query", with: "ba"
+      click_button "Search"
 
+      expect(current_path).to eq search_path
+      expect(page).to have_css('div.media', maximum: 15)
+    end
+  end 
 end

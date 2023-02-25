@@ -1,7 +1,7 @@
 class MediaService 
 
   def self.media_search(media_query)
-    parse_data(conn.get("/api/v1/search?q=#{media_query}"))
+    parse_data(conn.get("/api/v1/media?q=#{media_query}"))
   end
 
   def self.parse_data(response)

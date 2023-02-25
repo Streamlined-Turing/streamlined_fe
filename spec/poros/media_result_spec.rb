@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe MediaResult do 
-  it 'exists and has attributes' do 
-    media_data = {
+  before :each do 
+    @media_data = {
       "id": "3173903",
       "type": "media",
       "attributes": {
@@ -19,8 +19,11 @@ RSpec.describe MediaResult do
               "sub_services": ["Netflix"],
               "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
       }
+  end
 
-      media = MediaResult.new(media_data)
+  it 'exists and has attributes' do 
+
+      media = MediaResult.new(@media_data)
 
       expect(media).to be_an_instance_of(MediaResult)
       expect(media.id).to eq(3173903)
@@ -28,5 +31,11 @@ RSpec.describe MediaResult do
       expect(media.type).to eq("tv_series")
       expect(media.audience_score).to eq(9.3)
       expect(media.poster).to eq("https://cdn.watchmode.com/posters/03173903_poster_w185.jpg")
+  end
+
+  it 'can reformat the media type' do 
+    media = MediaResult.new(@media_data)
+    
+    expect(media.formatted_type).to eq('Tv Series')
   end
 end

@@ -12,4 +12,8 @@ class MediaResult
     @audience_score = media_result_data[:attributes][:audience_score]
     @poster = media_result_data[:attributes][:poster]
   end
+
+  def formatted_type 
+    type.gsub("_", " ").titleize
+  end
 end

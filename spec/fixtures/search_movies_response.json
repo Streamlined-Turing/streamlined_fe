@@ -16,6 +16,23 @@
                 "language": "en",
                 "sub_services": ["Netflix"],
                 "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
+        },
+        {
+        "id": "1",
+        "type": "media",
+        "attributes": {
+                "id": 1,
+                "title": "Example",
+                "audience_score": 9.3,
+                "rating": "TV-MA",
+                "type": "tv_series",
+                "description": " Walter White goes bonkers",
+                "genres": [],
+                "release_year": 2008,
+                "runtime": 45,
+                "language": "en",
+                "sub_services": ["Netflix"],
+                "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
         }, 
         {        
         "id": "456789",

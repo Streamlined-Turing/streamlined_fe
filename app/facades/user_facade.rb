@@ -1,8 +1,6 @@
 class UserFacade
-
   def self.format(data)
     # TODO: Consider a Struct or PORO for User data.
-    require 'pry'; binding.pry
     {
       id: data[:id],
       sub: data[:attributes][:sub],

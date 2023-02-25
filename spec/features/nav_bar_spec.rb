@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "The logout feature", type: :feature do
+RSpec.describe 'The logout feature', type: :feature do
   describe 'when the user clicks logout' do
     before :each do
-      @user = {id: 1, username: 'test'}
+      @user = { id: 1, username: 'test' }
     end
 
     it 'redirects to the landing page and the logout button is no longer displayed' do
@@ -14,7 +14,7 @@ RSpec.describe "The logout feature", type: :feature do
       click_button 'Logout'
 
       expect(current_path).to eq root_path
-      expect(page).to_not have_button "Logout"
+      expect(page).to_not have_button 'Logout'
     end
 
     it 'should have a button to go to My Profile if a user is logged in' do

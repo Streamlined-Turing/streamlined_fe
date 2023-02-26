@@ -27,7 +27,7 @@ RSpec.describe UserService do
     end
   end
 
-  describe '#onboard' do
+  describe '#edit_user' do
     let(:user_data) do
       { 'id' => '1',
         'sub' => '104505147435508023263',
@@ -43,7 +43,7 @@ RSpec.describe UserService do
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})
 
-      response = UserService.onboard(user_data, 'pitzelalex')
+      response = UserService.edit_user(user_data, 'pitzelalex')
 
       expect(response[:data][:id]).to eq('1')
       expect(response[:data][:type]).to eq('user')

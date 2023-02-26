@@ -18,16 +18,18 @@ RSpec.describe 'Media Search' do
       
       expect(page).to have_content('Results For: bad')
 
-      within "#media_3173903" do 
-        expect(page).to have_content('Breaking Bad')
-        expect(page).to have_css("img[src='https://cdn.watchmode.com/posters/03173903_poster_w185.jpg']")
-        expect(page).to have_content('Media Type: Tv Series')
+      within "#media_1588222" do 
+        expect(page).to have_content('The Bad Guys')
+        expect(page).to have_css("img[src='https://cdn.watchmode.com/posters/01588222_poster_w185.jpg']")
+        expect(page).to have_content('Media Type: Movie')
+        expect(page).to have_content('Release Year: 2022')
       end 
 
-      within "#media_456789" do 
-        expect(page).to have_content('Bad Times')
-        expect(page).to have_css("img[src='https://cdn.watchmode.com/posters/03168281_poster_w185.jpg']")
-        expect(page).to have_content('Media Type: Movie')
+      within "#media_311191" do 
+        expect(page).to have_content('Bad Education')
+        expect(page).to have_css("img[src='https://cdn.watchmode.com/posters/0311191_poster_w185.jpg']")
+        expect(page).to have_content('Media Type: Tv Series')
+        expect(page).to have_content('Release Year: 2012')
       end 
     end
 
@@ -39,8 +41,8 @@ RSpec.describe 'Media Search' do
 
       expect(current_path).to eq search_path
       
-      within "#media_3173903" do 
-        expect(page).to have_link('Breaking Bad')
+      within "#media_1588222" do 
+        expect(page).to have_link('The Bad Guys')
         # click_link 'Breaking Bad'
         # expect(current_path).to eq 
       end

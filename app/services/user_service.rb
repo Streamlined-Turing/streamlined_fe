@@ -24,6 +24,7 @@ class UserService
     parse(response)
   end
 
+
   private
 
   def self.service_params

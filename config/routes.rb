@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/logout', to: 'login#destroy'
   post '/auth/google_oauth2/callback', to: 'login#create'
+  post '/login', to: 'login#create'
 
   get '/search', to: 'search#index'
   get '/dashboard', to: 'users#show'

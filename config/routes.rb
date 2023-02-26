@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get '/search', to: 'search#index'
   get '/dashboard', to: 'users#show'
+  get '/dashboard/edit', to: 'users#edit'
   get '/onboarding', to: 'login#edit'
   patch '/onboarding', to: 'login#update'
 

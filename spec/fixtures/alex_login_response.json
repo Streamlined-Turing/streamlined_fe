@@ -3,13 +3,11 @@
     "id": "1",
     "type": "user",
     "attributes": {
-      "uid": "104505147435508023263",
-      "full_name": "Alex Pitzel",
+      "sub": "104505147435508023263",
+      "name": "Alex Pitzel",
       "username": "pitzelalex",
       "email": "pitzelalex@gmail.com",
-      "first_name": "Alex",
-      "last_name": "Pitzel",
-      "image": "https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c"
+      "picture": "https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c"
     }
   }
 }

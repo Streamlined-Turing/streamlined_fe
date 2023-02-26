@@ -4,6 +4,10 @@ class MediaService
     parse(conn.get("/api/v1/media/#{id}"))
   end
 
+  def self.media_search(media_query)
+    parse(conn.get("/api/v1/media?q=#{media_query}"))
+  end
+
   private
 
   def self.conn

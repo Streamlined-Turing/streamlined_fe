@@ -1,17 +1,13 @@
 class UserFacade
-
   def self.format(data)
     # TODO: Consider a Struct or PORO for User data.
-
     {
       id: data[:id],
-      uid: data[:attributes][:uid],
-      full_name: data[:attributes][:full_name],
+      sub: data[:attributes][:sub],
+      name: data[:attributes][:name],
       username: data[:attributes][:username],
       email: data[:attributes][:email],
-      first_name: data[:attributes][:first_name],
-      last_name: data[:attributes][:last_name],
-      image: data[:attributes][:image]
+      picture: data[:attributes][:picture]
     }
   end
 

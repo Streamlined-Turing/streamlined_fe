@@ -8,14 +8,14 @@
                 "title": "Breaking Bad",
                 "audience_score": 9.3,
                 "rating": "TV-MA",
-                "type": "tv_series",
+                "media_type": "tv_series",
                 "description": " Walter White goes bonkers",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
         },
         {
         "id": "1",
@@ -25,14 +25,14 @@
                 "title": "Example",
                 "audience_score": 9.3,
                 "rating": "TV-MA",
-                "type": "tv_series",
+                "media_type": "tv_series",
                 "description": " Walter White goes bonkers",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
         }, 
         {        
         "id": "456789",
@@ -42,14 +42,14 @@
                 "title": "Bad Times",
                 "audience_score": 8,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "Such a good movie",
                 "genres": [],
                 "release_year": 2010,
                 "runtime": 120,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/03168281_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/03168281_poster_w185.jpg"}
         },
        {
         "id": "1588222",
@@ -59,14 +59,14 @@
                 "title": "The Bad Guys",
                 "audience_score": 4,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "wild",
                 "genres": [],
                 "release_year": 2010,
                 "runtime": 120,
                 "language": "en",
                 "sub_services": ["Hulu"],
-                "poster": "https://cdn.watchmode.com/posters/01588222_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/01588222_poster_w185.jpg"}
        },
        {
         "id": "140508",
@@ -76,14 +76,14 @@
                 "title": "Bad Boys for Life",
                 "audience_score": 7,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "they are bad boys!",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0140508_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0140508_poster_w185.jpg"}
        }, 
        {
         "id": "3184758",
@@ -93,14 +93,14 @@
                 "title": "Bad Sisters",
                 "audience_score": 5,
                 "rating": "TV-MA",
-                "type": "tv_series",
+                "media_type": "tv_series",
                 "description": "they are bad sisters!",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/03184758_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/03184758_poster_w185.jpg"}
        },
        {
         "id": "12355",
@@ -110,14 +110,14 @@
                 "title": "Bad Moms",
                 "audience_score": 6.3,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "they are bad moms!",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0140701_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0140701_poster_w185.jpg"}
        }, 
        {
         "id": "3465923874",
@@ -127,14 +127,14 @@
                 "title": "Bad Boys II",
                 "audience_score": 5,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "back at it",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0140507_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0140507_poster_w185.jpg"}
        },
        {
         "id": "3456",
@@ -144,14 +144,14 @@
                 "title": "Bad Santa",
                 "audience_score": 3,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "santa breaks bad",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0140745_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0140745_poster_w185.jpg"}
        },
        {
         "id": "435678",
@@ -161,14 +161,14 @@
                 "title": "Bad Teacher",
                 "audience_score": 3,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0140772_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0140772_poster_w185.jpg"}
        },
        {
         "id": "4",
@@ -178,14 +178,14 @@
                 "title": "Bad Education",
                 "audience_score": 4,
                 "rating": "TV-MA",
-                "type": "tv_series",
+                "media_type": "tv_series",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0311191_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0311191_poster_w185.jpg"}
        },
        {
         "id": "9875",
@@ -195,14 +195,14 @@
                 "title": "The Bad Guy",
                 "audience_score": 4,
                 "rating": "TV-MA",
-                "type": "tv_series",
+                "media_type": "tv_series",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/03182440_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/03182440_poster_w185.jpg"}
        },
        {
         "id": "75",
@@ -212,14 +212,14 @@
                 "title": "Bad Times at the El Royale",
                 "audience_score": 8,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0140778_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0140778_poster_w185.jpg"}
        },
        {
         "id": "95837",
@@ -229,14 +229,14 @@
                 "title": "Badlands",
                 "audience_score": 8.5,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0140949_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0140949_poster_w185.jpg"}
        },
        {
         "id": "95",
@@ -246,14 +246,14 @@
                 "title": "Bad Words",
                 "audience_score": 3,
                 "rating": "TV-MA",
-                "type": "movie",
+                "media_type": "movie",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0140798_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0140798_poster_w185.jpg"}
        },
        {
         "id": "95999",
@@ -263,14 +263,14 @@
                 "title": "Bad Behaviour",
                 "audience_score": 3,
                 "rating": "TV-MA",
-                "type": "tv_miniseries",
+                "media_type": "tv_miniseries",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0545464_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0545464_poster_w185.jpg"}
        },
        {
         "id": "654746",
@@ -280,14 +280,14 @@
                 "title": "Bad Influence",
                 "audience_score": 2,
                 "rating": "TV-MA",
-                "type": "tv_movie",
+                "media_type": "tv_movie",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/04157529_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/04157529_poster_w185.jpg"}
        },
        {
         "id": "95977",
@@ -297,14 +297,14 @@
                 "title": "Bad Genius",
                 "audience_score": 3,
                 "rating": "TV-MA",
-                "type": "tv_miniseries",
+                "media_type": "tv_miniseries",
                 "description": "goodness",
                 "genres": [],
                 "release_year": 2008,
                 "runtime": 45,
                 "language": "en",
                 "sub_services": ["Netflix"],
-                "poster": "https://cdn.watchmode.com/posters/0540482_poster_w185.jpg"}
+                "poster_path": "https://cdn.watchmode.com/posters/0540482_poster_w185.jpg"}
        }
    ] 
 }

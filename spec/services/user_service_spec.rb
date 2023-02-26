@@ -38,7 +38,7 @@ RSpec.describe UserService do
     end
 
     it 'updates the user entry and gets the details' do
-      stub_request(:patch, 'http://localhost:5000/api/v1/users')
+      stub_request(:patch, 'http://localhost:5000/api/v1/users/1')
         .to_return(status: 201,
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})

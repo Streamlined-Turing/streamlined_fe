@@ -31,6 +31,7 @@ RSpec.describe MediaResult do
       expect(media.type).to eq("tv_series")
       expect(media.vote_average).to eq(9.3)
       expect(media.poster).to eq("https://cdn.watchmode.com/posters/03173903_poster_w185.jpg")
+      expect(media.release_year).to eq(2008)
   end
 
   it 'can reformat the media type' do 

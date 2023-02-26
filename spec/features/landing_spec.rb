@@ -4,7 +4,7 @@ RSpec.describe 'Landing page', type: :feature do
 
   before :each do 
     stub_request(:get, "http://localhost:5000/api/v1/trending_media")
-      .to_return(status: 200, body: File.read('./spec/fixtures/trending_movies_response.json'), headers: {})
+      .to_return(status: 200, body: File.read('./spec/fixtures/trending_media_response.json'), headers: {})
   end
 
   describe 'when a user or visitor' do
@@ -30,8 +30,23 @@ RSpec.describe 'Landing page', type: :feature do
         end
       end
 
-      xit 'has a section for 3 recommended trending media' do 
+      it 'has a section for 3 recommended trending media' do 
+        visit root_path
+          
+        within "#trending_media" do 
+          expect(page).to have_content("Trending Now")
+          expect(page).to have_content('Media Type', count: 3)
+          expect(page).to have_content("Die Hart the Movie")
+          expect(page).to have_content("We Have a Ghost")
+          expect(page).to have_content("Knock at the Cabin")
+        end
 
+        within "#media_1077280" do 
+          expect(page).to have_content("Die Hart the Movie")
+          expect(page).to have_css("img[src='https://image.tmdb.org/t/p/w500/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg']")
+          expect(page).to have_content("Vote Average: 6.3")
+          expect(page).to have_content("Media Type: Movie")
+        end
       end
     end
   end

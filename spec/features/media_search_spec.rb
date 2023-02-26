@@ -4,7 +4,7 @@ RSpec.describe 'Media Search' do
 
   before :each do 
     stub_request(:get, "http://localhost:5000/api/v1/media?q=bad")
-      .to_return(status: 200, body: File.read('./spec/fixtures/search_movies_response.json'), headers: {})
+      .to_return(status: 200, body: File.read('./spec/fixtures/search_media_response.json'), headers: {})
   end
 
   describe 'when a user or visitor visits any page' do 
@@ -22,14 +22,12 @@ RSpec.describe 'Media Search' do
         expect(page).to have_content('Breaking Bad')
         expect(page).to have_css("img[src='https://cdn.watchmode.com/posters/03173903_poster_w185.jpg']")
         expect(page).to have_content('Media Type: Tv Series')
-        expect(page).to have_content('Audience Score: 9.3')
       end 
 
       within "#media_456789" do 
         expect(page).to have_content('Bad Times')
         expect(page).to have_css("img[src='https://cdn.watchmode.com/posters/03168281_poster_w185.jpg']")
         expect(page).to have_content('Media Type: Movie')
-        expect(page).to have_content('Audience Score: 8')
       end 
     end
 

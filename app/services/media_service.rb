@@ -16,7 +16,7 @@ class MediaService
 
   def self.service_params
     {
-      url: 'http://localhost:5000',
+      url: ENV['media_base_url']
     }
   end
 end

@@ -25,7 +25,7 @@ RSpec.describe UserFacade do
     end
   end
 
-  describe '#onboard' do
+  describe '#edit_user' do
     it 'can return a hash of user details' do
       stub_request(:patch, 'http://localhost:5000/api/v1/users/1')
         .to_return(status: 201,
@@ -39,7 +39,7 @@ RSpec.describe UserFacade do
                        'email' => 'pitzelalex@gmail.com',
                        'picture' => 'https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c' }
 
-      user = UserFacade.onboard(current_user, 'pitzelalex')
+      user = UserFacade.edit_user(current_user, 'pitzelalex')
 
       expect(user).to be_a Hash
       expect(user[:id]).to eq('1')
@@ -51,7 +51,7 @@ RSpec.describe UserFacade do
     end
   end
 
-  describe '#onboard' do
+  describe '#edit_user' do
     it 'can return a hash of user details' do
       stub_request(:patch, 'http://localhost:5000/api/v1/users/1')
         .to_return(status: 201,
@@ -65,7 +65,7 @@ RSpec.describe UserFacade do
                        'email' => 'pitzelalex@gmail.com',
                        'picture' => 'https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c' }
 
-      user = UserFacade.onboard(current_user, 'pitzelalex')
+      user = UserFacade.edit_user(current_user, 'pitzelalex')
 
       expect(user).to be_a Hash
       expect(user[:id]).to eq('1')

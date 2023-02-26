@@ -19,7 +19,7 @@ class LoginController < ApplicationController
   end
 
   def update
-    user = UserFacade.onboard(current_user, params[:username])
+    user = UserFacade.edit_user(current_user, params[:username])
 
     session[:user] = user
     redirect_to dashboard_path

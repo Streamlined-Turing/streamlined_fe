@@ -14,6 +14,15 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require 'webmock/rspec'
+require 'vcr'
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  config.filter_sensitive_data('<GOOGLE_CLIENT_ID') { ENV['GOOGLE_CLIENT_ID'] }
+  config.filter_sensitive_data('<GOOGLE_CLIENT_SECRET') { ENV['GOOGLE_CLIENT_SECRET'] }
+  config.configure_rspec_metadata!
+end
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

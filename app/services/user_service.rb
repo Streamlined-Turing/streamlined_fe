@@ -17,7 +17,7 @@ class UserService
 
   def self.onboard(current_user, username)
     current_user['username'] = username
-    response = conn.patch('/api/v1/users') do |req|
+    response = conn.patch("/api/v1/users/#{current_user['id']}") do |req|
       req.body = current_user
     end
 
@@ -28,7 +28,7 @@ class UserService
 
   def self.service_params
     {
-      url: 'http://localhost:5000',
+      url: 'http://localhost:5000'
     }
   end
 end

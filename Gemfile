@@ -43,6 +43,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'shoulda-matchers'
   gem 'webmock'
+  gem 'vcr'
 end
 
 group :test do

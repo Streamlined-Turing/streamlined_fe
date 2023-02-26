@@ -1,3 +1,5 @@
 class LandingController < ApplicationController
-  def index; end
+  def index
+    @trending_media = MediaFacade.trending_media
+  end
 end

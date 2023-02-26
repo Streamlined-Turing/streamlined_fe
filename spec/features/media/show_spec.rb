@@ -29,7 +29,7 @@ RSpec.describe 'The Media Show page', type: :feature do
       end
 
       it 'shows media poster' do
-        expect(page).to have_content 'https://cdn.watchmode.com/posters/03173903_poster_w185.jpg'
+        expect(page.find('img')[:src]).to eq "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"
       end
 
       it 'shows media type' do

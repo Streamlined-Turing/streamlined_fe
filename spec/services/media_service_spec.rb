@@ -24,6 +24,8 @@ RSpec.describe MediaService do
       expect(response[:data][:attributes][:language]).to be_a String
       expect(response[:data][:attributes][:sub_services]).to be_a Array
       expect(response[:data][:attributes][:poster]).to be_a String
+      expect(response[:data][:attributes][:trailer]).to be_a String
+      expect(response[:data][:attributes][:trailer_thumbnail]).to be_a String
     end
   end
 end

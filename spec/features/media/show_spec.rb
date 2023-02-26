@@ -47,6 +47,15 @@ RSpec.describe 'The Media Show page', type: :feature do
       it 'shows media streaming services' do
         expect(page).to have_content 'Netflix'
       end
+
+      it 'shows media trailer link' do
+        expect(page).to have_link 'https://www.youtube.com/watch?v=XZ8daibM3AE'
+      end
+
+      it 'shows media trailer thumbnail' do
+        save_and_open_page
+        expect(page.find('img')[:src]).to eq "https://cdn.watchmode.com/video_thumbnails/536008_pthumbnail_320.jpg"
+      end
     end
   end
 end

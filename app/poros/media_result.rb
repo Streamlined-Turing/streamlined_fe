@@ -2,15 +2,15 @@ class MediaResult
   attr_reader :id,
               :title,
               :type,
-              :audience_score,
+              :vote_average,
               :poster
 
   def initialize(media_result_data)
     @id = media_result_data[:attributes][:id]
     @title = media_result_data[:attributes][:title]
-    @type = media_result_data[:attributes][:type]
-    @audience_score = media_result_data[:attributes][:audience_score]
-    @poster = media_result_data[:attributes][:poster]
+    @type = media_result_data[:attributes][:media_type]
+    @vote_average = media_result_data[:attributes][:vote_average]
+    @poster = media_result_data[:attributes][:poster_path]
   end
 
   def formatted_type 

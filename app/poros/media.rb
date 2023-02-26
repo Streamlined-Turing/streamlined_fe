@@ -10,8 +10,7 @@ class Media
               :trailer,
               :language,
               :audience_score,
-              :trailer,
-              :trailer_thumbnail
+              :trailer
 
 
   def initialize(data)
@@ -29,7 +28,6 @@ class Media
     @sub_services = data[:attributes][:sub_services]
     @audience_score = data[:attributes][:audience_score]
     @trailer = data[:attributes][:trailer]
-    @trailer_thumbnail = data[:attributes][:trailer_thumbnail]
   end
 
   def genres
@@ -38,9 +36,5 @@ class Media
 
   def sub_services
     @sub_services.join(', ')
-  end
-
-  def trailer_thumbnail
-    @trailer_thumbnail || "/assets/images/logos/inverse_thumbnail.png"
   end
 end

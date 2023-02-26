@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-<<<<<<< HEAD
 RSpec.describe MediaService do
   describe '#media' do
     it 'returns details about a piece of media' do
@@ -26,12 +25,9 @@ RSpec.describe MediaService do
       expect(response[:data][:attributes][:sub_services]).to be_a Array
       expect(response[:data][:attributes][:poster]).to be_a String
       expect(response[:data][:attributes][:trailer]).to be_a String
-      expect(response[:data][:attributes][:trailer_thumbnail]).to be_a String
     end
   end
-end
-=======
-RSpec.describe 'Media Service' do 
+
   describe '.media_search' do 
     before(:each) do 
       stub_request(:get, "http://localhost:5000/api/v1/media?q=bad")
@@ -61,4 +57,3 @@ RSpec.describe 'Media Service' do
     end
   end
 end
->>>>>>> 78d1ed6d37a3669bfe0fef100a33365a367c0bef

@@ -49,12 +49,7 @@ RSpec.describe 'The Media Show page', type: :feature do
       end
 
       it 'shows media trailer link' do
-        expect(page).to have_link 'https://www.youtube.com/watch?v=XZ8daibM3AE'
-      end
-
-      it 'shows media trailer thumbnail' do
-        save_and_open_page
-        expect(page.find('img')[:src]).to eq "https://cdn.watchmode.com/video_thumbnails/536008_pthumbnail_320.jpg"
+        expect(page).to have_link 'Link to Trailer'
       end
     end
   end

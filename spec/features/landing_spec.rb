@@ -1,7 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'Landing page', type: :feature do
-  describe 'when a user' do
+
+  before :each do 
+    stub_request(:get, "http://localhost:5000/api/v1/trending_media")
+      .to_return(status: 200, body: File.read('./spec/fixtures/trending_movies_response.json'), headers: {})
+  end
+
+  describe 'when a user or visitor' do
     describe 'visits the root path, it' do
       it 'should display the app name' do
         visit root_path
@@ -13,6 +19,19 @@ RSpec.describe 'Landing page', type: :feature do
         visit root_path
 
         expect(page).to have_css '.g_id_signin'
+      end
+
+      it "has a 'who are we' section" do 
+        visit root_path
+
+        within "#about_us" do
+          expect(page).to have_content("Who Are We?")
+          expect(page).to have_content("StreamLined is a tool to track movies and TV shows")
+        end
+      end
+
+      xit 'has a section for 3 recommended trending media' do 
+
       end
     end
   end

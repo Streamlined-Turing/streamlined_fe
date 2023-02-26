@@ -12,20 +12,15 @@ RSpec.describe 'Media Service' do
       expect(response[:data]).to be_an Array
       expect(response[:data][0]).to have_key(:id)
       expect(response[:data][0]).to have_key(:type)
-      expect(response[:data][0][:type]).to eq("media")
+      expect(response[:data][0][:type]).to eq("search_result")
       expect(response[:data][0]).to have_key(:attributes)
       expect(response[:data][0][:attributes]).to have_key(:id)
       expect(response[:data][0][:attributes]).to have_key(:title)
-      expect(response[:data][0][:attributes]).to have_key(:audience_score)
-      expect(response[:data][0][:attributes]).to have_key(:rating)
       expect(response[:data][0][:attributes]).to have_key(:media_type)
-      expect(response[:data][0][:attributes]).to have_key(:description)
-      expect(response[:data][0][:attributes]).to have_key(:genres)
       expect(response[:data][0][:attributes]).to have_key(:release_year)
-      expect(response[:data][0][:attributes]).to have_key(:runtime)
-      expect(response[:data][0][:attributes]).to have_key(:language)
-      expect(response[:data][0][:attributes]).to have_key(:sub_services)
-      expect(response[:data][0][:attributes]).to have_key(:poster_path)
+      expect(response[:data][0][:attributes]).to have_key(:tmdb_id)
+      expect(response[:data][0][:attributes]).to have_key(:tmdb_type)
+      expect(response[:data][0][:attributes]).to have_key(:poster)
     end
   end
 

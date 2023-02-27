@@ -1,0 +1,225 @@
+{
+        "data": [
+                {
+                "id": "1588222",
+                "type": "search_result",
+                "attributes": {
+                        "id": 1588222,
+                        "title": "The Bad Guys",
+                        "media_type": "movie",
+                        "release_year": 2022,
+                        "tmdb_id": 629542,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/01588222_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140508",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140508,
+                        "title": "Bad Boys for Life",
+                        "media_type": "movie",
+                        "release_year": 2020,
+                        "tmdb_id": 38700,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140508_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "311282",
+                "type": "search_result",
+                "attributes": {
+                        "id": 311282,
+                        "title": "Badehotellet",
+                        "media_type": "tv_series",
+                        "release_year": 2013,
+                        "tmdb_id": 62474,
+                        "tmdb_type": "tv",
+                        "poster": "https://cdn.watchmode.com/posters/0311282_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140701",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140701,
+                        "title": "Bad Moms",
+                        "media_type": "movie",
+                        "release_year": 2016,
+                        "tmdb_id": 376659,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140701_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "3184758",
+                "type": "search_result",
+                "attributes": {
+                        "id": 3184758,
+                        "title": "Bad Sisters",
+                        "media_type": "tv_series",
+                        "release_year": 2022,
+                        "tmdb_id": 199318,
+                        "tmdb_type": "tv",
+                        "poster": "https://cdn.watchmode.com/posters/03184758_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140507",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140507,
+                        "title": "Bad Boys II",
+                        "media_type": "movie",
+                        "release_year": 2003,
+                        "tmdb_id": 8961,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140507_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140745",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140745,
+                        "title": "Bad Santa",
+                        "media_type": "movie",
+                        "release_year": 2003,
+                        "tmdb_id": 10147,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140745_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140502",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140502,
+                        "title": "Bad Boys",
+                        "media_type": "movie",
+                        "release_year": 1995,
+                        "tmdb_id": 9737,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140502_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140772",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140772,
+                        "title": "Bad Teacher",
+                        "media_type": "movie",
+                        "release_year": 2011,
+                        "tmdb_id": 52449,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140772_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140669",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140669,
+                        "title": "Bad Lieutenant: Port of Call - New Orleans",
+                        "media_type": "movie",
+                        "release_year": 2009,
+                        "tmdb_id": 11699,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140669_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "311191",
+                "type": "search_result",
+                "attributes": {
+                        "id": 311191,
+                        "title": "Bad Education",
+                        "media_type": "tv_series",
+                        "release_year": 2012,
+                        "tmdb_id": 58460,
+                        "tmdb_type": "tv",
+                        "poster": "https://cdn.watchmode.com/posters/0311191_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "4101512",
+                "type": "search_result",
+                "attributes": {
+                        "id": 4101512,
+                        "title": "The Bad Seed",
+                        "media_type": "tv_movie",
+                        "release_year": 2018,
+                        "tmdb_id": 532814,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/04101512_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "3182440",
+                "type": "search_result",
+                "attributes": {
+                        "id": 3182440,
+                        "title": "The Bad Guy",
+                        "media_type": "tv_series",
+                        "release_year": 2022,
+                        "tmdb_id": 158050,
+                        "tmdb_type": "tv",
+                        "poster": "https://cdn.watchmode.com/posters/03182440_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "4154986",
+                "type": "search_result",
+                "attributes": {
+                        "id": 4154986,
+                        "title": "The Bad Seed Returns",
+                        "media_type": "tv_movie",
+                        "release_year": 2022,
+                        "tmdb_id": 897338,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/04154986_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "1514313",
+                "type": "search_result",
+                "attributes": {
+                        "id": 1514313,
+                        "title": "Bad Education",
+                        "media_type": "movie",
+                        "release_year": 2019,
+                        "tmdb_id": 530723,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/01514313_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140778",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140778,
+                        "title": "Bad Times at the El Royale",
+                        "media_type": "movie",
+                        "release_year": 2018,
+                        "tmdb_id": 446021,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140778_poster_w185.jpg"
+                        }
+                },
+                {
+                "id": "140949",
+                "type": "search_result",
+                "attributes": {
+                        "id": 140949,
+                        "title": "Badlands",
+                        "media_type": "movie",
+                        "release_year": 1973,
+                        "tmdb_id": 3133,
+                        "tmdb_type": "movie",
+                        "poster": "https://cdn.watchmode.com/posters/0140949_poster_w185.jpg"
+                        }
+                }
+        ]
+}

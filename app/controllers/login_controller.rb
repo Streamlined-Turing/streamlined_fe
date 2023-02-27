@@ -5,7 +5,7 @@ class LoginController < ApplicationController
   def create
     user_data = JWT.decode(params[:credential], nil, false).first
     @user = UserFacade.login(user_data)
-    session[:user] = @user
+    session[:user_id] = @user.id
 
     if self.onboarded?
       redirect_to dashboard_path
@@ -20,18 +20,18 @@ class LoginController < ApplicationController
   def update
     user = UserFacade.edit_user(current_user, params[:username])
 
-    session[:user] = user
+    session[:user_id] = user.id
     redirect_to dashboard_path
   end
 
   def destroy
-    session[:user] = nil
+    session[:user_id] = nil
     redirect_to root_path
   end
 
   private
 
   def onboarded?
-    @user[:username] != nil
+    @user.username != nil
   end
 end

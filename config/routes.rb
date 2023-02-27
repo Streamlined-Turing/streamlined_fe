@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   get '/search', to: 'search#index'
   get '/dashboard', to: 'users#show'
   get '/dashboard/edit', to: 'users#edit'
+  patch '/dashboard/edit', to: 'users#update'
   get '/onboarding', to: 'login#edit'
   patch '/onboarding', to: 'login#update'
 
   resources :media, only: [:show]
 end
-

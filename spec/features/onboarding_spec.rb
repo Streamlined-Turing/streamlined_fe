@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Onboarding Page', type: :feature do
   describe 'when a user has logged in for the first time' do
     before(:each) do
-      user = { 'id' => '1', 'name' => 'test' }
+      user = { 'id' => '1', 'name' => 'test', 'username' => 'pitzelalex' }
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       stub_request(:patch, 'http://localhost:5000/api/v1/users/1')

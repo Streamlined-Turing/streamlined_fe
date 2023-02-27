@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'user show page', type: :feature do
+RSpec.describe 'user dashboard', type: :feature do
   describe 'as a logged in user' do
     let(:user) do
       {

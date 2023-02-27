@@ -15,21 +15,17 @@ class UserService
     parse(response)
   end
 
-  def self.onboard(current_user, username)
-    current_user['username'] = username
+  def self.edit_user(current_user, username)
     response = conn.patch("/api/v1/users/#{current_user['id']}") do |req|
-      req.body = current_user
+      req.body = { username: username }
     end
 
     parse(response)
   end
 
-
-  private
-
   def self.service_params
     {
-      url: 'http://localhost:5000'
+      url: ENV['user_base_url']
     }
   end
 end

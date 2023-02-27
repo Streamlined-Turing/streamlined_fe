@@ -8,10 +8,10 @@ class User
 
   def initialize(user_data)
     @id = user_data[:id]
-    @sub = user_data[:sub]
-    @name = user_data[:name]
-    @username = user_data[:username]
-    @email = user_data[:email]
-    @picture = user_data[:picture]
+    @sub = user_data[:attributes][:sub]
+    @name = user_data[:attributes][:name]
+    @username = user_data[:attributes][:username]
+    @email = user_data[:attributes][:email]
+    @picture = user_data[:attributes][:picture]
   end
 end

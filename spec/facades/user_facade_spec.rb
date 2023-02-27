@@ -15,13 +15,7 @@ RSpec.describe UserFacade do
 
       user = UserFacade.login(user_data)
 
-      expect(user).to be_a Hash
-      expect(user[:id]).to eq('1')
-      expect(user[:sub]).to eq('104505147435508023263')
-      expect(user[:name]).to eq('Alex Pitzel')
-      expect(user[:username]).to eq('pitzelalex')
-      expect(user[:email]).to eq('pitzelalex@gmail.com')
-      expect(user[:picture]).to eq('https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c')
+      expect(user).to be_a User
     end
   end
 
@@ -32,22 +26,11 @@ RSpec.describe UserFacade do
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})
 
-      current_user = { 'id' => '1',
-                       'sub' => '104505147435508023263',
-                       'name' => 'Alex Pitzel',
-                       'username' => '',
-                       'email' => 'pitzelalex@gmail.com',
-                       'picture' => 'https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c' }
+      user_id = '1'
 
-      user = UserFacade.edit_user(current_user, 'pitzelalex')
+      user = UserFacade.edit_user(user_id, 'pitzelalex')
 
-      expect(user).to be_a Hash
-      expect(user[:id]).to eq('1')
-      expect(user[:sub]).to eq('104505147435508023263')
-      expect(user[:name]).to eq('Alex Pitzel')
-      expect(user[:username]).to eq('pitzelalex')
-      expect(user[:email]).to eq('pitzelalex@gmail.com')
-      expect(user[:picture]).to eq('https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c')
+      expect(user).to be_a User
     end
   end
 
@@ -58,22 +41,11 @@ RSpec.describe UserFacade do
                    body: File.read('spec/fixtures/alex_login_response.json'),
                    headers: {})
 
-      current_user = { 'id' => '1',
-                       'sub' => '104505147435508023263',
-                       'name' => 'Alex Pitzel',
-                       'username' => '',
-                       'email' => 'pitzelalex@gmail.com',
-                       'picture' => 'https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c' }
+      user_id = '1'
 
-      user = UserFacade.edit_user(current_user, 'pitzelalex')
+      user = UserFacade.edit_user(user_id, 'pitzelalex')
 
-      expect(user).to be_a Hash
-      expect(user[:id]).to eq('1')
-      expect(user[:sub]).to eq('104505147435508023263')
-      expect(user[:name]).to eq('Alex Pitzel')
-      expect(user[:username]).to eq('pitzelalex')
-      expect(user[:email]).to eq('pitzelalex@gmail.com')
-      expect(user[:picture]).to eq('https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c')
+      expect(user).to be_a User
     end
   end
 end

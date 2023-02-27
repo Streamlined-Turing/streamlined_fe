@@ -1,7 +1,6 @@
 class LoginController < ApplicationController
   skip_before_action :verify_authenticity_token
-  def index
-  end
+  def index; end
 
   def create
     user_data = JWT.decode(params[:credential], nil, false).first

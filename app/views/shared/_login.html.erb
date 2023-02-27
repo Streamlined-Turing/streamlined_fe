@@ -4,7 +4,7 @@
 <% else %>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <div id="g_id_onload"
-       data-client_id="790343586716-g46mji3tfutee34bp1r2eqkkjvf57bpr.apps.googleusercontent.com"
+       data-client_id=<%= "#{ENV['GOOGLE_CLIENT_ID']}"  %>
        data-context="use"
        data-ux_mode="redirect"
        data-login_uri="auth/google_oauth2/callback"

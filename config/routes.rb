@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/logout', to: 'login#destroy'
   post '/auth/google_oauth2/callback', to: 'login#create'
+  post '/login', to: 'login#create'
 
   get '/search', to: 'search#index'
   get '/dashboard', to: 'users#show'
@@ -11,4 +12,6 @@ Rails.application.routes.draw do
   patch '/dashboard/edit', to: 'users#update'
   get '/onboarding', to: 'login#edit'
   patch '/onboarding', to: 'login#update'
+
+  resources :media, only: [:show]
 end

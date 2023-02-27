@@ -1,6 +1,16 @@
-require 'rails_helper' 
+require 'rails_helper'
 
-RSpec.describe MediaFacade do 
+RSpec.describe MediaFacade do
+  describe 'instance methods' do
+    describe '#media' do
+      it 'can return a single media object' do
+        response = File.read("./spec/fixtures/media1.json")
+        stub_request(:get, "localhost:5000/api/v1/media/1").to_return(status: 200, body: response)
+        expect(MediaFacade.media(1)).to be_a Media 
+      end
+    end
+  end
+
   describe '.search_results' do 
     it 'can return a collection of a maximum of 15 media result objects' do 
       stub_request(:get, "http://localhost:5000/api/v1/media?q=bad")

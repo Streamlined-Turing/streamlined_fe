@@ -1,5 +1,9 @@
 class MediaFacade 
-  
+  def self.media(id)
+    media_data = MediaService.media(id)[:data]
+    Media.new(media_data)
+  end
+
   def self.search_results(media_query)
     data = MediaService.media_search(media_query)
     limit_15 = data[:data].first(15)

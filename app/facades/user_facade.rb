@@ -15,7 +15,11 @@ class UserFacade
     format(UserService.login(user_data)[:data])
   end
 
-  def self.onboard(current_user, username)
-    format(UserService.onboard(current_user, username)[:data])
+  # def self.onboard(current_user, username)
+  #   format(UserService.onboard(current_user, username)[:data])
+  # end
+
+  def self.edit_user(current_user, username)
+    format(UserService.edit_user(current_user, username)[:data])
   end
 end

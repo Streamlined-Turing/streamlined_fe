@@ -9,12 +9,12 @@ RSpec.describe 'user dashboard', type: :feature do
         'name' => 'Alex Pitzel',
         'username' => 'pitzelalex',
         'email' => 'pitzelalex@gmail.com',
-        'picture' => 'https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c'
+        'picture' => 'https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c'
       }
     end
 
-    it 'displays details about my account' do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    it 'displays details about my account', :vcr do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
 
       visit dashboard_path
 
@@ -24,8 +24,8 @@ RSpec.describe 'user dashboard', type: :feature do
       expect(page.find('img')[:src]).to eq user['picture']
     end
 
-    it 'has a button to edit my profile' do
-      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
+    it 'has a button to edit my profile', :vcr do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
 
       visit dashboard_path
 

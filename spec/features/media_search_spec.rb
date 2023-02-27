@@ -5,6 +5,8 @@ RSpec.describe 'Media Search' do
   before :each do 
     stub_request(:get, "http://localhost:5000/api/v1/media?q=bad")
       .to_return(status: 200, body: File.read('./spec/fixtures/search_media_response.json'), headers: {})
+    stub_request(:get, "http://localhost:5000/api/v1/trending_media")
+      .to_return(status: 200, body: File.read('./spec/fixtures/trending_media_response.json'), headers: {})
   end
 
   describe 'when a user or visitor visits any page' do 

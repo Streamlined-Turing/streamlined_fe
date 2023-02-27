@@ -18,4 +18,8 @@ class MediaResult
   def formatted_type 
     type.gsub("_", " ").titleize
   end
+
+  def round_vote 
+    vote_average.round(1)
+  end
 end

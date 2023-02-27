@@ -8,16 +8,16 @@ RSpec.describe MediaResult do
       "attributes": {
               "id": 3173903,
               "title": "Breaking Bad",
-              "audience_score": 9.3,
+              "vote_average": 9.3456,
               "rating": "TV-MA",
-              "type": "tv_series",
+              "media_type": "tv_series",
               "description": " Walter White goes bonkers",
               "genres": [],
               "release_year": 2008,
               "runtime": 45,
               "language": "en",
               "sub_services": ["Netflix"],
-              "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
+              "poster_path": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"}
       }
   end
 
@@ -29,13 +29,20 @@ RSpec.describe MediaResult do
       expect(media.id).to eq(3173903)
       expect(media.title).to eq("Breaking Bad")
       expect(media.type).to eq("tv_series")
-      expect(media.audience_score).to eq(9.3)
+      expect(media.vote_average).to eq(9.3456)
       expect(media.poster).to eq("https://cdn.watchmode.com/posters/03173903_poster_w185.jpg")
+      expect(media.release_year).to eq(2008)
   end
 
   it 'can reformat the media type' do 
     media = MediaResult.new(@media_data)
     
     expect(media.formatted_type).to eq('Tv Series')
+  end
+
+  it 'can round the vote average' do 
+    media = MediaResult.new(@media_data)
+    
+    expect(media.round_vote).to eq(9.3)
   end
 end

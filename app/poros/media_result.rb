@@ -2,18 +2,24 @@ class MediaResult
   attr_reader :id,
               :title,
               :type,
-              :audience_score,
-              :poster
+              :vote_average,
+              :poster,
+              :release_year
 
   def initialize(media_result_data)
     @id = media_result_data[:attributes][:id]
     @title = media_result_data[:attributes][:title]
-    @type = media_result_data[:attributes][:type]
-    @audience_score = media_result_data[:attributes][:audience_score]
-    @poster = media_result_data[:attributes][:poster]
+    @type = media_result_data[:attributes][:media_type]
+    @vote_average = media_result_data[:attributes][:vote_average]
+    @poster = media_result_data[:attributes][:poster_path] || media_result_data[:attributes][:poster]
+    @release_year = media_result_data[:attributes][:release_year]
   end
 
   def formatted_type 
     type.gsub("_", " ").titleize
+  end
+
+  def round_vote 
+    vote_average.round(1)
   end
 end

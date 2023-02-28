@@ -16,4 +16,8 @@ class UserFacade
 
     User.new(response)
   end
+
+  def self.delete(current_user)
+    UserService.delete(current_user)
+  end
 end

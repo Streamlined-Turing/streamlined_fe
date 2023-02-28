@@ -21,6 +21,10 @@ class UserService
     parse(response)
   end
 
+  def self.delete(user_id)
+    conn.delete("/api/v1/users/#{user_id}")
+  end
+
   def self.conn
     Faraday.new(service_params)
   end

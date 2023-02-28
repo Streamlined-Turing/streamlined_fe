@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:5000/api/v1/users
+    body:
+      encoding: UTF-8
+      string: email=pitzelalex%40gmail.com&name=Alex+Pitzel&picture=https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FAEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA%3Ds96-c&sub=104505147435508023263
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"53b9c9a49e6747b97e2752f35d10015b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 03a091e9-ca7d-4ce1-ac66-40bcf6e6e430
+      X-Runtime:
+      - '0.004115'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"6","type":"user","attributes":{"sub":"104505147435508023263","username":null,"email":"pitzelalex@gmail.com","name":"Alex
+        Pitzel","picture":"https://lh3.googleusercontent.com/a/AEdFTp5vj_rzxJzWHjgqM1-InqDI0fJWxwpHK_zElpKLgA=s96-c"}}}'
+  recorded_at: Tue, 28 Feb 2023 13:16:20 GMT
+- request:
+    method: delete
+    uri: http://localhost:5000/api/v1/users/6
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 7e62bb71-f9f5-4eae-9248-ab9ef15ecd31
+      X-Runtime:
+      - '0.013603'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 28 Feb 2023 13:16:20 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,147 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"663feae2e2ff7ff3002f082b430ade5e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 04a06f4c-6ceb-40bd-9d59-633401d467bf
+      X-Runtime:
+      - '0.003212'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":"new_username","email":"j.king92@gmail.com","name":"Joe
+        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
+  recorded_at: Tue, 28 Feb 2023 00:39:52 GMT
+- request:
+    method: delete
+    uri: http://localhost:5000/api/v1/users/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      X-Request-Id:
+      - 22db3274-c89a-4fda-9960-a96d4de4116e
+      X-Runtime:
+      - '0.014029'
+      Content-Length:
+      - '3906'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"error":"Not Found","exception":"#\u003cActionController::RoutingError:
+        No route matches [DELETE] \"/api/v1/users\"\u003e","traces":{"Application
+        Trace":[],"Framework Trace":[{"id":0,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in
+        `call''"},{"id":1,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in
+        `call''"},{"id":2,"trace":"railties (5.2.8.1) lib/rails/rack/logger.rb:38:in
+        `call_app''"},{"id":3,"trace":"railties (5.2.8.1) lib/rails/rack/logger.rb:26:in
+        `block in call''"},{"id":4,"trace":"activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in
+        `block in tagged''"},{"id":5,"trace":"activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in
+        `tagged''"},{"id":6,"trace":"activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in
+        `tagged''"},{"id":7,"trace":"railties (5.2.8.1) lib/rails/rack/logger.rb:26:in
+        `call''"},{"id":8,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in
+        `call''"},{"id":9,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in
+        `call''"},{"id":10,"trace":"rack (2.2.6.2) lib/rack/runtime.rb:22:in `call''"},{"id":11,"trace":"activesupport
+        (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":12,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":13,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":14,"trace":"rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call''"},{"id":15,"trace":"railties
+        (5.2.8.1) lib/rails/engine.rb:524:in `call''"},{"id":16,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":17,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":18,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":19,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":20,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call''"},{"id":1,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":2,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":3,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":4,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":5,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":6,"trace":"activesupport
+        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":7,"trace":"railties
+        (5.2.8.1) lib/rails/rack/logger.rb:26:in `call''"},{"id":8,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":9,"trace":"actionpack
+        (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":10,"trace":"rack
+        (2.2.6.2) lib/rack/runtime.rb:22:in `call''"},{"id":11,"trace":"activesupport
+        (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+        `call''"},{"id":12,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in
+        `call''"},{"id":13,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in
+        `call''"},{"id":14,"trace":"rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call''"},{"id":15,"trace":"railties
+        (5.2.8.1) lib/rails/engine.rb:524:in `call''"},{"id":16,"trace":"puma (3.12.6)
+        lib/puma/configuration.rb:227:in `call''"},{"id":17,"trace":"puma (3.12.6)
+        lib/puma/server.rb:706:in `handle_request''"},{"id":18,"trace":"puma (3.12.6)
+        lib/puma/server.rb:476:in `process_client''"},{"id":19,"trace":"puma (3.12.6)
+        lib/puma/server.rb:334:in `block in run''"},{"id":20,"trace":"puma (3.12.6)
+        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
+  recorded_at: Tue, 28 Feb 2023 00:39:52 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trending_media
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e33bd2ceec38c2a20dfe63ebbea584e9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 60fbf171-bb5e-4ffe-b94e-97419b242e47
+      X-Runtime:
+      - '0.100671'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"852096","type":"trending_media","attributes":{"id":852096,"title":"We
+        Have a Ghost","poster_path":"/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg","media_type":"movie","vote_average":6.613}},{"id":"100088","type":"trending_media","attributes":{"id":100088,"title":null,"poster_path":"/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg","media_type":"tv","vote_average":8.817}},{"id":"1077280","type":"trending_media","attributes":{"id":1077280,"title":"Die
+        Hart","poster_path":"/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg","media_type":"movie","vote_average":6.479}}]}'
+  recorded_at: Tue, 28 Feb 2023 00:39:53 GMT
+recorded_with: VCR 6.1.0

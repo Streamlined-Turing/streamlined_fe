@@ -1,0 +1,35 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: http://localhost:5000/api/v1/users/100
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - d638d3a9-6739-42e7-998b-892b245ecebe
+      X-Runtime:
+      - '0.002658'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"User with id 100 not found"}'
+  recorded_at: Tue, 28 Feb 2023 01:19:37 GMT
+recorded_with: VCR 6.1.0

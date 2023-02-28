@@ -1,6 +1,8 @@
-<img src=<%= @user.picture %> alt="profile picture">
+<div class="profile_pic">
+  <img src=<%= @user.picture %> alt="profile picture">
+</div>
 <p>Username: <%= @user.username %></p>
 <p>Email: <%= @user.email %></p>
 <p>Name: <%= @user.name %></p>
 
-<%= button_to 'Edit Profile', dashboard_edit_path, method: :get, local: true %>
+<%= button_to 'Edit Profile', edit_dashboard_path, method: :get, local: true %>

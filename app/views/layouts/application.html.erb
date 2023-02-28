@@ -4,16 +4,21 @@
     <title>StreamlinedFe</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= stylesheet_link_tag "cyborg_theme" %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <nav>
-      <%= render partial: 'shared/top_section.html.erb' %>
-    </nav>
-    <%= yield %>
+    <div class="app-container">
+      <nav>
+       <%= render partial: 'shared/top_section.html.erb' %>
+      </nav>
+        <% flash.each do |type, msg| %>
+        <%= msg %>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>

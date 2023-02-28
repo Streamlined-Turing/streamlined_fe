@@ -3,7 +3,7 @@ class SessionController < ApplicationController
   def index; end
 
   def create
-    user_data = JWT.decode(params[:credential], nil, false).first
+    user_data = Google::Auth::IDTokens.verify_oidc(params[:credential])
     @user = UserFacade.login(user_data)
     session[:user_id] = @user.id
 

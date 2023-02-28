@@ -26,7 +26,7 @@ RSpec.describe 'user dashboard edit', type: :feature do
 
       visit dashboard_edit_path
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_call_original
-save_and_open_page
+
       click_button('Delete Account')
 
       expect(current_path).to eq(root_path)

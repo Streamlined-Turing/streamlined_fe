@@ -22,7 +22,7 @@ RSpec.describe MediaFacade do
       expect(all_media_results.count).to be <= 15
       
       all_media_results.each do |media|
-        expect(media).to be_an_instance_of(MediaResult)
+        expect(media).to be_an_instance_of(Media)
       end
     end
   end
@@ -37,7 +37,7 @@ RSpec.describe MediaFacade do
       expect(trending_media_results).to be_an Array 
       
       trending_media_results.each do |media|
-        expect(media).to be_an_instance_of(MediaResult)
+        expect(media).to be_an_instance_of(Media)
       end
     end
   end

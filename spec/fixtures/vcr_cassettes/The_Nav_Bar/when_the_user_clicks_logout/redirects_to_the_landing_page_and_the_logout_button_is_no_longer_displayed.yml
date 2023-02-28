@@ -21,6 +21,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
+
       - W/"ac42289005006652c4f82a88ad5ffa4e"
       Cache-Control:
       - max-age=0, private, must-revalidate

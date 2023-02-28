@@ -7,6 +7,8 @@ RSpec.describe 'Media Search' do
       .to_return(status: 200, body: File.read('./spec/fixtures/search_media_response.json'), headers: {})
     stub_request(:get, "http://localhost:5000/api/v1/trending_media")
       .to_return(status: 200, body: File.read('./spec/fixtures/trending_media_response.json'), headers: {})
+    stub_request(:get, "http://localhost:5000/api/v1/media/3173903")
+      .to_return(status: 200, body: File.read('./spec/fixtures/media1.json'), headers: {})
   end
 
   describe 'when a user or visitor visits any page' do 
@@ -40,13 +42,11 @@ RSpec.describe 'Media Search' do
 
       fill_in "query", with: "bad"
       click_button "Search"
-
       expect(current_path).to eq search_path
       
-      within "#media_1588222" do 
-        expect(page).to have_link('The Bad Guys')
-        # click_link 'Breaking Bad'
-        # expect(current_path).to eq 
+      within "#media_3173903" do 
+        click_link 'Breaking Bad'
+        expect(current_path).to eq media_path(3173903)
       end
     end
   end 

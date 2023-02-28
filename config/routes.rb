@@ -7,10 +7,11 @@ Rails.application.routes.draw do
   post '/login', to: 'login#create'
 
   get '/search', to: 'search#index'
-  get '/dashboard', to: 'users#show'
-  get '/dashboard/edit', to: 'users#edit'
-  patch '/dashboard/edit', to: 'users#update'
-  delete '/dashboard', to: 'users#destroy'
+  # get '/dashboard', to: 'users#show'
+  resource :dashboard, except: [:new, :index, :create], controller: 'users'
+  # get '/dashboard/edit', to: 'users#edit'
+  # patch '/dashboard/edit', to: 'users#update'
+  # delete '/dashboard', to: 'users#destroy'
   get '/onboarding', to: 'login#edit'
   patch '/onboarding', to: 'login#update'
 

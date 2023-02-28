@@ -7,7 +7,7 @@ RSpec.describe 'user dashboard edit', type: :feature do
     it 'has a field to edit username', :vcr do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_id)
 
-      visit dashboard_edit_path
+      visit edit_dashboard_path
 
       expect(page).to have_field('username', with: 'pitzelalex')
       expect(page).to have_button 'Update Username'
@@ -24,7 +24,7 @@ RSpec.describe 'user dashboard edit', type: :feature do
     it 'has a button to delete account', :vcr do 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_id)
 
-      visit dashboard_edit_path
+      visit edit_dashboard_path
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_call_original
 
       click_button('Delete Account')

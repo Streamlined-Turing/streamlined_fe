@@ -40,16 +40,16 @@
                         }
                 },
                 {
-                "id": "140701",
+                "id": "3173903",
                 "type": "search_result",
                 "attributes": {
-                        "id": 140701,
-                        "title": "Bad Moms",
-                        "media_type": "movie",
-                        "release_year": 2016,
+                        "id": 3173903,
+                        "title": "Breaking Bad",
+                        "media_type": "tv_series",
+                        "release_year": 2008,
                         "tmdb_id": 376659,
-                        "tmdb_type": "movie",
-                        "poster": "https://cdn.watchmode.com/posters/0140701_poster_w185.jpg"
+                        "tmdb_type": "tv_series",
+                        "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"
                         }
                 },
                 {

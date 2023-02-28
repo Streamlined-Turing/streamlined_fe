@@ -7,7 +7,7 @@
       "title": "Breaking Bad",
       "audience_score": 9.3,
       "rating": "TV-MA",
-      "type": "tv_series",
+      "media_type": "tv_series",
       "description": 
       "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live. He becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost as he enters the dangerous world of drugs and crime.",
       "genres": ["Action"],
@@ -18,7 +18,8 @@
         "Netflix"
       ],
       "poster": "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg",
-      "trailer": "https://www.youtube.com/watch?v=5NpEA2yaWVQ"
+      "trailer": "https://www.youtube.com/watch?v=5NpEA2yaWVQ", 
+      "vote_average": 6.3
     }
   }
 }

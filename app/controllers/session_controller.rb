@@ -1,5 +1,7 @@
 class SessionController < ApplicationController
   skip_before_action :verify_authenticity_token
+  before_action :logged_in, only: :edit
+
   def index; end
 
   def create
@@ -14,8 +16,7 @@ class SessionController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     user = UserFacade.edit_user(current_user, params[:username])
@@ -30,6 +31,13 @@ class SessionController < ApplicationController
   end
 
   private
+
+  def logged_in
+    if current_user.nil?
+      flash[:alert] = 'Must be logged in to access the onboarding page'
+      redirect_to root_path
+    end
+  end
 
   def onboarded?
     @user.username != nil

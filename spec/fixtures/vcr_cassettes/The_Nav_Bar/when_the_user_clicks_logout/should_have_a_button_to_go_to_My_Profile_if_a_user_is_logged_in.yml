@@ -2,6 +2,42 @@
 http_interactions:
 - request:
     method: get
+    uri: http://localhost:5000/api/v1/trending_media
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f62e5d4ec38fd62a9256b121ae772224"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7947ec7f-78d0-47ad-9717-34f7efbd0efc
+      X-Runtime:
+      - '0.070668'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"852096","type":"trending_media","attributes":{"id":852096,"title":"We
+        Have a Ghost","poster_path":"/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg","media_type":"movie","vote_average":6.667}},{"id":"1077280","type":"trending_media","attributes":{"id":1077280,"title":"Die
+        Hart","poster_path":"/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg","media_type":"movie","vote_average":6.523}},{"id":"100088","type":"trending_media","attributes":{"id":100088,"title":null,"poster_path":"/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg","media_type":"tv","vote_average":8.824}}]}'
+  recorded_at: Mon, 27 Feb 2023 17:38:38 GMT
+- request:
+    method: get
     uri: http://localhost:5000/api/v1/users/1
     body:
       encoding: US-ASCII
@@ -21,18 +57,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7414934dda746c250495f7c2e95f1d49"
+      - W/"ac42289005006652c4f82a88ad5ffa4e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a130f4e4-3962-4fdf-9a47-14898800f9cd
+      - 536ab936-11e8-4f89-9f3a-a3c054265a7b
       X-Runtime:
-      - '0.008363'
+      - '0.002719'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"104505147435508023263","username":"new_username","email":"pitzelalex@gmail.com","name":"Alex
-        Pitzel","picture":"https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c"}}}'
-  recorded_at: Mon, 27 Feb 2023 00:39:10 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":null,"email":"j.king92@gmail.com","name":"Joe
+        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
+  recorded_at: Mon, 27 Feb 2023 17:38:38 GMT
 recorded_with: VCR 6.1.0

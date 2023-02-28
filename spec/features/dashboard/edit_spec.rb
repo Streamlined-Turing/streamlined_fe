@@ -21,6 +21,17 @@ RSpec.describe 'user dashboard edit', type: :feature do
       expect(page).to have_content('Username: new_username')
     end
 
-    it 'has a button to delete account'
+    it 'has a button to delete account', :vcr do 
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_id)
+
+      visit dashboard_edit_path
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_call_original
+save_and_open_page
+      click_button('Delete Account')
+
+      expect(current_path).to eq(root_path)
+      expect(page).to have_css '.g_id_signin'
+      expect(page).to have_content('Account successfully deleted')
+    end
   end
 end

@@ -1,6 +1,11 @@
-<% if current_user %>
-  <%= button_to "My Profile", dashboard_path, method: :get %>
-  <%= button_to 'Logout', logout_path, method: :get %>
+<ul class="nav nav-pills">
+  <% if current_user %>
+  <li class="active">
+    <%= button_to "My Profile", dashboard_path, class: "btn btn-default", method: :get %>
+  </li>
+  <li class="active">
+    <%= button_to 'Logout', logout_path, class: "btn btn-default", method: :get %>
+  </li>
 <% else %>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <div id="g_id_onload"
@@ -18,5 +23,9 @@
        data-size="large"
        data-logo_alignment="left">
   </div>
-<% end %>
+  <% end %>
+  <li class="active navbar-right">
+    <%= render partial: 'shared/search' %>
+  </li>
+</ul>
 

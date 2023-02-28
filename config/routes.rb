@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'landing#index'
 
-  get '/logout', to: 'login#destroy'
-  post '/login', to: 'login#create'
+  post '/login', to: 'session#create'
+  get '/onboarding', to: 'session#edit'
+  patch '/onboarding', to: 'session#update'
+  delete '/logout', to: 'session#destroy'
 
   get '/search', to: 'search#index'
-  get '/dashboard', to: 'users#show'
-  get '/dashboard/edit', to: 'users#edit'
-  patch '/dashboard/edit', to: 'users#update'
-  get '/onboarding', to: 'login#edit'
-  patch '/onboarding', to: 'login#update'
+
+  resource :dashboard, except: [:new, :index, :create], controller: 'users'
 
   resources :media, only: [:show]
 end

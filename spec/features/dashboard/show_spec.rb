@@ -33,7 +33,7 @@ RSpec.describe 'user dashboard', type: :feature do
 
       click_button 'Edit Profile'
 
-      expect(current_path).to eq dashboard_edit_path
+      expect(current_path).to eq edit_dashboard_path
     end
   end
 end

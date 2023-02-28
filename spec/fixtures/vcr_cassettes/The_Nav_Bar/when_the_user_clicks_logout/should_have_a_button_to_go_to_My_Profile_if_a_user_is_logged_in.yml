@@ -21,21 +21,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e33bd2ceec38c2a20dfe63ebbea584e9"
+      - W/"f62e5d4ec38fd62a9256b121ae772224"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9002d46e-623d-4e8e-a135-336a865e91ba
+      - 7947ec7f-78d0-47ad-9717-34f7efbd0efc
       X-Runtime:
-      - '0.130793'
+      - '0.070668'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[{"id":"852096","type":"trending_media","attributes":{"id":852096,"title":"We
-        Have a Ghost","poster_path":"/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg","media_type":"movie","vote_average":6.613}},{"id":"100088","type":"trending_media","attributes":{"id":100088,"title":null,"poster_path":"/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg","media_type":"tv","vote_average":8.817}},{"id":"1077280","type":"trending_media","attributes":{"id":1077280,"title":"Die
-        Hart","poster_path":"/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg","media_type":"movie","vote_average":6.479}}]}'
-  recorded_at: Mon, 27 Feb 2023 23:40:38 GMT
+        Have a Ghost","poster_path":"/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg","media_type":"movie","vote_average":6.667}},{"id":"1077280","type":"trending_media","attributes":{"id":1077280,"title":"Die
+        Hart","poster_path":"/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg","media_type":"movie","vote_average":6.523}},{"id":"100088","type":"trending_media","attributes":{"id":100088,"title":null,"poster_path":"/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg","media_type":"tv","vote_average":8.824}}]}'
+  recorded_at: Mon, 27 Feb 2023 17:38:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -57,18 +57,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"835e16a8ca996b40eae4f674d593429a"
+      - W/"ac42289005006652c4f82a88ad5ffa4e"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 492d4308-a83a-4d45-9dc4-e6fbb1104ba8
+      - 536ab936-11e8-4f89-9f3a-a3c054265a7b
       X-Runtime:
-      - '0.044403'
+      - '0.002719'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"105041345352080471447","username":"pitzelalex","email":"kerynn.davis@gmail.com","name":"Kerynn
-        Davis","picture":"https://lh3.googleusercontent.com/a/AGNmyxY5UK6Lt_U-V4uA3JuRjjmNBwUxk3usxmjmO3wP=s96-c"}}}'
-  recorded_at: Mon, 27 Feb 2023 23:40:38 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":null,"email":"j.king92@gmail.com","name":"Joe
+        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
+  recorded_at: Mon, 27 Feb 2023 17:38:38 GMT
 recorded_with: VCR 6.1.0

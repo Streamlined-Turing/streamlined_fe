@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'landing#index'
 
-  post '/auth/google_oauth2/callback', to: 'session#create'
   post '/login', to: 'session#create'
   get '/onboarding', to: 'session#edit'
   patch '/onboarding', to: 'session#update'

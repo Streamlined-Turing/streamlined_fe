@@ -42,7 +42,7 @@ RSpec.describe 'user dashboard', type: :feature do
   describe 'as a visitor' do 
     it 'does not allow access to the dashboard', :vcr do 
       stub_request(:get, "http://localhost:5000/api/v1/trending_media")
-      .to_return(status: 200, body: File.read('./spec/fixtures/trending_media_response.json'), headers: {})
+        .to_return(status: 200, body: File.read('./spec/fixtures/trending_media_response.json'), headers: {})
 
       visit dashboard_path
 

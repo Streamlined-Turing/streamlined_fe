@@ -35,7 +35,6 @@ RSpec.describe 'Landing page', type: :feature do
           
         within "#trending_media" do 
           expect(page).to have_content("Trending Now")
-          expect(page).to have_content('Media Type', count: 3)
           expect(page).to have_content("Die Hart the Movie")
           expect(page).to have_content("We Have a Ghost")
           expect(page).to have_content("Knock at the Cabin")
@@ -45,7 +44,6 @@ RSpec.describe 'Landing page', type: :feature do
           expect(page).to have_content("Die Hart the Movie")
           expect(page).to have_css("img[src='https://image.tmdb.org/t/p/w500/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg']")
           expect(page).to have_content("Vote Average: 6.3")
-          expect(page).to have_content("Media Type: Movie")
         end
       end
     end

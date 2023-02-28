@@ -21,6 +21,11 @@ class UsersController < ApplicationController
   private
 
   def fetch_user
-    @user = UserFacade.get(current_user)
+    if current_user.nil?
+      flash[:alert] = 'Must be logged in to access the dashboard'
+      redirect_to root_path
+    else
+      @user = UserFacade.get(current_user)
+    end 
   end
 end

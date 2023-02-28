@@ -22,4 +22,16 @@ RSpec.describe 'Onboarding Page', type: :feature do
       expect(page).to have_content('pitzelalex')
     end
   end
+
+  describe 'as a visitor' do 
+    it 'cannot access the onboarding page', :vcr do
+      stub_request(:get, "http://localhost:5000/api/v1/trending_media")
+        .to_return(status: 200, body: File.read('./spec/fixtures/trending_media_response.json'), headers: {})
+
+      visit onboarding_path
+
+      expect(current_path).to eq root_path
+      expect(page).to have_content("Must be logged in to access the onboarding page")
+    end
+  end
 end

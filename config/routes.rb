@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root 'landing#index'
 
   get '/logout', to: 'login#destroy'
-  post '/auth/google_oauth2/callback', to: 'login#create'
   post '/login', to: 'login#create'
 
   get '/search', to: 'search#index'

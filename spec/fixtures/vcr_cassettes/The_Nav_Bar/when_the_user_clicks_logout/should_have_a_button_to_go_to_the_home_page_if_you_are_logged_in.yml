@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"830e47f0c173ab6b3968376f40bfd0a9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 99237720-5e11-441f-aed6-ce0631b3869a
+      X-Runtime:
+      - '0.004418'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"","email":"krporter22@gmail.com","name":"Kelsie
+        Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
+  recorded_at: Tue, 28 Feb 2023 23:52:37 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trending_media
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b7f91dc62f77df69201e14d4f2d8b339"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dc2e886d-01cc-4de7-bb1a-5c99d880fba8
+      X-Runtime:
+      - '0.152913'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"937278","type":"trending_media","attributes":{"id":937278,"title":"A
+        Man Called Otto","poster_path":"/130H1gap9lFfiTF9iDrqNIkFvC9.jpg","media_type":"movie","vote_average":7.294}},{"id":"852096","type":"trending_media","attributes":{"id":852096,"title":"We
+        Have a Ghost","poster_path":"/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg","media_type":"movie","vote_average":6.672}},{"id":"906221","type":"trending_media","attributes":{"id":906221,"title":"Magic
+        Mike''s Last Dance","poster_path":"/9a9pyJZRhUWUSBT8BQqWihtqbI8.jpg","media_type":"movie","vote_average":6.2}}]}'
+  recorded_at: Tue, 28 Feb 2023 23:52:37 GMT
+recorded_with: VCR 6.1.0

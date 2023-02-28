@@ -1,4 +1,7 @@
 <ul class="nav nav-pills">
+    <li class="active">
+    <%= button_to "Home", root_path, class: "btn btn-default", method: :get %>
+  </li>
   <% if current_user %>
   <li class="active">
     <%= button_to "My Profile", dashboard_path, class: "btn btn-default", method: :get %>

@@ -16,7 +16,7 @@ RSpec.describe MediaService do
       expect(response[:data][:attributes][:title]).to be_a String
       expect(response[:data][:attributes][:audience_score]).to be_a Float
       expect(response[:data][:attributes][:rating]).to be_a String
-      expect(response[:data][:attributes][:type]).to be_a String
+      expect(response[:data][:attributes][:media_type]).to be_a String
       expect(response[:data][:attributes][:description]).to be_a String
       expect(response[:data][:attributes][:genres]).to be_a Array
       expect(response[:data][:attributes][:release_year]).to be_a Integer

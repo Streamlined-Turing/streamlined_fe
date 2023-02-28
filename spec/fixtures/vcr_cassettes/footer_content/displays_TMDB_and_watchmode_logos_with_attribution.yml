@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trending_media
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d2e7bdc7d3452e62a1fffb938ac215ed"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 27101e77-f6a2-49c8-8948-c317072d0826
+      X-Runtime:
+      - '0.130154'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"852096","type":"trending_media","attributes":{"id":852096,"title":"We
+        Have a Ghost","poster_path":"/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg","media_type":"movie","vote_average":6.651}},{"id":"100088","type":"trending_media","attributes":{"id":100088,"title":null,"poster_path":"/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg","media_type":"tv","vote_average":8.815}},{"id":"1077280","type":"trending_media","attributes":{"id":1077280,"title":"Die
+        Hart","poster_path":"/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg","media_type":"movie","vote_average":6.673}}]}'
+  recorded_at: Tue, 28 Feb 2023 14:59:09 GMT
+recorded_with: VCR 6.1.0

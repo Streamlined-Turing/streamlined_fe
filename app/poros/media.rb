@@ -2,6 +2,7 @@ class Media
   attr_reader :id,
               :title,
               :poster,
+              :poster_path,
               :description,
               :runtime,
               :type,
@@ -17,7 +18,8 @@ class Media
   def initialize(data)
     @id = data[:id]
     @title = data[:attributes][:title]
-    @poster = data[:attributes][:poster] || data[:attributes][:poster_path]
+    @poster = data[:attributes][:poster]
+    @poster_path = data[:attributes][:poster_path]
     @description = data[:attributes][:description]
     @genre = data[:attributes][:genres]
     @runtime = data[:attributes][:runtime]

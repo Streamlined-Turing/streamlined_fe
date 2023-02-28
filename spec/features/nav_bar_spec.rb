@@ -25,5 +25,38 @@ RSpec.describe "The Nav Bar", type: :feature do
 
       expect(current_path).to eq dashboard_path
     end
+
+    it 'should have a button to go to the home page if you are logged in', :vcr do 
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+      visit dashboard_path
+
+      click_button 'Home'
+
+      expect(current_path).to eq root_path
+    end
+
+    it 'should have a button to go to the home page for a visitor', :vcr do 
+      visit search_path
+
+      click_button 'Home'
+
+      expect(current_path).to eq root_path
+    end
+
+    it 'should have a home button for both users and visitors', :vcr do 
+      visit root_path
+
+      click_button 'Home'
+
+      expect(current_path).to eq root_path
+
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+
+      visit root_path
+
+      click_button 'Home'
+
+      expect(current_path).to eq root_path
+    end
   end
 end

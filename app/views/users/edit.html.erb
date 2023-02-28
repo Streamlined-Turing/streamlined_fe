@@ -4,3 +4,7 @@
 
   <%= f.submit 'Update Username' %>
 <% end %>
+<br>
+<p><%= button_to 'Delete Account', dashboard_path, method: :delete, local: true  %>
+Caution, this action is irreversible.
+</p>

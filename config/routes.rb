@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#show'
   get '/dashboard/edit', to: 'users#edit'
   patch '/dashboard/edit', to: 'users#update'
+  delete '/dashboard', to: 'users#destroy'
   get '/onboarding', to: 'login#edit'
   patch '/onboarding', to: 'login#update'
 

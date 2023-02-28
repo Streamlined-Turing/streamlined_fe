@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media?q=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2f1453b6-bc52-4e16-a343-6ab96fb66d7b
+      X-Runtime:
+      - '0.001417'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Tue, 28 Feb 2023 23:52:37 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trending_media
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b7f91dc62f77df69201e14d4f2d8b339"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d1bfe233-5127-4cf6-9c53-d542041f0730
+      X-Runtime:
+      - '0.104568'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"937278","type":"trending_media","attributes":{"id":937278,"title":"A
+        Man Called Otto","poster_path":"/130H1gap9lFfiTF9iDrqNIkFvC9.jpg","media_type":"movie","vote_average":7.294}},{"id":"852096","type":"trending_media","attributes":{"id":852096,"title":"We
+        Have a Ghost","poster_path":"/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg","media_type":"movie","vote_average":6.672}},{"id":"906221","type":"trending_media","attributes":{"id":906221,"title":"Magic
+        Mike''s Last Dance","poster_path":"/9a9pyJZRhUWUSBT8BQqWihtqbI8.jpg","media_type":"movie","vote_average":6.2}}]}'
+  recorded_at: Tue, 28 Feb 2023 23:52:37 GMT
+recorded_with: VCR 6.1.0

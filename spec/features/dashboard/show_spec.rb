@@ -21,7 +21,9 @@ RSpec.describe 'user dashboard', type: :feature do
       expect(page).to have_content(user['username'])
       expect(page).to have_content(user['email'])
       expect(page).to have_content(user['name'])
-      expect(page.find('img')[:src]).to eq user['picture']
+      within '.profile_pic' do
+        expect(page.find('img')[:src]).to eq user['picture']
+      end
     end
 
     it 'has a button to edit my profile', :vcr do

@@ -21,6 +21,12 @@ class UserService
     parse(response)
   end
 
+  def self.delete(user_id)
+    response = conn.delete("/api/v1/users/#{user_id}")
+    # TODO expect response to be 204 = success, 404= failure
+    
+  end
+
   def self.conn
     Faraday.new(service_params)
   end

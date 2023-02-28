@@ -11,6 +11,13 @@ class UsersController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def destroy
+    UserFacade.delete(current_user)
+    session[:user_id] = nil
+    redirect_to root_path
+    flash[:alert] = 'Account successfully deleted'
+  end
+
   private
 
   def fetch_user

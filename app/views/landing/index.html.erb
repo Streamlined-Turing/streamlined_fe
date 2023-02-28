@@ -1,26 +1,28 @@
 
-
-
 <section id="trending_media">
   <center><h2>Trending Now</h2></center>
   <div class="container-fluid">
-  <% @trending_media.in_groups_of(3).each do |group| %>
-  <div class="row">
-  <% group.each do |media| %>
-  <div class="col-lg-4">
-    <div id="media_<%= media.id %>">
-      <h3><%= media.title %></h3>
-      <img src=<%="https://image.tmdb.org/t/p/w500#{media.poster}"%>>
-      <p>Vote Average: <%= media.round_vote %></p>
+    <% @trending_media.in_groups_of(3).each do |group| %>
+    <div class="row">
+      <% group.each do |media| %>
+        <div class="col-lg-4">
+        <div id="media_<%= media.id %>">
+          <h3><%= media.title %></h3>
+          <img src=<%="https://image.tmdb.org/t/p/w500#{media.poster}"%>>
+          <div class="lead">
+            <p>Vote Average: <%= media.round_vote %></p>
+          </div>
+        </div>
+        </div>
+      <% end %>
     </div>
-    </div>
-    <% end %>
-  </div>
-  <% end %>
+      <% end %>
   </div>
 </section>
 
 <div id="about_us">
   <center><h2>Who Are We?</h2></center>
-  <p>StreamLined is a tool to track movies and TV shows a user would like to watch, are currently watching, and also track media a user has watched. Once a user has created a StreamLined account, they will have access to a dashboard with three default lists to categorize their media: 'Currently Watching', 'Want to Watch', and 'Watched'. The user will be able to search for movies and TV shows by title, view the media details, and save to the appropriate list in their dashboard. Once a user has finished watching their show or movie, the user will be able to provide reviews and ratings. Users of this app will be to set their streaming services and search for their desired media based on the streaming service available to the user.</p>
+  <div class="lead">
+    <p>StreamLined is a tool to track movies and TV shows a user would like to watch, are currently watching, and also track media a user has watched. Once a user has created a StreamLined account, they will have access to a dashboard with three default lists to categorize their media: 'Currently Watching', 'Want to Watch', and 'Watched'. The user will be able to search for movies and TV shows by title, view the media details, and save to the appropriate list in their dashboard. Once a user has finished watching their show or movie, the user will be able to provide reviews and ratings. Users of this app will be to set their streaming services and search for their desired media based on the streaming service available to the user.</p>
+  </div>
 </div>

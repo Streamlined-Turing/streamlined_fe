@@ -1,6 +1,6 @@
 <% if current_user %>
   <%= render partial: 'shared/profile' %>
-  <%= button_to 'Logout', logout_path, method: :get %>
+  <%= button_to 'Logout', logout_path, method: :delete %>
 <% else %>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <div id="g_id_onload"

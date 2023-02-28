@@ -16,7 +16,17 @@
        <%= render partial: 'shared/top_section.html.erb' %>
       </nav>
         <% flash.each do |type, msg| %>
-        <%= msg %>
+        <% if type == :alert %> 
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong><%= msg %></strong>
+        </div>
+        <% else %>
+        <div class="alert alert-dismissible alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <strong><%= msg %></strong>
+        </div>
+        <% end %>
       <% end %>
       <%= yield %>
     </div>

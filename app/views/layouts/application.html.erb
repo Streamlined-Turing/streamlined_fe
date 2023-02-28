@@ -7,11 +7,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
     <nav>
-      <%= render partial: 'shared/nav_bar.html.erb' %>
+      <%= render partial: 'shared/top_section.html.erb' %>
     </nav>
     <% flash.each do |type, msg| %>
       <%= msg %>

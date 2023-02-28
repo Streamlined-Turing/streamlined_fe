@@ -73,4 +73,3 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
-OmniAuth.config.silence_get_warning = true

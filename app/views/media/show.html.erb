@@ -1,15 +1,41 @@
-<%= @media.title %>
-<div class='poster'>
-  <%= image_tag @media.poster %>
+<h2><center><%= @media.title %></center></h2>
+
+<div class="row">
+  <% if @media.poster %>
+    <div class='poster col-md-4'>
+      <%= image_tag(@media.poster, height:'100%', width:'100%') %>
+    </div>
+  <% end %>
+  <div class='col-md-8'>
+    <h4>Synopsis: </h4><%= @media.description %>
+    <br>
+    Audience Rating: <%= @media.audience_score %>
+    <br>
+    <% if @media.genre != [] %>
+      Genres: <%= @media.genres %>
+      <br>
+    <% end %>
+    Runtime: <%= @media.runtime %> minutes
+    <br>
+    Release year: <%= @media.release_year %>
+    <br>
+    <% if @media.rating %>
+      Rating: <%= @media.rating %>
+      <br>
+      <% end %>
+    <br>
+    <% if @media.sub_services.present? %>
+      Available for Streaming on: <%= @media.sub_services %>
+    <% else %>
+      Not currently available on any subscription streaming services
+    <% end %>
+    <br>
+    Media Type: <%= @media.formatted_type %>
+    <br>
+    <% if @media.trailer %>
+      <h5>Trailer</h5>
+      <iframe width="600" height="336" src='https://www.youtube.com/embed/<%= @media.trailer_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen>
+      </iframe>
+    <% end %>
+  </div>
 </div>
-<%= @media.description %>
-<%= @media.audience_score %>
-<%= @media.genres %>
-<%= @media.runtime %>
-<%= @media.type %>
-<%= @media.release_year %>
-<%= @media.rating %>
-<%= @media.trailer %>
-<%= @media.language %>
-<%= @media.sub_services %>
-<%= link_to 'Link to Trailer', @media.trailer %>

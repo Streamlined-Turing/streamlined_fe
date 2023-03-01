@@ -9,7 +9,7 @@ RSpec.describe 'user dashboard edit', type: :feature do
 
       visit edit_dashboard_path
 
-      expect(page).to have_field('username', with: 'pitzelalex')
+      expect(page).to have_field('username', with: 'kerynn')
       expect(page).to have_button 'Update Username'
 
       fill_in 'username', with: 'new_username'

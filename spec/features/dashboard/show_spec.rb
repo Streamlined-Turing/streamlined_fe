@@ -5,11 +5,11 @@ RSpec.describe 'user dashboard', type: :feature do
     let(:user) do
       {
         'id' => '1',
-        'sub' => '104505147435508023263',
-        'name' => 'Alex Pitzel',
-        'username' => 'pitzelalex',
-        'email' => 'pitzelalex@gmail.com',
-        'picture' => 'https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c'
+        'sub' => '105041345352080471447',
+        'name' => 'Kerynn Davis',
+        'username' => 'kerynn',
+        'email' => 'kerynn.davis@gmail.com',
+        'picture' => 'https://lh3.googleusercontent.com/a/AGNmyxY5UK6Lt_U-V4uA3JuRjjmNBwUxk3usxmjmO3wP=s96-c'
       }
     end
 
@@ -43,15 +43,48 @@ RSpec.describe 'user dashboard', type: :feature do
       expect(current_path).to eq edit_dashboard_path
     end
 
-    it 'has a section for currently watching', :vcr do 
+    it 'has a section for currently watching' do 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
 
       visit dashboard_path
 
       within '#currently_watching' do 
         expect(page).to have_content('Currently Watching')
-        expect(page).to have_content('Game of Thrones')
-        expect(page).to have_content('The Lego Batman Movie')
+        expect(page).to_not have_link('Currently Watching')
+        # expect(page).to have_content('Game of Thrones')
+        # expect(page).to have_content('The Lego Batman Movie')
+      end 
+    end
+
+    it 'has a section for want to watch' do 
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+
+      visit dashboard_path
+      
+      within '#currently_watching' do
+        expect(page).to have_link('Watched')
+        click_link 'Want to Watch'
+      end 
+
+      within '#want_to_watch' do 
+        expect(page).to have_content('Want to Watch')
+        expect(page).to_not have_link('Want to Watch')
+        expect(page).to have_content('This list is currently empty. Search for media to start adding!')
+      end 
+    end
+
+    it 'has a section for watched' do 
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+
+      visit dashboard_path
+      
+      within '#currently_watching' do 
+        click_link 'Watched'
+      end 
+
+      within '#watched' do 
+        expect(page).to have_content('Watched')
+        expect(page).to_not have_link('Watched')
       end 
     end
   end

@@ -13,6 +13,11 @@ RSpec.describe 'user dashboard', type: :feature do
       }
     end
 
+    before :each do 
+      stub_request(:get, "http://localhost:5000/api/v1/users/1/lists?list=Currently Watching}")
+        .to_return(status: 200, body: File.read('./spec/fixtures/user_media_list_response.json'), headers: {})
+    end
+
     it 'displays details about my account', :vcr do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
 
@@ -36,6 +41,18 @@ RSpec.describe 'user dashboard', type: :feature do
       click_button 'Edit Profile'
 
       expect(current_path).to eq edit_dashboard_path
+    end
+
+    it 'has a section for currently watching', :vcr do 
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+
+      visit dashboard_path
+
+      within '#currently_watching' do 
+        expect(page).to have_content('Currently Watching')
+        expect(page).to have_content('Game of Thrones')
+        expect(page).to have_content('The Lego Batman Movie')
+      end 
     end
   end
 

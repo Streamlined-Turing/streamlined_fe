@@ -1,0 +1,54 @@
+{
+  "data": [
+      {
+          "id": "345534",
+          "type": "media",
+          "attributes": {
+              "id": 345534,
+              "title": "Game of Thrones",
+              "audience_score": 8.8,
+              "rating": "TV-MA",
+              "media_type": "tv_series",
+              "description": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+              "genres": [],
+              "release_year": 2011,
+              "runtime": 60,
+              "language": "en",
+              "sub_services": [
+                  "HBO MAX",
+                  "Spectrum On Demand",
+                  "HBO (Via Hulu)"
+              ],
+              "poster": "https://cdn.watchmode.com/posters/0345534_poster_w185.jpg",
+              "imdb_id": "tt0944947",
+              "tmdb_id": 1399,
+              "tmdb_type": "tv",
+              "trailer": "https://www.youtube.com/watch?v=BpJYNVhGf1s"
+          }
+      },
+      {
+          "id": "1402919",
+          "type": "media",
+          "attributes": {
+              "id": 1402919,
+              "title": "The Lego Batman Movie",
+              "audience_score": 7.6,
+              "rating": "PG",
+              "media_type": "movie",
+              "description": "A cooler-than-ever Bruce Wayne must deal with the usual suspects as they plan to rule Gotham City, while discovering that he has accidentally adopted a teenage orphan who wishes to become his sidekick.",
+              "genres": [],
+              "release_year": 2017,
+              "runtime": 104,
+              "language": "en",
+              "sub_services": [
+                  "HBO MAX"
+              ],
+              "poster": "https://cdn.watchmode.com/posters/01402919_poster_w185.jpg",
+              "imdb_id": "tt4116284",
+              "tmdb_id": 324849,
+              "tmdb_type": "movie",
+              "trailer": "https://www.youtube.com/watch?v=rGQUKzSDhrg"
+          }
+      }
+  ]
+}

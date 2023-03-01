@@ -9,7 +9,14 @@
 <%= @media.type %>
 <%= @media.release_year %>
 <%= @media.rating %>
-<%= @media.trailer %>
 <%= @media.language %>
 <%= @media.sub_services %>
 <%= link_to 'Link to Trailer', @media.trailer %>
+
+<div id="add_to_list">
+  <% if @user %>
+    FORM
+  <% else %>
+    Login/Register to add this to a list.
+  <% end %>
+</div>

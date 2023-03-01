@@ -7,7 +7,7 @@
     <%= button_to "My Profile", dashboard_path, class: "btn btn-default", method: :get %>
   </li>
   <li class="active">
-    <%= button_to 'Logout', logout_path, class: "btn btn-default", method: :get %>
+    <%= button_to 'Logout', logout_path, class: "btn btn-default", method: :delete %>
   </li>
 <% else %>
   <script src="https://accounts.google.com/gsi/client" async defer></script>

@@ -5,7 +5,7 @@ class MediaFacade
   end
 
   def self.list_results(current_user, list_name)
-    binding.pry
+  
     list_data = MediaService.list_search(current_user, list_name)
     list_data[:data].map do |list_result|
       Media.new(list_result)

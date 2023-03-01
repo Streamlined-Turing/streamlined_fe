@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 93d689ce-9c28-4e20-a7a4-50a2f2c08b23
+      - 33abc8d4-90e2-4132-a209-ec92593cca91
       X-Runtime:
-      - '0.003211'
+      - '0.002432'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"sub":"105041345352080471447","username":"kerynn","email":"kerynn.davis@gmail.com","name":"Kerynn
         Davis","picture":"https://lh3.googleusercontent.com/a/AGNmyxY5UK6Lt_U-V4uA3JuRjjmNBwUxk3usxmjmO3wP=s96-c"}}}'
-  recorded_at: Wed, 01 Mar 2023 18:37:34 GMT
+  recorded_at: Wed, 01 Mar 2023 17:39:29 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
@@ -60,13 +60,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - '08cd36fd-11cd-4f83-a1a0-071c57316f3d'
+      - af2abbdb-4d70-4f41-8701-ef178ba43286
       X-Runtime:
-      - '0.004262'
+      - '0.004556'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 01 Mar 2023 18:37:34 GMT
+  recorded_at: Wed, 01 Mar 2023 17:39:29 GMT
 recorded_with: VCR 6.1.0

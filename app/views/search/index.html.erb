@@ -3,7 +3,7 @@
 <% @media_results.each do |media| %>
   <div id="media_<%= media.id %>">
     <h3><%= link_to media.title, media_path(media.id) %></h3>
-    <p><img src=<%= media.poster %>></p>
+    <p><%= link_to image_tag(media.poster), media_path(media.id)  %></p>
     <p>Media Type: <%= media.formatted_type %></p>
     <p>Release Year: <%= media.release_year %></p>
   </div>

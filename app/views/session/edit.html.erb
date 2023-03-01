@@ -1,8 +1,18 @@
-<h2>Welcome to Streamlined</h2>
+<h2><center>Welcome to Streamlined</h2></center>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <%= form_with url: onboarding_path, method: :patch, local: true do |f| %>
+        <%= f.label :username, 'Please enter a username', class:"control-label" %>
+        <div class="input-group">
+          <%= f.text_field :username, {class:"form-control", width:1} %>
 
-<%= form_with url: onboarding_path, method: :patch, local: true do |f| %>
-  <%= f.label :username, 'Please enter a username' %>
-  <%= f.text_field :username %>
-
-  <%= f.submit %>
-<% end %>
+          <span class="input-group-btn">
+            <%= f.submit :Submit, class: "btn btn-default" %>
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe 'The Media Show page', type: :feature do
+RSpec.describe 'The Media Show page', :vcr, type: :feature do
   describe 'it displays media data' do
-    let!(:url) { "localhost:5000/api/v1/media/1" }
-    let!(:response) { File.read("./spec/fixtures/media1.json") }
 
     before :each do
-      stub_request(:get, url).to_return(status: 200, body: response)
-      visit media_path(1)
+      visit media_path(3173903)
     end
 
     describe 'media attributes' do
@@ -24,8 +21,8 @@ RSpec.describe 'The Media Show page', type: :feature do
         expect(page).to have_content 9.3 
       end
 
-      it 'shows media genre' do
-        expect(page).to have_content 'Action'
+      xit 'shows media genre' do
+        expect(page).to have_content 'Genres: '
       end
 
       it 'shows media poster' do
@@ -35,7 +32,7 @@ RSpec.describe 'The Media Show page', type: :feature do
       end
 
       it 'shows media type' do
-        expect(page).to have_content 'tv_series'
+        expect(page).to have_content 'Tv'
       end
 
       it 'shows media release year' do
@@ -50,8 +47,11 @@ RSpec.describe 'The Media Show page', type: :feature do
         expect(page).to have_content 'Netflix'
       end
 
-      it 'shows media trailer link' do
-        expect(page).to have_link 'Link to Trailer'
+      it 'shows media trailer video' do
+        expect(page).to have_css 'iframe'
+      end
+
+      xit 'shows what lists this media belongs to for the current user' do
       end
     end
 

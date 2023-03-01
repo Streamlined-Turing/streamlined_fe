@@ -1,6 +1,6 @@
 class MediaFacade 
-  def self.media(id)
-    media_data = MediaService.media(id)[:data]
+  def self.media(id, user_id = nil)
+    media_data = MediaService.media(id, user_id)[:data]
     Media.new(media_data)
   end
 

@@ -2,7 +2,7 @@ class MediaController < ApplicationController
   before_action :logged_in, only: :show
   
   def show
-    @media = MediaFacade.media(params[:id])
+    @media = MediaFacade.media(params[:id], current_user)
   end
 
   private 

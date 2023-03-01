@@ -2,11 +2,7 @@ require 'rails_helper'
 
 RSpec.describe MediaService do
   describe '#media' do
-    it 'returns details about a piece of media' do
-      stub_request(:get, "http://localhost:5000/api/v1/media/3173903")
-        .to_return(status: 200,
-                   body: File.read('spec/fixtures/media1.json'),
-                   headers: {})
+    it 'returns details about a piece of media', :vcr do
 
       response = MediaService.media(3173903)
 
@@ -25,6 +21,7 @@ RSpec.describe MediaService do
       expect(response[:data][:attributes][:sub_services]).to be_a Array
       expect(response[:data][:attributes][:poster]).to be_a String
       expect(response[:data][:attributes][:trailer]).to be_a String
+      expect(response[:data][:attributes][:user_lists]).to be_a String
     end
   end
 

@@ -1,7 +1,9 @@
 class MediaService
 
-  def self.media(id)
-    parse(conn.get("/api/v1/media/#{id}"))
+  def self.media(id, user_id = nil)
+    parse(conn.get("/api/v1/media/#{id}") do |r|
+      r.params = {user_id: user_id}
+    end)
   end
 
   def self.trending_media_search 

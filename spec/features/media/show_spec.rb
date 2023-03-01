@@ -78,13 +78,13 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
 
       it 'has an option to add media to lists', :vcr do   
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
-      
-        visit media_path(1)
+
+        visit media_path(3173903)
 
         within '#add_to_list' do
           expect(page).to have_content('FORM')
         end
-      end 
+      end
     end
   end
 end

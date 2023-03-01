@@ -25,16 +25,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 75e12a03-0850-4bd7-a218-82c4454b22d6
+      - 5122696d-719d-46b2-b138-6362046ad04f
       X-Runtime:
-      - '0.005816'
+      - '0.080518'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"sub":"104505147435508023263","username":"pitzelalex","email":"pitzelalex@gmail.com","name":"Alex
         Pitzel","picture":"https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c"}}}'
-  recorded_at: Wed, 01 Mar 2023 21:36:59 GMT
+  recorded_at: Wed, 01 Mar 2023 21:31:51 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
@@ -60,18 +60,18 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a8b386a3-4e4c-479b-8c13-deba9fc93a56
+      - 1d0b1353-9f24-4c5a-b4ff-ab2c5a9131cf
       X-Runtime:
-      - '0.018848'
+      - '0.039035'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":[]}'
-  recorded_at: Wed, 01 Mar 2023 21:36:59 GMT
+  recorded_at: Wed, 01 Mar 2023 21:31:51 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/trending_media
+    uri: http://localhost:5000/api/v1/users/1
     body:
       encoding: US-ASCII
       string: ''
@@ -90,20 +90,52 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ec0c850b05bf2839e153ed784eabab8d"
+      - W/"a0ff839f59953fb7d3706cc989b233a1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 452f9ba4-66d5-453a-9445-3bdcdfae91cb
+      - a3354679-846d-4252-9488-8460018fb800
       X-Runtime:
-      - '0.092766'
+      - '0.002149'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"937278","type":"trending_media","attributes":{"id":937278,"title":"A
-        Man Called Otto","poster_path":"/130H1gap9lFfiTF9iDrqNIkFvC9.jpg","media_type":"movie","vote_average":7.514}},{"id":"82856","type":"trending_media","attributes":{"id":82856,"title":"The
-        Mandalorian","poster_path":"/x4b89IkzxfGnA26coS5nRpkEzPo.jpg","media_type":"tv","vote_average":8.5}},{"id":"906221","type":"trending_media","attributes":{"id":906221,"title":"Magic
-        Mike''s Last Dance","poster_path":"/9a9pyJZRhUWUSBT8BQqWihtqbI8.jpg","media_type":"movie","vote_average":6.67}}]}'
-  recorded_at: Wed, 01 Mar 2023 21:36:59 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"104505147435508023263","username":"pitzelalex","email":"pitzelalex@gmail.com","name":"Alex
+        Pitzel","picture":"https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c"}}}'
+  recorded_at: Wed, 01 Mar 2023 21:31:51 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Want%20to%20Watch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2256896b-ec37-49e2-9c4f-8516e237c2fb
+      X-Runtime:
+      - '0.008809'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 01 Mar 2023 21:31:51 GMT
 recorded_with: VCR 6.1.0

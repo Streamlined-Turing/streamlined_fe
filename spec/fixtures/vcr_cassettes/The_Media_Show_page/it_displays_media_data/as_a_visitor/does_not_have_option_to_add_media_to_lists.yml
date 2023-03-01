@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/3173903?user_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4e3872dca8671a76d55731c380a0de67"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2fcb00ff-cdf4-4d93-9c36-63f8467c22c9
+      X-Runtime:
+      - '0.345503'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3173903","type":"media","attributes":{"id":3173903,"title":"Breaking
+        Bad","audience_score":9.3,"rating":"TV-MA","media_type":"tv_series","description":"When
+        Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III
+        cancer and given a prognosis of only two years left to live. He becomes filled
+        with a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
+  recorded_at: Wed, 01 Mar 2023 21:35:15 GMT
+recorded_with: VCR 6.1.0

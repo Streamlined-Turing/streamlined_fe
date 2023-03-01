@@ -1,7 +1,16 @@
 class UsersController < ApplicationController
   before_action :fetch_user, only: %i[show edit]
 
-  def show; end
+  def show
+    if params[:list] == 'Want to Watch'
+      
+    elsif params[:list] == 'Watched'
+
+    else 
+      params[:list] = 'Currently Watching'
+      @lists = MediaFacade.list_results(current_user, params[:list])
+    end
+  end
 
   def edit; end
 

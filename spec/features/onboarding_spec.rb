@@ -14,12 +14,12 @@ RSpec.describe 'Onboarding Page', type: :feature do
       expect(page).to have_content('Please enter a username')
       expect(page).to have_field 'username'
 
-      fill_in 'username', with: 'pitzelalex'
+      fill_in 'username', with: 'kerynn'
 
       click_button 'Save'
 
       expect(current_path).to eq dashboard_path
-      expect(page).to have_content('pitzelalex')
+      expect(page).to have_content('kerynn')
     end
   end
 

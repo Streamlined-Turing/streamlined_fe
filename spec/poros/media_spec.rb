@@ -38,4 +38,10 @@ RSpec.describe Media do
   it 'can reformat the sub_services' do 
     expect(@media.sub_services).to eq('Netflix')
   end
+
+  describe '#trailer_id' do
+    it 'takes the youtube link and returns just the youtube id for embedding' do
+      expect(@media.trailer_id).to eq('5NpEA2yaWVQ')
+    end
+  end
 end

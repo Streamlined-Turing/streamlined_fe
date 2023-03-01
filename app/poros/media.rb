@@ -13,8 +13,8 @@ class Media
               :audience_score,
               :trailer, 
               :vote_average,
+              :genre,
               :user_lists
-
 
   def initialize(data)
     @id = data[:id]
@@ -50,5 +50,9 @@ class Media
 
   def round_vote 
     @vote_average.round(1)
+  end
+
+  def trailer_id
+    trailer.partition('=').last
   end
 end

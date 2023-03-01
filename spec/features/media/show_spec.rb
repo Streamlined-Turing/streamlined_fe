@@ -32,7 +32,7 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
       end
 
       it 'shows media type' do
-        expect(page).to have_content 'tv_series'
+        expect(page).to have_content 'Tv'
       end
 
       it 'shows media release year' do
@@ -47,8 +47,8 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
         expect(page).to have_content 'Netflix'
       end
 
-      it 'shows media trailer link' do
-        expect(page).to have_link 'Link to Trailer'
+      it 'shows media trailer video' do
+        expect(page).to have_css 'iframe'
       end
 
       xit 'shows what lists this media belongs to for the current user' do

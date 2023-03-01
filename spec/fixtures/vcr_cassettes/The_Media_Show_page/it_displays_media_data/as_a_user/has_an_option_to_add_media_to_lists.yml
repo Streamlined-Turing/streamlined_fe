@@ -2,6 +2,46 @@
 http_interactions:
 - request:
     method: get
+    uri: http://localhost:5000/api/v1/media/3173903?user_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4e3872dca8671a76d55731c380a0de67"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 688e088a-ca75-48e1-b029-1dbdec453f89
+      X-Runtime:
+      - '0.461692'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3173903","type":"media","attributes":{"id":3173903,"title":"Breaking
+        Bad","audience_score":9.3,"rating":"TV-MA","media_type":"tv_series","description":"When
+        Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III
+        cancer and given a prognosis of only two years left to live. He becomes filled
+        with a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
+  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
+- request:
+    method: get
     uri: http://localhost:5000/api/v1/users/1
     body:
       encoding: US-ASCII
@@ -21,18 +61,58 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"9ff2021301dad271c6b7529511eeac63"
+      - W/"a0ff839f59953fb7d3706cc989b233a1"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 561051a1-461c-4db5-af55-d2f1b0fc4250
+      - 0e932ebd-bd7a-4fb4-88ab-e4a80259f7ac
       X-Runtime:
-      - '0.001798'
+      - '0.026579'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"105041345352080471447","username":"kerynn","email":"kerynn.davis@gmail.com","name":"Kerynn
-        Davis","picture":"https://lh3.googleusercontent.com/a/AGNmyxY5UK6Lt_U-V4uA3JuRjjmNBwUxk3usxmjmO3wP=s96-c"}}}'
-  recorded_at: Wed, 01 Mar 2023 18:39:47 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"104505147435508023263","username":"pitzelalex","email":"pitzelalex@gmail.com","name":"Alex
+        Pitzel","picture":"https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c"}}}'
+  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/3173903?user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4e3872dca8671a76d55731c380a0de67"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e7340f63-db48-4deb-86b4-19fdb91f86aa
+      X-Runtime:
+      - '0.315575'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3173903","type":"media","attributes":{"id":3173903,"title":"Breaking
+        Bad","audience_score":9.3,"rating":"TV-MA","media_type":"tv_series","description":"When
+        Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III
+        cancer and given a prognosis of only two years left to live. He becomes filled
+        with a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
+  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
 recorded_with: VCR 6.1.0

@@ -2,13 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'The Media Show page', :vcr, type: :feature do
   describe 'it displays media data' do
-
     before :each do
-      visit media_path(3173903)
+      visit media_path(3_173_903)
     end
 
     describe 'media attributes' do
-
       it 'shows media title' do
         expect(page).to have_content 'Breaking Bad'
       end
@@ -18,7 +16,7 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
       end
 
       it 'shows media rating' do
-        expect(page).to have_content 9.3 
+        expect(page).to have_content 9.3
       end
 
       xit 'shows media genre' do
@@ -27,7 +25,7 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
 
       it 'shows media poster' do
         within '.poster' do
-          expect(page.find('img')[:src]).to eq "https://cdn.watchmode.com/posters/03173903_poster_w185.jpg"
+          expect(page.find('img')[:src]).to eq 'https://cdn.watchmode.com/posters/03173903_poster_w185.jpg'
         end
       end
 
@@ -55,16 +53,15 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
       end
     end
 
-    describe 'as a visitor' do 
-      it 'does not have option to add media to lists' do 
-
-        within '#add_to_list' do 
+    describe 'as a visitor' do
+      it 'does not have option to add media to lists' do
+        within '#add_to_list' do
           expect(page).to have_content('Login/Register to add this to a list.')
         end
       end
     end
 
-    describe 'as a user' do 
+    describe 'as a user' do
       let(:user) do
         {
           'id' => '1',
@@ -74,17 +71,17 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
           'email' => 'pitzelalex@gmail.com',
           'picture' => 'https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c'
         }
-      end 
+      end
 
-      it 'has an option to add media to lists', :vcr do   
+      it 'has an option to add media to lists', :vcr do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
-      
-        visit media_path(1)
+
+        visit media_path(3_173_903)
 
         within '#add_to_list' do
           expect(page).to have_content('FORM')
         end
-      end 
+      end
     end
   end
 end

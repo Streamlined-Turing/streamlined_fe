@@ -2,11 +2,11 @@
 
 <div class="row">
   <% if @media.poster %>
-    <div class='poster col-md-4'>
+    <div class='poster col-md-3'>
       <%= image_tag(@media.poster, height:'100%', width:'100%') %>
     </div>
   <% end %>
-  <div class='col-md-8'>
+  <div class='col-md-9'>
     <h4>Synopsis: </h4><%= @media.description %>
     <br>
     Audience Rating: <%= @media.audience_score %>

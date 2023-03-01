@@ -42,7 +42,7 @@
 
 <div id="add_to_list">
   <% if @user %>
-    FORM
+    <%= render partial: 'shared/drop_down_lists', locals: { user_id: @user.id, media_id: @media.id}  %>
   <% else %>
     Login/Register to add this to a list.
   <% end %>

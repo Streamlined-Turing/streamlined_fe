@@ -3,8 +3,8 @@
     Add to List <span class="caret"></span>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <li><a class="dropdown-item" href="#">Want to Watch</a></li>
-    <li><a class="dropdown-item" href="#">Currently Watching</a></li>
-    <li><a class="dropdown-item" href="#">Watched</a></li>
+    <li><%= link_to "Want to Watch", media_path(media_id, :list=>"Want to Watch"), class: "dropdown-item", method: :patch %></li>
+    <li><%= link_to "Currently Watching", media_path(media_id, :list=>"Currently Watching"), class: "dropdown-item", method: :patch %></li>
+    <li><%= link_to "Watched", media_path(media_id, :list=>"Watched"), class: "dropdown-item", method: :patch %></li>
   </div>
 </div>

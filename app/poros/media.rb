@@ -12,7 +12,8 @@ class Media
               :language,
               :audience_score,
               :trailer, 
-              :vote_average
+              :vote_average,
+              :genre
 
 
   def initialize(data)
@@ -48,5 +49,9 @@ class Media
 
   def round_vote 
     @vote_average.round(1)
+  end
+
+  def trailer_id
+    trailer.partition('=').last
   end
 end

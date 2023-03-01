@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trending_media
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2c36c12828545a64729d0b68d45323aa"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0e67ddc6-e016-4f0c-8e3f-10fc521cbac3
+      X-Runtime:
+      - '0.133314'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"937278","type":"trending_media","attributes":{"id":937278,"title":"A
+        Man Called Otto","poster_path":"/130H1gap9lFfiTF9iDrqNIkFvC9.jpg","media_type":"movie","vote_average":7.489}},{"id":"82856","type":"trending_media","attributes":{"id":82856,"title":null,"poster_path":"/x4b89IkzxfGnA26coS5nRpkEzPo.jpg","media_type":"tv","vote_average":8.474}},{"id":"906221","type":"trending_media","attributes":{"id":906221,"title":"Magic
+        Mike''s Last Dance","poster_path":"/9a9pyJZRhUWUSBT8BQqWihtqbI8.jpg","media_type":"movie","vote_average":6.8}}]}'
+  recorded_at: Wed, 01 Mar 2023 18:05:52 GMT
+recorded_with: VCR 6.1.0

@@ -10,22 +10,24 @@
       <%= button_to 'Logout', logout_path, class: "btn btn-default", method: :delete %>
     </li>
   <% else %>
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <div id="g_id_onload"
-        data-client_id=<%= "#{ENV['GOOGLE_CLIENT_ID']}"  %>
-        data-context="use"
-        data-ux_mode="redirect"
-        data-login_uri="/login"
-        data-auto_prompt="false">
-    </div>
-    <div class="g_id_signin"
-        data-type="standard"
-        data-shape="rectangular"
-        data-theme="outline"
-        data-text="signin_with"
-        data-size="large"
-        data-logo_alignment="left">
-    </div>
+    <li class='active' style='margin-left:5px;'>
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
+      <div id="g_id_onload"
+          data-client_id=<%= "#{ENV['GOOGLE_CLIENT_ID']}"  %>
+          data-context="use"
+          data-ux_mode="redirect"
+          data-login_uri="/login"
+          data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin"
+          data-type="standard"
+          data-shape="rectangular"
+          data-theme="outline"
+          data-text="signin_with"
+          data-size="large"
+          data-logo_alignment="left">
+      </div>
+    </li>
   <% end %>
   <li class="active navbar-right">
     <%= render partial: 'shared/search' %>

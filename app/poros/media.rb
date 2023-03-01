@@ -12,7 +12,8 @@ class Media
               :language,
               :audience_score,
               :trailer, 
-              :vote_average
+              :vote_average,
+              :user_lists
 
 
   def initialize(data)

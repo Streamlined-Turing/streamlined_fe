@@ -2,11 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'The Media Show page', :vcr, type: :feature do
   describe 'it displays media data' do
-    # let!(:url) { "localhost:5000/api/v1/media/1" }
-    # let!(:response) { File.read("./spec/fixtures/media1.json") }
 
     before :each do
-      # stub_request(:get, url).to_return(status: 200, body: response)
       visit media_path(3173903)
     end
 

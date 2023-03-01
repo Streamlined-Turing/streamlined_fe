@@ -53,6 +53,9 @@ RSpec.describe 'The Media Show page', type: :feature do
       it 'shows media trailer link' do
         expect(page).to have_link 'Link to Trailer'
       end
+
+      xit 'shows what lists this media belongs to for the current user' do
+      end
     end
   end
 end

@@ -73,14 +73,28 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
         }
       end
 
-      it 'has an option to add media to lists', :vcr do
+      it 'has an option to add media to lists' do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
 
-        visit media_path(3_173_903)
+        visit media_path(1602633)
 
         within '#add_to_list' do
-          expect(page).to have_content('FORM')
+          expect(page).to have_button("Add to List")
+          click_button "Add to List"
+          expect(page).to have_link("Want to Watch")
+          expect(page).to have_link("Watched")
+          click_link "Currently Watching"
+
+          within '#current_list' do 
+            expect(page).to have_content("Currently Watching")
+            expect(page).to_not have_content("Want to Watch")
+            expect(page).to_not have_content("Watched")
+          end
         end
+
+        # visit dashboard_path
+
+        # expect(page).to have_content("Lucky")
       end
     end
   end

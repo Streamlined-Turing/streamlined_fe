@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 27bd2167-5f83-44e6-a605-29dc6060da38
+      - 688e088a-ca75-48e1-b029-1dbdec453f89
       X-Runtime:
-      - '0.278816'
+      - '0.461692'
       Transfer-Encoding:
       - chunked
     body:
@@ -39,7 +39,7 @@ http_interactions:
         with a sense of fearlessness and an unrelenting desire to secure his family''s
         financial future at any cost as he enters the dangerous world of drugs and
         crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
-  recorded_at: Wed, 01 Mar 2023 21:35:51 GMT
+  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -65,16 +65,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ff4fd9ab-3ee6-453f-bd01-555c4ee8c1ab
+      - 0e932ebd-bd7a-4fb4-88ab-e4a80259f7ac
       X-Runtime:
-      - '0.002328'
+      - '0.026579'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"sub":"104505147435508023263","username":"pitzelalex","email":"pitzelalex@gmail.com","name":"Alex
         Pitzel","picture":"https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c"}}}'
-  recorded_at: Wed, 01 Mar 2023 21:35:51 GMT
+  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/media/3173903?user_id=1
@@ -90,128 +90,29 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 500
-      message: Internal Server Error
+      code: 200
+      message: OK
     headers:
       Content-Type:
-      - application/json; charset=UTF-8
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4e3872dca8671a76d55731c380a0de67"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8d6bad53-d5ca-4225-945a-7d1a2b3be4f6
+      - e7340f63-db48-4deb-86b4-19fdb91f86aa
       X-Runtime:
-      - '0.325549'
-      Content-Length:
-      - '10601'
+      - '0.315575'
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
-      string: '{"status":500,"error":"Internal Server Error","exception":"#\u003cNoMethodError:
-        undefined method `name'' for nil:NilClass\u003e","traces":{"Application Trace":[{"id":0,"trace":"app/poros/media.rb:55:in
-        `lists''"},{"id":1,"trace":"app/poros/media.rb:37:in `initialize''"},{"id":2,"trace":"app/facade/media_facade.rb:4:in
-        `new''"},{"id":3,"trace":"app/facade/media_facade.rb:4:in `details''"},{"id":4,"trace":"app/controllers/api/v1/media_controller.rb:3:in
-        `show''"}],"Framework Trace":[{"id":5,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in
-        `send_action''"},{"id":6,"trace":"actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in
-        `process_action''"},{"id":7,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in
-        `process_action''"},{"id":8,"trace":"actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in
-        `block in process_action''"},{"id":9,"trace":"activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in
-        `run_callbacks''"},{"id":10,"trace":"actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in
-        `process_action''"},{"id":11,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in
-        `process_action''"},{"id":12,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in
-        `block in process_action''"},{"id":13,"trace":"activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in
-        `block in instrument''"},{"id":14,"trace":"activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in
-        `instrument''"},{"id":15,"trace":"activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in
-        `instrument''"},{"id":16,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in
-        `process_action''"},{"id":17,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in
-        `process_action''"},{"id":18,"trace":"activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in
-        `process_action''"},{"id":19,"trace":"actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in
-        `process''"},{"id":20,"trace":"actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in
-        `dispatch''"},{"id":21,"trace":"actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in
-        `dispatch''"},{"id":22,"trace":"actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in
-        `dispatch''"},{"id":23,"trace":"actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in
-        `serve''"},{"id":24,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in
-        `block in serve''"},{"id":25,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in
-        `each''"},{"id":26,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in
-        `serve''"},{"id":27,"trace":"actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in
-        `call''"},{"id":28,"trace":"rack (2.2.6.2) lib/rack/etag.rb:27:in `call''"},{"id":29,"trace":"rack
-        (2.2.6.2) lib/rack/conditional_get.rb:27:in `call''"},{"id":30,"trace":"rack
-        (2.2.6.2) lib/rack/head.rb:12:in `call''"},{"id":31,"trace":"activerecord
-        (5.2.8.1) lib/active_record/migration.rb:559:in `call''"},{"id":32,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":33,"trace":"activesupport
-        (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":34,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":35,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":36,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":37,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":38,"trace":"railties
-        (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":39,"trace":"railties
-        (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":40,"trace":"activesupport
-        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":41,"trace":"activesupport
-        (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":42,"trace":"activesupport
-        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":43,"trace":"railties
-        (5.2.8.1) lib/rails/rack/logger.rb:26:in `call''"},{"id":44,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":45,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":46,"trace":"rack
-        (2.2.6.2) lib/rack/runtime.rb:22:in `call''"},{"id":47,"trace":"activesupport
-        (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":48,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":49,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":50,"trace":"rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call''"},{"id":51,"trace":"railties
-        (5.2.8.1) lib/rails/engine.rb:524:in `call''"},{"id":52,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":53,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":54,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":55,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":56,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}],"Full Trace":[{"id":0,"trace":"app/poros/media.rb:55:in
-        `lists''"},{"id":1,"trace":"app/poros/media.rb:37:in `initialize''"},{"id":2,"trace":"app/facade/media_facade.rb:4:in
-        `new''"},{"id":3,"trace":"app/facade/media_facade.rb:4:in `details''"},{"id":4,"trace":"app/controllers/api/v1/media_controller.rb:3:in
-        `show''"},{"id":5,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/basic_implicit_render.rb:6:in
-        `send_action''"},{"id":6,"trace":"actionpack (5.2.8.1) lib/abstract_controller/base.rb:194:in
-        `process_action''"},{"id":7,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/rendering.rb:30:in
-        `process_action''"},{"id":8,"trace":"actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:42:in
-        `block in process_action''"},{"id":9,"trace":"activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in
-        `run_callbacks''"},{"id":10,"trace":"actionpack (5.2.8.1) lib/abstract_controller/callbacks.rb:41:in
-        `process_action''"},{"id":11,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/rescue.rb:22:in
-        `process_action''"},{"id":12,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:34:in
-        `block in process_action''"},{"id":13,"trace":"activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in
-        `block in instrument''"},{"id":14,"trace":"activesupport (5.2.8.1) lib/active_support/notifications/instrumenter.rb:23:in
-        `instrument''"},{"id":15,"trace":"activesupport (5.2.8.1) lib/active_support/notifications.rb:168:in
-        `instrument''"},{"id":16,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/instrumentation.rb:32:in
-        `process_action''"},{"id":17,"trace":"actionpack (5.2.8.1) lib/action_controller/metal/params_wrapper.rb:256:in
-        `process_action''"},{"id":18,"trace":"activerecord (5.2.8.1) lib/active_record/railties/controller_runtime.rb:24:in
-        `process_action''"},{"id":19,"trace":"actionpack (5.2.8.1) lib/abstract_controller/base.rb:134:in
-        `process''"},{"id":20,"trace":"actionpack (5.2.8.1) lib/action_controller/metal.rb:191:in
-        `dispatch''"},{"id":21,"trace":"actionpack (5.2.8.1) lib/action_controller/metal.rb:252:in
-        `dispatch''"},{"id":22,"trace":"actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:52:in
-        `dispatch''"},{"id":23,"trace":"actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:34:in
-        `serve''"},{"id":24,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:52:in
-        `block in serve''"},{"id":25,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in
-        `each''"},{"id":26,"trace":"actionpack (5.2.8.1) lib/action_dispatch/journey/router.rb:35:in
-        `serve''"},{"id":27,"trace":"actionpack (5.2.8.1) lib/action_dispatch/routing/route_set.rb:840:in
-        `call''"},{"id":28,"trace":"rack (2.2.6.2) lib/rack/etag.rb:27:in `call''"},{"id":29,"trace":"rack
-        (2.2.6.2) lib/rack/conditional_get.rb:27:in `call''"},{"id":30,"trace":"rack
-        (2.2.6.2) lib/rack/head.rb:12:in `call''"},{"id":31,"trace":"activerecord
-        (5.2.8.1) lib/active_record/migration.rb:559:in `call''"},{"id":32,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call''"},{"id":33,"trace":"activesupport
-        (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks''"},{"id":34,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call''"},{"id":35,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call''"},{"id":36,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call''"},{"id":37,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call''"},{"id":38,"trace":"railties
-        (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app''"},{"id":39,"trace":"railties
-        (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call''"},{"id":40,"trace":"activesupport
-        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged''"},{"id":41,"trace":"activesupport
-        (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged''"},{"id":42,"trace":"activesupport
-        (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged''"},{"id":43,"trace":"railties
-        (5.2.8.1) lib/rails/rack/logger.rb:26:in `call''"},{"id":44,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call''"},{"id":45,"trace":"actionpack
-        (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call''"},{"id":46,"trace":"rack
-        (2.2.6.2) lib/rack/runtime.rb:22:in `call''"},{"id":47,"trace":"activesupport
-        (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
-        `call''"},{"id":48,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in
-        `call''"},{"id":49,"trace":"actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in
-        `call''"},{"id":50,"trace":"rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call''"},{"id":51,"trace":"railties
-        (5.2.8.1) lib/rails/engine.rb:524:in `call''"},{"id":52,"trace":"puma (3.12.6)
-        lib/puma/configuration.rb:227:in `call''"},{"id":53,"trace":"puma (3.12.6)
-        lib/puma/server.rb:706:in `handle_request''"},{"id":54,"trace":"puma (3.12.6)
-        lib/puma/server.rb:476:in `process_client''"},{"id":55,"trace":"puma (3.12.6)
-        lib/puma/server.rb:334:in `block in run''"},{"id":56,"trace":"puma (3.12.6)
-        lib/puma/thread_pool.rb:135:in `block in spawn_thread''"}]}}'
-  recorded_at: Wed, 01 Mar 2023 21:35:52 GMT
+      string: '{"data":{"id":"3173903","type":"media","attributes":{"id":3173903,"title":"Breaking
+        Bad","audience_score":9.3,"rating":"TV-MA","media_type":"tv_series","description":"When
+        Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III
+        cancer and given a prognosis of only two years left to live. He becomes filled
+        with a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
+  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
 recorded_with: VCR 6.1.0

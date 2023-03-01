@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media?q=bad
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"53839443376195ac91b757d0de450697"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 71f525b0-efd5-44a6-ba62-550ad47cc04c
+      X-Runtime:
+      - '0.367173'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1588222","type":"search_result","attributes":{"id":1588222,"title":"The
+        Bad Guys","media_type":"movie","release_year":2022,"tmdb_id":629542,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01588222_poster_w185.jpg"}},{"id":"140508","type":"search_result","attributes":{"id":140508,"title":"Bad
+        Boys for Life","media_type":"movie","release_year":2020,"tmdb_id":38700,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140508_poster_w185.jpg"}},{"id":"311282","type":"search_result","attributes":{"id":311282,"title":"Badehotellet","media_type":"tv_series","release_year":2013,"tmdb_id":62474,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/0311282_poster_w185.jpg"}},{"id":"140701","type":"search_result","attributes":{"id":140701,"title":"Bad
+        Moms","media_type":"movie","release_year":2016,"tmdb_id":376659,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140701_poster_w185.jpg"}},{"id":"3184758","type":"search_result","attributes":{"id":3184758,"title":"Bad
+        Sisters","media_type":"tv_series","release_year":2022,"tmdb_id":199318,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/03184758_poster_w185.jpg"}},{"id":"140507","type":"search_result","attributes":{"id":140507,"title":"Bad
+        Boys II","media_type":"movie","release_year":2003,"tmdb_id":8961,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140507_poster_w185.jpg"}},{"id":"140745","type":"search_result","attributes":{"id":140745,"title":"Bad
+        Santa","media_type":"movie","release_year":2003,"tmdb_id":10147,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140745_poster_w185.jpg"}},{"id":"140502","type":"search_result","attributes":{"id":140502,"title":"Bad
+        Boys","media_type":"movie","release_year":1995,"tmdb_id":9737,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140502_poster_w185.jpg"}},{"id":"140743","type":"search_result","attributes":{"id":140743,"title":"Bad
+        Samaritan","media_type":"movie","release_year":2018,"tmdb_id":467632,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140743_poster_w185.jpg"}},{"id":"140589","type":"search_result","attributes":{"id":140589,"title":"Bad
+        Genius","media_type":"movie","release_year":2017,"tmdb_id":455714,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140589_poster_w185.jpg"}},{"id":"140772","type":"search_result","attributes":{"id":140772,"title":"Bad
+        Teacher","media_type":"movie","release_year":2011,"tmdb_id":52449,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140772_poster_w185.jpg"}},{"id":"140669","type":"search_result","attributes":{"id":140669,"title":"Bad
+        Lieutenant: Port of Call - New Orleans","media_type":"movie","release_year":2009,"tmdb_id":11699,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140669_poster_w185.jpg"}},{"id":"311191","type":"search_result","attributes":{"id":311191,"title":"Bad
+        Education","media_type":"tv_series","release_year":2012,"tmdb_id":58460,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/0311191_poster_w185.jpg"}},{"id":"4101512","type":"search_result","attributes":{"id":4101512,"title":"The
+        Bad Seed","media_type":"tv_movie","release_year":2018,"tmdb_id":532814,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/04101512_poster_w185.jpg"}},{"id":"3182440","type":"search_result","attributes":{"id":3182440,"title":"The
+        Bad Guy","media_type":"tv_series","release_year":2022,"tmdb_id":158050,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/03182440_poster_w185.jpg"}},{"id":"4154986","type":"search_result","attributes":{"id":4154986,"title":"The
+        Bad Seed Returns","media_type":"tv_movie","release_year":2022,"tmdb_id":897338,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/04154986_poster_w185.jpg"}},{"id":"1514313","type":"search_result","attributes":{"id":1514313,"title":"Bad
+        Education","media_type":"movie","release_year":2019,"tmdb_id":530723,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01514313_poster_w185.jpg"}},{"id":"140778","type":"search_result","attributes":{"id":140778,"title":"Bad
+        Times at the El Royale","media_type":"movie","release_year":2018,"tmdb_id":446021,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140778_poster_w185.jpg"}},{"id":"140949","type":"search_result","attributes":{"id":140949,"title":"Badlands","media_type":"movie","release_year":1973,"tmdb_id":3133,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140949_poster_w185.jpg"}},{"id":"140897","type":"search_result","attributes":{"id":140897,"title":"Badhaai
+        Ho","media_type":"movie","release_year":2018,"tmdb_id":547654,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140897_poster_w185.jpg"}},{"id":"140798","type":"search_result","attributes":{"id":140798,"title":"Bad
+        Words","media_type":"movie","release_year":2013,"tmdb_id":209403,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140798_poster_w185.jpg"}},{"id":"1562668","type":"search_result","attributes":{"id":1562668,"title":"Badla","media_type":"movie","release_year":2019,"tmdb_id":581361,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01562668_poster_w185.jpg"}},{"id":"51990","type":"search_result","attributes":{"id":51990,"title":"Bad
+        Blood","media_type":"tv_series","release_year":2017,"tmdb_id":72742,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/051990_poster_w185.jpg"}},{"id":"140779","type":"search_result","attributes":{"id":140779,"title":"Bad
+        Timing","media_type":"movie","release_year":1980,"tmdb_id":33214,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140779_poster_w185.jpg"}},{"id":"3179618","type":"search_result","attributes":{"id":3179618,"title":"Bad
+        Buddy","media_type":"tv_series","release_year":2021,"tmdb_id":122009,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/03179618_poster_w185.jpg"}},{"id":"1702236","type":"search_result","attributes":{"id":1702236,"title":"Bad
+        Behind Bars: Jodi Arias","media_type":"movie","release_year":2023,"tmdb_id":1074291,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01702236_poster_w185.jpg"}},{"id":"51988","type":"search_result","attributes":{"id":51988,"title":"Bad
+        Banks","media_type":"tv_series","release_year":2018,"tmdb_id":76892,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/051988_poster_w185.jpg"}},{"id":"1672785","type":"search_result","attributes":{"id":1672785,"title":"Bad
+        Ass 2: Bad Asses","media_type":"movie","release_year":2014,"tmdb_id":255268,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01672785_poster_w185.jpg"}},{"id":"3177574","type":"search_result","attributes":{"id":3177574,"title":"Bad
+        and Crazy","media_type":"tv_series","release_year":2021,"tmdb_id":132979,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/03177574_poster_w185.jpg"}},{"id":"411346","type":"search_result","attributes":{"id":411346,"title":"Bad
+        Hair Day","media_type":"tv_movie","release_year":2015,"tmdb_id":317198,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0411346_poster_w185.jpg"}},{"id":"311198","type":"search_result","attributes":{"id":311198,"title":"Bad
+        Girls","media_type":"tv_series","release_year":1999,"tmdb_id":2850,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/0311198_poster_w185.jpg"}},{"id":"4157529","type":"search_result","attributes":{"id":4157529,"title":"Bad
+        Influence","media_type":"tv_movie","release_year":2022,"tmdb_id":969584,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/04157529_poster_w185.jpg"}},{"id":"2692651","type":"search_result","attributes":{"id":2692651,"title":"Bad
+        Boy","media_type":"movie","release_year":2020,"tmdb_id":674358,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/02692651_poster_w185.jpg"}},{"id":"256504","type":"search_result","attributes":{"id":256504,"title":"Bad
+        Hero","media_type":"movie","release_year":2010,"tmdb_id":260607,"tmdb_type":"movie","poster":null}},{"id":"256566","type":"search_result","attributes":{"id":256566,"title":"Bad
+        Luck Blackie","media_type":"short_film","release_year":1949,"tmdb_id":84664,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0256566_poster_w185.jpg"}},{"id":"4159619","type":"search_result","attributes":{"id":4159619,"title":"Bad
+        Nanny","media_type":"tv_movie","release_year":2022,"tmdb_id":1033635,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/04159619_poster_w185.jpg"}},{"id":"3171144","type":"search_result","attributes":{"id":3171144,"title":"Bad
+        Boy Billionaires: India","media_type":"tv_series","release_year":2020,"tmdb_id":111086,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/03171144_poster_w185.jpg"}},{"id":"543976","type":"search_result","attributes":{"id":543976,"title":"Bad
+        Vegan: Fame. Fraud. Fugitives.","media_type":"tv_miniseries","release_year":2022,"tmdb_id":157709,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/0543976_poster_w185.jpg"}},{"id":"545464","type":"search_result","attributes":{"id":545464,"title":"Bad
+        Behaviour","media_type":"tv_series","release_year":2023,"tmdb_id":207368,"tmdb_type":"tv","poster":"https://cdn.watchmode.com/posters/0545464_poster_w185.jpg"}},{"id":"2721044","type":"search_result","attributes":{"id":2721044,"title":"Bad
+        President: All My Sh*t","media_type":"short_film","release_year":2020,"tmdb_id":864458,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/02721044_poster_w185.jpg"}},{"id":"1568851","type":"search_result","attributes":{"id":1568851,"title":"Bad
+        Vegan and the Teleportation Machine","media_type":"movie","release_year":2016,"tmdb_id":589172,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01568851_poster_w185.jpg"}},{"id":"140811","type":"search_result","attributes":{"id":140811,"title":"Bad,
+        Bad Men","media_type":"movie","release_year":2015,"tmdb_id":433684,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/0140811_poster_w185.jpg"}},{"id":"1695548","type":"search_result","attributes":{"id":1695548,"title":"Bad
+        Company: The Official Authorised 40th Anniversary Documentary","media_type":"movie","release_year":2014,"tmdb_id":717636,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01695548_poster_w185.jpg"}},{"id":"3190002","type":"search_result","attributes":{"id":3190002,"title":"Baddies
+        South: The Reunion","media_type":"tv_series","release_year":2022,"tmdb_id":211063,"tmdb_type":"tv","poster":null}},{"id":"1653275","type":"search_result","attributes":{"id":1653275,"title":"Bad
+        Ben: Benign","media_type":"movie","release_year":2021,"tmdb_id":879734,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01653275_poster_w185.jpg"}},{"id":"1635266","type":"search_result","attributes":{"id":1635266,"title":"Bad
+        Nazi, Good Nazi","media_type":"movie","release_year":2019,"tmdb_id":830586,"tmdb_type":"movie","poster":"https://cdn.watchmode.com/posters/01635266_poster_w185.jpg"}}]}'
+  recorded_at: Wed, 01 Mar 2023 18:05:52 GMT
+recorded_with: VCR 6.1.0

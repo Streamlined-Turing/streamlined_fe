@@ -37,7 +37,7 @@ RSpec.describe 'Media Search' do
       end 
     end
 
-    it 'has a link to each media show page' do 
+    it 'has a link to each media show page', :vcr do 
       visit root_path
 
       fill_in "query", with: "bad"

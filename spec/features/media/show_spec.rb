@@ -54,5 +54,37 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
       xit 'shows what lists this media belongs to for the current user' do
       end
     end
+
+    describe 'as a visitor' do 
+      it 'does not have option to add media to lists' do 
+
+        within '#add_to_list' do 
+          expect(page).to have_content('Login/Register to add this to a list.')
+        end
+      end
+    end
+
+    describe 'as a user' do 
+      let(:user) do
+        {
+          'id' => '1',
+          'sub' => '104505147435508023263',
+          'name' => 'Alex Pitzel',
+          'username' => 'pitzelalex',
+          'email' => 'pitzelalex@gmail.com',
+          'picture' => 'https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c'
+        }
+      end 
+
+      it 'has an option to add media to lists', :vcr do   
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+      
+        visit media_path(1)
+
+        within '#add_to_list' do
+          expect(page).to have_content('FORM')
+        end
+      end 
+    end
   end
 end

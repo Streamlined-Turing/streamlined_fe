@@ -6,3 +6,34 @@
 <p>Name: <%= @user.name %></p>
 
 <%= button_to 'Edit Profile', edit_dashboard_path, method: :get, local: true %>
+
+<section id='user_lists'>
+  <% if @list == 'Currently Watching' %>
+    <div id="currently_watching">
+      <h2>Currently Watching</h2>
+      <%= link_to 'Want to Watch', '/dashboard?list=Want+to+Watch', method: :get, local: true %>
+      <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
+      <% if @lists.empty? %>
+        <p>This list is currently empty. Search for media to start adding!</p>
+      <% end %>
+    </div>
+  <% elsif @list == 'Want to Watch' %>
+    <div id="want_to_watch">
+      <h2>Want to Watch</h2>
+      <%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %>
+      <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
+      <% if @lists.empty? %>
+        <p>This list is currently empty. Search for media to start adding!</p>
+      <% end %>
+    </div>
+  <% elsif @list == 'Watched' %>
+    <div id="watched">
+      <h2>Watched</h2>
+      <%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %>
+      <%= link_to 'Want to Watch', '/dashboard?list=Want to Watch', method: :get, local: true %>
+      <% if @lists.empty? %>
+        <p>This list is currently empty. Search for media to start adding!</p>
+      <% end %>
+    </div>
+  <% end %>
+</section>

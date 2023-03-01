@@ -21,20 +21,54 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7414934dda746c250495f7c2e95f1d49"
+      - W/"9ff2021301dad271c6b7529511eeac63"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - eb645c56-5798-4e96-8675-d8f70ca64622
+      - 01b5b1b2-29f5-441a-bf30-251ed24b176f
       X-Runtime:
-      - '0.002726'
+      - '0.001866'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"104505147435508023263","username":"new_username","email":"pitzelalex@gmail.com","name":"Alex
-        Pitzel","picture":"https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c"}}}'
-  recorded_at: Mon, 27 Feb 2023 00:36:06 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"105041345352080471447","username":"kerynn","email":"kerynn.davis@gmail.com","name":"Kerynn
+        Davis","picture":"https://lh3.googleusercontent.com/a/AGNmyxY5UK6Lt_U-V4uA3JuRjjmNBwUxk3usxmjmO3wP=s96-c"}}}'
+  recorded_at: Wed, 01 Mar 2023 18:39:38 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a82220f8-3c89-4c10-9837-d28b19e0953c
+      X-Runtime:
+      - '0.003499'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 01 Mar 2023 18:39:38 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -56,18 +90,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"7414934dda746c250495f7c2e95f1d49"
+      - W/"9ff2021301dad271c6b7529511eeac63"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9d6370ef-c7a8-4764-a417-a3ff11cde554
+      - f184fc7a-0177-4db0-9100-80697bdaf94e
       X-Runtime:
-      - '0.002047'
+      - '0.001725'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"104505147435508023263","username":"new_username","email":"pitzelalex@gmail.com","name":"Alex
-        Pitzel","picture":"https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c"}}}'
-  recorded_at: Mon, 27 Feb 2023 00:36:06 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"105041345352080471447","username":"kerynn","email":"kerynn.davis@gmail.com","name":"Kerynn
+        Davis","picture":"https://lh3.googleusercontent.com/a/AGNmyxY5UK6Lt_U-V4uA3JuRjjmNBwUxk3usxmjmO3wP=s96-c"}}}'
+  recorded_at: Wed, 01 Mar 2023 18:39:38 GMT
 recorded_with: VCR 6.1.0

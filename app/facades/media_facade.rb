@@ -4,6 +4,14 @@ class MediaFacade
     Media.new(media_data)
   end
 
+  def self.list_results(current_user, list_name)
+  
+    list_data = MediaService.list_search(current_user, list_name)
+    list_data[:data].map do |list_result|
+      Media.new(list_result)
+    end
+  end
+
   def self.search_results(media_query)
     data = MediaService.media_search(media_query)
     limit_15 = data[:data].first(15)

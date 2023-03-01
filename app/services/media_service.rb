@@ -14,6 +14,10 @@ class MediaService
     parse(conn.get("/api/v1/media?q=#{media_query}"))
   end
 
+  def self.list_search(current_user, list_query)
+    parse(conn.get("/api/v1/users/#{current_user}/lists?list=#{list_query}"))
+  end
+
   private
 
   def self.conn

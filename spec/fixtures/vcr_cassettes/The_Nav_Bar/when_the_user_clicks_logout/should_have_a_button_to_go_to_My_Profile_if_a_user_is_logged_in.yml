@@ -21,21 +21,21 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"f62e5d4ec38fd62a9256b121ae772224"
+      - W/"2c36c12828545a64729d0b68d45323aa"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7947ec7f-78d0-47ad-9717-34f7efbd0efc
+      - dc4e95af-3521-485d-9190-ba158bcf1a37
       X-Runtime:
-      - '0.070668'
+      - '0.075805'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"852096","type":"trending_media","attributes":{"id":852096,"title":"We
-        Have a Ghost","poster_path":"/xo0fgAUoEeVQ7KsKeMWypyglvnf.jpg","media_type":"movie","vote_average":6.667}},{"id":"1077280","type":"trending_media","attributes":{"id":1077280,"title":"Die
-        Hart","poster_path":"/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg","media_type":"movie","vote_average":6.523}},{"id":"100088","type":"trending_media","attributes":{"id":100088,"title":null,"poster_path":"/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg","media_type":"tv","vote_average":8.824}}]}'
-  recorded_at: Mon, 27 Feb 2023 17:38:38 GMT
+      string: '{"data":[{"id":"937278","type":"trending_media","attributes":{"id":937278,"title":"A
+        Man Called Otto","poster_path":"/130H1gap9lFfiTF9iDrqNIkFvC9.jpg","media_type":"movie","vote_average":7.489}},{"id":"82856","type":"trending_media","attributes":{"id":82856,"title":null,"poster_path":"/x4b89IkzxfGnA26coS5nRpkEzPo.jpg","media_type":"tv","vote_average":8.474}},{"id":"906221","type":"trending_media","attributes":{"id":906221,"title":"Magic
+        Mike''s Last Dance","poster_path":"/9a9pyJZRhUWUSBT8BQqWihtqbI8.jpg","media_type":"movie","vote_average":6.8}}]}'
+  recorded_at: Wed, 01 Mar 2023 18:47:24 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -57,18 +57,52 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"ac42289005006652c4f82a88ad5ffa4e"
+      - W/"7cf3eb93a5f4faa03123eba6cbd0ced2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 536ab936-11e8-4f89-9f3a-a3c054265a7b
+      - d0caaef4-154a-4db8-9ce2-19ea53e83fb5
       X-Runtime:
-      - '0.002719'
+      - '0.002186'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":null,"email":"j.king92@gmail.com","name":"Joe
-        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
-  recorded_at: Mon, 27 Feb 2023 17:38:38 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"105041345352080471447","username":"new_username","email":"kerynn.davis@gmail.com","name":"Kerynn
+        Davis","picture":"https://lh3.googleusercontent.com/a/AGNmyxY5UK6Lt_U-V4uA3JuRjjmNBwUxk3usxmjmO3wP=s96-c"}}}'
+  recorded_at: Wed, 01 Mar 2023 18:47:24 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - bc4e04f6-cb27-42cb-8224-2f66a3f21b11
+      X-Runtime:
+      - '0.007474'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Wed, 01 Mar 2023 18:47:24 GMT
 recorded_with: VCR 6.1.0

@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c36ba8f1-f92d-457f-a598-51c3d2e80c6d
+      - f9f811ea-ab48-4aaf-8293-cf832661621b
       X-Runtime:
-      - '0.386286'
+      - '0.380053'
       Transfer-Encoding:
       - chunked
     body:
@@ -39,7 +39,7 @@ http_interactions:
         with a sense of fearlessness and an unrelenting desire to secure his family''s
         financial future at any cost as he enters the dangerous world of drugs and
         crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
-  recorded_at: Wed, 01 Mar 2023 23:43:06 GMT
+  recorded_at: Thu, 02 Mar 2023 00:29:58 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -65,16 +65,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4d909456-b2ec-43e4-9db0-fb9af09aa02a
+      - 3ede57f2-8c29-4e55-af53-f3fdaa590330
       X-Runtime:
-      - '0.002363'
+      - '0.003220'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
         Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
-  recorded_at: Wed, 01 Mar 2023 23:43:06 GMT
+  recorded_at: Thu, 02 Mar 2023 00:29:58 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/media/1602633?user_id=1
@@ -100,9 +100,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 28fd7716-f3a5-494d-9141-a4f395ef1cf2
+      - 6575901e-a9a2-43e7-9917-45d04a61392d
       X-Runtime:
-      - '0.254740'
+      - '0.304695'
       Transfer-Encoding:
       - chunked
     body:
@@ -114,10 +114,10 @@ http_interactions:
         from the people around her as she fights to stay alive. Is this paranoia,
         or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
         (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"Watched"}}}'
-  recorded_at: Wed, 01 Mar 2023 23:43:06 GMT
+  recorded_at: Thu, 02 Mar 2023 00:29:58 GMT
 - request:
     method: patch
-    uri: http://localhost:5000/api/v1/users/1/media/1602633?list=Currently%20Watching
+    uri: http://localhost:5000/api/v1/users/1/media/1602633?list=Watched
     body:
       encoding: UTF-8
       string: ''
@@ -138,13 +138,13 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 43df67c9-7967-4de6-b8cf-c83bdda7fb64
+      - '080f1413-afd1-4ddf-85d3-adfbd804dfb2'
       X-Runtime:
-      - '0.008255'
+      - '0.095381'
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Wed, 01 Mar 2023 23:43:06 GMT
+  recorded_at: Thu, 02 Mar 2023 00:29:58 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -170,16 +170,16 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 29e786c0-fd70-4ab1-9b30-d9722212c171
+      - d25ec938-58da-41d7-8fee-4bb4e1200943
       X-Runtime:
-      - '0.002105'
+      - '0.042675'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
         Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
-  recorded_at: Wed, 01 Mar 2023 23:43:06 GMT
+  recorded_at: Thu, 02 Mar 2023 00:29:58 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/media/1602633?user_id=1
@@ -201,13 +201,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a2a88e5411676a8d7f4deb5334f4cbb6"
+      - W/"f3d488fcb1ec89a68e10877d112ac319"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - c9b5e3d8-6564-45c5-bcd9-678fde9908a9
+      - 14aac5cf-6b0c-4b37-a87a-c28d6ca63130
       X-Runtime:
-      - '0.237890'
+      - '0.305581'
       Transfer-Encoding:
       - chunked
     body:
@@ -218,9 +218,38 @@ http_interactions:
         reappears every night. Even when she kills him. May struggles to get help
         from the people around her as she fights to stay alive. Is this paranoia,
         or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
-        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"Currently
-        Watching"}}}'
-  recorded_at: Wed, 01 Mar 2023 23:43:07 GMT
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"Watched"}}}'
+  recorded_at: Thu, 02 Mar 2023 00:29:59 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1/media/1602633?list=Want%20to%20Watch
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 515ff0f1-46c6-4087-8b60-8a5dda66a5f6
+      X-Runtime:
+      - '0.017561'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 02 Mar 2023 00:29:59 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -246,19 +275,19 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0ee42764-dd41-439c-a572-7b34461dede0
+      - d8eda2dc-055e-4e91-bd79-d116099da9df
       X-Runtime:
-      - '0.004429'
+      - '0.004800'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
         Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
-  recorded_at: Wed, 01 Mar 2023 23:43:07 GMT
+  recorded_at: Thu, 02 Mar 2023 00:29:59 GMT
 - request:
     method: get
-    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    uri: http://localhost:5000/api/v1/media/1602633?user_id=1
     body:
       encoding: US-ASCII
       string: ''
@@ -277,23 +306,24 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"54860b85126d88d75b0104dbd69594a7"
+      - W/"9eb53519b533412b76ee1f933d0f7f3b"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e010f267-84b7-49e8-b00a-03f3d905e646
+      - '09c54eaa-42b0-408f-b87c-09f46f55b52b'
       X-Runtime:
-      - '0.248892'
+      - '0.293364'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":[{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+      string: '{"data":{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
         Rated","media_type":"movie","description":"May, a self help author with all
         the answers, suddenly finds herself stalked by a masked man who mysteriously
         reappears every night. Even when she kills him. May struggles to get help
         from the people around her as she fights to stay alive. Is this paranoia,
         or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
-        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"None"}}]}'
-  recorded_at: Wed, 01 Mar 2023 23:43:07 GMT
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"Want
+        to Watch"}}}'
+  recorded_at: Thu, 02 Mar 2023 00:29:59 GMT
 recorded_with: VCR 6.1.0

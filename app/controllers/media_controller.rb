@@ -5,6 +5,11 @@ class MediaController < ApplicationController
     @media = MediaFacade.media(params[:id], current_user)
   end
 
+  def update
+    MediaService.media_list_update(params[:id], current_user, params[:list])
+    redirect_back(fallback_location: root_path)
+  end
+
   private 
 
   def logged_in 

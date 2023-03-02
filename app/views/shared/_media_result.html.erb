@@ -1,0 +1,13 @@
+  <div id="media_<%= media.id %>">
+    <h3><%= link_to media.title, media_path(media.id) %></h3>
+    <% if media.poster %>
+      <p><%= link_to image_tag(media.poster), media_path(media.id)  %></p>
+    <% end %>
+    <p>Media Type: <%= media.formatted_type %></p>
+    <p>Release Year: <%= media.release_year %></p>
+    <% if current_user %>
+      <%= render partial: 'shared/drop_down_lists', locals: { user_id: current_user, media_id: media.id, button_text: ""} %>
+    <% else %>
+      Login/Register to add this to a list.
+    <% end %>
+  </div>

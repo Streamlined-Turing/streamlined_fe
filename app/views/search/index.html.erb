@@ -1,12 +1,5 @@
 <h1>Results For: <%= @media_query %></h1>
 
 <% @media_results.each do |media| %>
-  <div id="media_<%= media.id %>">
-    <h3><%= link_to media.title, media_path(media.id) %></h3>
-    <% if media.poster %>
-      <p><%= link_to image_tag(media.poster), media_path(media.id)  %></p>
-    <% end %>
-    <p>Media Type: <%= media.formatted_type %></p>
-    <p>Release Year: <%= media.release_year %></p>
-  </div>
+  <%= render partial: "shared/media_result", locals: {media: media} %>
 <% end %>

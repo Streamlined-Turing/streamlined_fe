@@ -18,6 +18,12 @@ class MediaService
     parse(conn.get("/api/v1/users/#{current_user}/lists?list=#{list_query}"))
   end
 
+  def self.media_list_update(media_id, user_id, list)
+    conn.patch("/api/v1/users/#{user_id}/media/#{media_id}") do |r|
+       r.params = {list: list}
+    end
+  end
+
   private
 
   def self.conn

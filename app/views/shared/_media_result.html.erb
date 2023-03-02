@@ -6,7 +6,7 @@
   <p>Media Type: <%= media.formatted_type %></p>
   <p>Release Year: <%= media.release_year %></p>
   <% if current_user %>
-    <%= render partial: 'shared/drop_down_lists', locals: { user_id: current_user, media_id: media.id, button_text: ""} %>
+    <%= render partial: 'shared/drop_down_lists', locals: { user_id: current_user, media_id: media.id, button_text: "Add to List"} %>
   <% else %>
     <%= render partial: 'shared/visitor_drop_down', locals: { button_text: "Add to List" } %>
   <% end %>

@@ -55,10 +55,17 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
     end
 
     describe 'as a visitor' do
-      it 'does not have option to add media to lists' do
+      it 'displays a button to add media to list but prompts visitor to login first' do 
         within '#add_to_list' do
-          expect(page).to have_content('Login/Register to add this to a list.')
-          expect(page).to_not have_button("Add to List")
+          expect(page).to have_content("Add to List")
+
+          click_button "Add to List"
+
+          expect(page).to have_link("Login to add this to a list")
+
+          click_link "Login to add this to a list"
+          
+          expect(current_path).to eq(root_path)
         end
       end
     end

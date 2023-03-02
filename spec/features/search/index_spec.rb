@@ -50,4 +50,25 @@ RSpec.describe 'Media Search' do
       end
     end
   end 
+
+  describe 'visitor' do 
+    it 'displays a button to add media to list but prompts visitor to login first' do 
+      visit root_path
+
+      fill_in "query", with: "bad"
+      click_button "Search"
+
+      within "#media_3173903" do 
+        expect(page).to have_content("Add to List")
+
+        click_button "Add to List"
+
+        expect(page).to have_link("Login to add this to a list")
+
+        click_link "Login to add this to a list"
+        
+        expect(current_path).to eq(root_path)
+      end
+    end
+  end
 end

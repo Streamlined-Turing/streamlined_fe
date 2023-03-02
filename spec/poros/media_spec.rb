@@ -21,6 +21,7 @@ RSpec.describe Media do
     expect(@media.audience_score).to eq @media.audience_score
     expect(@media.vote_average).to eq @media.vote_average
     expect(@media.user_lists).to eq @media.user_lists
+    expect(@media.user_rating).to eq @media.user_rating
   end
 
   it 'can reformat the media type' do 

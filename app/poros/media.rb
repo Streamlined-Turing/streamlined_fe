@@ -14,7 +14,8 @@ class Media
               :trailer, 
               :vote_average,
               :genre,
-              :user_lists
+              :user_lists,
+              :user_rating
 
   def initialize(data)
     @id = data[:id]
@@ -34,6 +35,7 @@ class Media
     @trailer = data[:attributes][:trailer]
     @vote_average = data[:attributes][:vote_average]
     @user_lists = data[:attributes][:user_lists]
+    @user_rating = data[:attributes][:user_rating]
   end
 
   def genres

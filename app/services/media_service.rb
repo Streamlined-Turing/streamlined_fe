@@ -20,7 +20,13 @@ class MediaService
 
   def self.media_list_update(media_id, user_id, list)
     conn.patch("/api/v1/users/#{user_id}/media/#{media_id}") do |r|
-       r.params = {list: list}
+      r.params = {list: list}
+    end
+  end
+
+  def self.media_rating_update(media_id, user_id, rating)
+    conn.patch("/api/v1/users/#{user_id}/media/#{media_id}") do |r|
+      r.params = {rating: rating}
     end
   end
 

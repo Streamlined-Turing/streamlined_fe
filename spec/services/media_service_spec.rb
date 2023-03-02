@@ -69,4 +69,24 @@ RSpec.describe MediaService do
     expect(response[:data][0][:attributes]).to have_key(:poster_path)
     end 
   end 
+
+  describe 'media updates', :vcr do
+    it 'returns no content for updating lists' do
+      response = MediaService.media_list_update(3173903, 1, "Want to Watch")
+
+      expect(response.status).to eq 204
+
+      new_data = MediaService.media(3173903, 1)
+      expect(new_data[:data][:attributes][:user_lists]).to eq "Want to Watch"
+    end
+
+    it 'returns no content for updating rating' do
+      response = MediaService.media_rating_update(3173903, 1, 3)
+
+      expect(response.status).to eq 204
+
+      new_data = MediaService.media(3173903, 1)
+      expect(new_data[:data][:attributes][:user_rating]).to eq 3 
+    end
+  end
 end

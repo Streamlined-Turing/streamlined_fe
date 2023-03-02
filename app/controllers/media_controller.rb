@@ -1,12 +1,13 @@
 class MediaController < ApplicationController
   before_action :logged_in, only: :show
-  
+ 
   def show
     @media = MediaFacade.media(params[:id], current_user)
   end
 
   def update
-    MediaService.media_list_update(params[:id], current_user, params[:list])
+    MediaService.media_list_update(params[:id], current_user, params[:list]) if params[:list]
+    MediaService.media_rating_update(params[:id], current_user, params[:rating]) if params[:rating]
     redirect_back(fallback_location: root_path)
   end
 

@@ -26,7 +26,7 @@ RSpec.describe 'Landing page', type: :feature do
 
         within "#about_us" do
           expect(page).to have_content("Who Are We?")
-          expect(page).to have_content("StreamLined is a tool to track movies and TV shows")
+          expect(page).to have_content("StreamLined is your new go-to media tracking tool ")
         end
       end
 

@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   resource :dashboard, except: [:new, :index, :create], controller: 'users'
 
-  resources :media, only: [:show]
+  resources :media, only: [:show, :update]
 end

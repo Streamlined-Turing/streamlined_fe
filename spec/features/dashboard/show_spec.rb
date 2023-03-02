@@ -87,6 +87,32 @@ RSpec.describe 'user dashboard', :vcr, type: :feature do
         expect(page).to_not have_link('Watched')
       end 
     end
+
+    it 'has an option to change media to a different list' do 
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+      visit dashboard_path
+
+      visit media_path(1602633)
+
+      click_button "Add to List"
+      click_link "Currently Watching"
+
+      visit dashboard_path
+
+      expect(page).to have_content("Lucky")
+
+      within('#media_results') do 
+        click_button ""
+        #This "watched" refers to list assignment
+        click_link "Watched"
+      end
+
+      expect(page).to_not have_content("Lucky")
+      #This "watched" refers to the list
+      click_link "Watched"
+
+      expect(page).to have_content("Lucky")
+    end
   end
 
   describe 'as a visitor' do 

@@ -1,0 +1,10 @@
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <%= button_text %> <span class="caret"></span>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li><%= link_to "Want to Watch", media_path(media_id, :list=>"Want to Watch"), class: "dropdown-item", method: :patch %></li>
+    <li><%= link_to "Currently Watching", media_path(media_id, :list=>"Currently Watching"), class: "dropdown-item", method: :patch %></li>
+    <li><%= link_to "Watched", media_path(media_id, :list=>"Watched"), class: "dropdown-item", method: :patch %></li>
+  </div>
+</div>

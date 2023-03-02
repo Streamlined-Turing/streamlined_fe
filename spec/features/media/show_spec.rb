@@ -19,8 +19,12 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
         expect(page).to have_content 9.3
       end
 
-      xit 'shows media genre' do
-        expect(page).to have_content 'Genres: '
+      it 'does not show a media attribute if it does not exist' do
+        expect(page).to_not have_content 'Genres: '
+
+        visit media_path(1602633)
+
+        expect(page).to have_content('Genres: ')
       end
 
       it 'shows media poster' do
@@ -48,15 +52,13 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
       it 'shows media trailer video' do
         expect(page).to have_css 'iframe'
       end
-
-      xit 'shows what lists this media belongs to for the current user' do
-      end
     end
 
     describe 'as a visitor' do
       it 'does not have option to add media to lists' do
         within '#add_to_list' do
           expect(page).to have_content('Login/Register to add this to a list.')
+          expect(page).to_not have_button("Add to List")
         end
       end
     end
@@ -73,13 +75,72 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
         }
       end
 
-      it 'has an option to add media to lists', :vcr do
+      it 'has an option to add media to lists' do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
 
-        visit media_path(3_173_903)
+        visit media_path(1602633)
 
         within '#add_to_list' do
-          expect(page).to have_content('FORM')
+          expect(page).to have_button("Add to List")
+          click_button "Add to List"
+          expect(page).to have_link("Want to Watch")
+          expect(page).to have_link("Watched")
+          click_link "Currently Watching"
+
+          within '#current_list' do 
+            expect(page).to have_content("Currently Watching")
+            expect(page).to_not have_content("Want to Watch")
+            expect(page).to_not have_content("Watched")
+          end
+        end
+
+        visit dashboard_path
+
+        expect(page).to have_content("Lucky")
+      end
+
+      it 'can add media to other lists' do 
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+
+        visit media_path(1602633)
+
+        within '#add_to_list' do
+          expect(page).to have_button("Add to List")
+          click_button "Add to List"
+          expect(page).to have_link("Want to Watch")
+          expect(page).to have_link("Currently Watching")
+          click_link "Watched"
+        end
+
+        visit dashboard_path
+
+        expect(page).to have_content("Currently Watching")
+        expect(page).to_not have_content("Lucky")
+        click_link "Watched"
+        expect(page).to have_content("Lucky")
+      end
+
+      it 'can change media from one list to a new list' do 
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+
+        visit media_path(1602633)
+
+        within '#add_to_list' do
+          expect(page).to have_button("Add to List")
+
+          click_button "Add to List"
+
+          expect(page).to have_link("Want to Watch")
+          expect(page).to have_link("Currently Watching")
+
+          click_link "Watched"
+
+          expect(page).to have_content("Current List: Watched")
+
+          click_button "Add to List"
+          click_link "Want to Watch"
+
+          expect(page).to have_content("Current List: Want to Watch")
         end
       end
     end

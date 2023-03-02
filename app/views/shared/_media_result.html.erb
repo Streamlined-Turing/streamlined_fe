@@ -8,6 +8,6 @@
     <% if current_user %>
       <%= render partial: 'shared/drop_down_lists', locals: { user_id: current_user, media_id: media.id, button_text: ""} %>
     <% else %>
-      Login/Register to add this to a list.
+      <%= render partial: 'shared/visitor_drop_down', locals: { button_text: "Add to List" } %>
     <% end %>
   </div>

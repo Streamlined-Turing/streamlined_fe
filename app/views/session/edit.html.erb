@@ -6,10 +6,10 @@
       <%= form_with url: onboarding_path, method: :patch, local: true do |f| %>
         <%= f.label :username, 'Please enter a username', class:"control-label" %>
         <div class="input-group">
-          <%= f.text_field :username, {class:"form-control", width:1} %>
+          <%= f.text_field :username, {class:"form-control", required: true } %>
 
           <span class="input-group-btn">
-            <%= f.submit :Submit, class: "btn btn-default" %>
+            <%= f.submit :Save, class: "btn btn-default" %>
           </span>
         </div>
       <% end %>

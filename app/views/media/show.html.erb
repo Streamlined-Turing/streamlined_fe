@@ -12,7 +12,7 @@
               Current List:
               <%= @media.user_lists %>
             </div>
-            <%= render partial: 'shared/drop_down_lists', locals: { user_id: @user.id, media_id: @media.id}  %>
+            <%= render partial: 'shared/drop_down_lists', locals: { user_id: @user.id, media_id: @media.id, button_text: "Add to List"}  %>
           <% else %>
             Login/Register to add this to a list.
           <% end %>

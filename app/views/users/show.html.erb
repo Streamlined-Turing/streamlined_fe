@@ -13,13 +13,15 @@
       <h2>Currently Watching</h2>
       <%= link_to 'Want to Watch', '/dashboard?list=Want+to+Watch', method: :get, local: true %>
       <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
-      <% if @media_list.empty? %>
-        <p>This list is currently empty. Search for media to start adding!</p>
-      <% else %>
-        <% @media_list.each do |media| %>
-          <%= render partial: "shared/media_result", locals: {media: media} %>
+      <div id="media_results">
+        <% if @media_list.empty? %>
+          <p>This list is currently empty. Search for media to start adding!</p>
+        <% else %>
+          <% @media_list.each do |media| %>
+            <%= render partial: "shared/media_result", locals: {media: media} %>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   <% elsif @list == 'Want to Watch' %>
     <div id="want_to_watch">

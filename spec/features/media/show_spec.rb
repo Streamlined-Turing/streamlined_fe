@@ -58,6 +58,7 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
       it 'does not have option to add media to lists' do
         within '#add_to_list' do
           expect(page).to have_content('Login/Register to add this to a list.')
+          expect(page).to_not have_button("Add to List")
         end
       end
     end

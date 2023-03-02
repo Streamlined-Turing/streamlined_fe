@@ -102,7 +102,7 @@ RSpec.describe 'user dashboard', :vcr, type: :feature do
       expect(page).to have_content("Lucky")
 
       within('#media_results') do 
-        click_button ""
+        click_button "Add to List"
         #This "watched" refers to list assignment
         click_link "Watched"
       end

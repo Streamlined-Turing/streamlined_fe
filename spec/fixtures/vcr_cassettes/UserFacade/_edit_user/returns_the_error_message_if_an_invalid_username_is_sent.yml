@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: UTF-8
+      string: username=a
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 28946472-4264-42b5-9e6c-cfd4451b2145
+      X-Runtime:
+      - '0.003861'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Username must be 6 - 36 characters in length"}'
+  recorded_at: Thu, 02 Mar 2023 21:12:20 GMT
+recorded_with: VCR 6.1.0

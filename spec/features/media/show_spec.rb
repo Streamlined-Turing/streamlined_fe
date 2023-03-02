@@ -19,8 +19,12 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
         expect(page).to have_content 9.3
       end
 
-      xit 'shows media genre' do
-        expect(page).to have_content 'Genres: '
+      it 'does not show a media attribute if it does not exist' do
+        expect(page).to_not have_content 'Genres: '
+
+        visit media_path(1602633)
+
+        expect(page).to have_content('Genres: ')
       end
 
       it 'shows media poster' do
@@ -47,9 +51,6 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
 
       it 'shows media trailer video' do
         expect(page).to have_css 'iframe'
-      end
-
-      xit 'shows what lists this media belongs to for the current user' do
       end
     end
 
@@ -92,9 +93,54 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
           end
         end
 
-        # visit dashboard_path
+        visit dashboard_path
 
-        # expect(page).to have_content("Lucky")
+        expect(page).to have_content("Lucky")
+      end
+
+      it 'can add media to other lists' do 
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+
+        visit media_path(1602633)
+
+        within '#add_to_list' do
+          expect(page).to have_button("Add to List")
+          click_button "Add to List"
+          expect(page).to have_link("Want to Watch")
+          expect(page).to have_link("Currently Watching")
+          click_link "Watched"
+        end
+
+        visit dashboard_path
+
+        expect(page).to have_content("Currently Watching")
+        expect(page).to_not have_content("Lucky")
+        click_link "Watched"
+        expect(page).to have_content("Lucky")
+      end
+
+      it 'can change media from one list to a new list' do 
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+
+        visit media_path(1602633)
+
+        within '#add_to_list' do
+          expect(page).to have_button("Add to List")
+
+          click_button "Add to List"
+
+          expect(page).to have_link("Want to Watch")
+          expect(page).to have_link("Currently Watching")
+
+          click_link "Watched"
+
+          expect(page).to have_content("Current List: Watched")
+
+          click_button "Add to List"
+          click_link "Want to Watch"
+
+          expect(page).to have_content("Current List: Want to Watch")
+        end
       end
     end
   end

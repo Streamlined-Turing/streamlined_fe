@@ -21,7 +21,7 @@ RSpec.describe 'user dashboard edit', type: :feature do
       expect(page).to have_content('Username: new_username')
     end
 
-    it 'displays a flash message when I enter an invalid username' do
+    it 'displays a flash message when I enter an invalid username', :vcr do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_id)
 
       visit edit_dashboard_path

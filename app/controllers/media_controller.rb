@@ -11,6 +11,11 @@ class MediaController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
+  def destroy
+    MediaService.delete_from_list(params[:id], current_user)
+    redirect_back(fallback_location: root_path)
+  end
+
   private 
 
   def logged_in 

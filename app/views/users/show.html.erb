@@ -42,7 +42,10 @@
       </ul>
       <div id="media_results">
         <% if @media_list.empty? %>
-          <p>This list is currently empty. Search for media to start adding!</p>
+          <center>
+            <h4>This list is currently empty. Search for media to start adding!</h4>
+            <%= image_tag 'retro-tv-static.png', height:'300px' %>
+          </center>
         <% else %>
           <% @media_list.each do |media| %>
             <%= render partial: 'shared/delete_from_list', locals: { user_list: "Currently Watching", media_id: media.id, button_text: "X"}  %>
@@ -67,7 +70,10 @@
         </li>
       </ul>
       <% if @media_list.empty? %>
-        <p>This list is currently empty. Search for media to start adding!</p>
+        <center>
+          <h4>This list is currently empty. Search for media to start adding!</h4>
+          <%= image_tag 'retro-tv-static.png', height:'300px' %>
+        </center>
       <% else %>
         <% @media_list.each do |media| %>
           <%= render partial: 'shared/delete_from_list', locals: { user_list: "Want to Watch", media_id: media.id, button_text: "X"}  %>
@@ -87,7 +93,10 @@
         </li>
       </ul>
       <% if @media_list.empty? %>
-        <p>This list is currently empty. Search for media to start adding!</p>
+        <center>
+          <h4>This list is currently empty. Search for media to start adding!</h4>
+          <%= image_tag 'retro-tv-static.png', height:'300px' %>
+        </center>
       <% else %>
         <% @media_list.each do |media| %>
           <%= render partial: 'shared/delete_from_list', locals: { user_list: "Watched", media_id: media.id, button_text: "X"}  %>

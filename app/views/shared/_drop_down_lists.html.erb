@@ -1,6 +1,6 @@
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Add to List <span class="caret"></span>
+    <%= button_text %> <span class="caret"></span>
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <li><%= link_to "Want to Watch", media_path(media_id, :list=>"Want to Watch"), class: "dropdown-item", method: :patch %></li>

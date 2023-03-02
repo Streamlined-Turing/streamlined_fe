@@ -1,0 +1,502 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1911945c4dd0a3b4413d1dd2ec373edf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 37067c1a-b5c1-4c32-8a5e-6fab6cc92649
+      X-Runtime:
+      - '0.050489'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
+        Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 01:38:08 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5b9050fd-ca8b-4cff-904b-b886327d70fe
+      X-Runtime:
+      - '0.033119'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 02 Mar 2023 01:38:08 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1911945c4dd0a3b4413d1dd2ec373edf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3883e3e1-7a9d-41cb-9dc6-e404cac2aa59
+      X-Runtime:
+      - '0.002558'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
+        Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 01:38:08 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/1602633?user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2428f784b80de49902038587977519dc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1142d38f-5116-4490-8472-35e8d65e33a0
+      X-Runtime:
+      - '0.507668'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+        Rated","media_type":"movie","description":"May, a self help author with all
+        the answers, suddenly finds herself stalked by a masked man who mysteriously
+        reappears every night. Even when she kills him. May struggles to get help
+        from the people around her as she fights to stay alive. Is this paranoia,
+        or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"None"}}}'
+  recorded_at: Thu, 02 Mar 2023 01:38:09 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1/media/1602633?list=Currently%20Watching
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 649db5bf-0aac-4c6e-8861-28704f33ba28
+      X-Runtime:
+      - '0.182798'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 02 Mar 2023 01:38:09 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1911945c4dd0a3b4413d1dd2ec373edf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 53ff32f4-ca8a-4f4b-8eea-89040d07e3b6
+      X-Runtime:
+      - '0.002633'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
+        Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 01:38:09 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/1602633?user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"a2a88e5411676a8d7f4deb5334f4cbb6"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7c063328-baf6-457f-b80d-ff5c36020a99
+      X-Runtime:
+      - '0.461578'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+        Rated","media_type":"movie","description":"May, a self help author with all
+        the answers, suddenly finds herself stalked by a masked man who mysteriously
+        reappears every night. Even when she kills him. May struggles to get help
+        from the people around her as she fights to stay alive. Is this paranoia,
+        or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"Currently
+        Watching"}}}'
+  recorded_at: Thu, 02 Mar 2023 01:38:10 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1911945c4dd0a3b4413d1dd2ec373edf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5338eb7d-9705-48da-9b4e-37b006b22509
+      X-Runtime:
+      - '0.002815'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
+        Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 01:38:10 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"54860b85126d88d75b0104dbd69594a7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b7f2d929-6243-4117-81b3-6a49b2ef0502
+      X-Runtime:
+      - '0.310753'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+        Rated","media_type":"movie","description":"May, a self help author with all
+        the answers, suddenly finds herself stalked by a masked man who mysteriously
+        reappears every night. Even when she kills him. May struggles to get help
+        from the people around her as she fights to stay alive. Is this paranoia,
+        or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"None"}}]}'
+  recorded_at: Thu, 02 Mar 2023 01:38:10 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1/media/1602633?list=Watched
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 623e3b90-17b9-481c-a549-e4f00106b622
+      X-Runtime:
+      - '0.068950'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 02 Mar 2023 01:38:10 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1911945c4dd0a3b4413d1dd2ec373edf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7b0e6d63-64eb-4224-baae-81e71df11c4d
+      X-Runtime:
+      - '0.007500'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
+        Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 01:38:10 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 955bb298-8a3c-4613-8c37-749a632e6d0c
+      X-Runtime:
+      - '0.009419'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 02 Mar 2023 01:38:10 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1911945c4dd0a3b4413d1dd2ec373edf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5fdf3cc4-64ec-49e5-8f32-633fb280ebf0
+      X-Runtime:
+      - '0.002297'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"100629754535654255597","username":"krporter22","email":"krporter22@gmail.com","name":"Kelsie
+        Porter","picture":"https://lh3.googleusercontent.com/a/AGNmyxZOpY4NQnIIap0WyzTXI52Yg-yv4qW0k79Nge-f=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 01:38:10 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Watched
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"54860b85126d88d75b0104dbd69594a7"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2482c1f3-32a4-4e76-a7bb-a1e767abb23d
+      X-Runtime:
+      - '0.247520'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+        Rated","media_type":"movie","description":"May, a self help author with all
+        the answers, suddenly finds herself stalked by a masked man who mysteriously
+        reappears every night. Even when she kills him. May struggles to get help
+        from the people around her as she fights to stay alive. Is this paranoia,
+        or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"None"}}]}'
+  recorded_at: Thu, 02 Mar 2023 01:38:10 GMT
+recorded_with: VCR 6.1.0

@@ -1,13 +1,12 @@
-  <div id="media_<%= media.id %>">
-    <h4><%= link_to media.title, media_path(media.id) %></h4>
-    <% if media.poster %>
-      <p><%= link_to image_tag(media.poster), media_path(media.id)  %></p>
-    <% end %>
-    <p>Media Type: <%= media.formatted_type %></p>
-    <p>Release Year: <%= media.release_year %></p>
-    <% if current_user %>
-      <%= render partial: 'shared/drop_down_lists', locals: { user_id: current_user, media_id: media.id, button_text: ""} %>
-    <% else %>
-      <%= render partial: 'shared/visitor_drop_down', locals: { button_text: "Add to List" } %>
-    <% end %>
-  </div>
+<h3><%= link_to media.title, media_path(media.id) %></h3>
+<br>
+  <% if media.poster %>
+    <p><%= link_to image_tag(media.poster, height:'80%', width:'80%'), media_path(media.id) %></p>
+  <% end %>
+  <p>Media Type: <%= media.formatted_type %></p>
+  <p>Release Year: <%= media.release_year %></p>
+  <% if current_user %>
+    <%= render partial: 'shared/drop_down_lists', locals: { user_id: current_user, media_id: media.id, button_text: ""} %>
+  <% else %>
+    <%= render partial: 'shared/visitor_drop_down', locals: { button_text: "Add to List" } %>
+  <% end %>

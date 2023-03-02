@@ -21,8 +21,13 @@ class SessionController < ApplicationController
   def update
     user = UserFacade.edit_user(current_user, params[:username])
 
-    session[:user_id] = user.id
-    redirect_to dashboard_path
+    if user.try(:id)
+      session[:user_id] = user.id
+      redirect_to dashboard_path
+    else
+      flash[:alert] = user
+      redirect_back(fallback_location: dashboard_path)
+    end
   end
 
   def destroy

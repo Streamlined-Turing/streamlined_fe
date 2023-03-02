@@ -21,13 +21,13 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"4e3872dca8671a76d55731c380a0de67"
+      - W/"626d2379cfe87874aed337f501f2101d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ba56299c-aa1f-4186-b39d-c0bed53343eb
+      - 63c4ab83-c645-473a-bc67-5e57e7de3b17
       X-Runtime:
-      - '0.334733'
+      - '0.343115'
       Transfer-Encoding:
       - chunked
     body:
@@ -38,6 +38,6 @@ http_interactions:
         cancer and given a prognosis of only two years left to live. He becomes filled
         with a sense of fearlessness and an unrelenting desire to secure his family''s
         financial future at any cost as he enters the dangerous world of drugs and
-        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
-  recorded_at: Wed, 01 Mar 2023 18:04:50 GMT
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None","user_rating":null}}}'
+  recorded_at: Thu, 02 Mar 2023 18:34:25 GMT
 recorded_with: VCR 6.1.0

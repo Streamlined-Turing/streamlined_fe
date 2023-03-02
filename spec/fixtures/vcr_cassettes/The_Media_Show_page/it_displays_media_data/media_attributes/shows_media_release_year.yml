@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 955ad291-f83d-4e66-967a-9c16bc31de62
+      - 6e12cec7-498a-4208-a392-7fbc8b78a4f7
       X-Runtime:
-      - '0.319666'
+      - '0.328042'
       Transfer-Encoding:
       - chunked
     body:
@@ -39,5 +39,5 @@ http_interactions:
         with a sense of fearlessness and an unrelenting desire to secure his family''s
         financial future at any cost as he enters the dangerous world of drugs and
         crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
-  recorded_at: Wed, 01 Mar 2023 17:57:57 GMT
+  recorded_at: Wed, 01 Mar 2023 21:53:38 GMT
 recorded_with: VCR 6.1.0

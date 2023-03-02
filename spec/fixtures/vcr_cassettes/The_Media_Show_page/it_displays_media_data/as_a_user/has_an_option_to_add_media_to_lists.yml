@@ -25,9 +25,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 688e088a-ca75-48e1-b029-1dbdec453f89
+      - 47af6832-af41-49d7-b7e8-021385a672c5
       X-Runtime:
-      - '0.461692'
+      - '0.321132'
       Transfer-Encoding:
       - chunked
     body:
@@ -39,7 +39,7 @@ http_interactions:
         with a sense of fearlessness and an unrelenting desire to secure his family''s
         financial future at any cost as he enters the dangerous world of drugs and
         crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
-  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
+  recorded_at: Wed, 01 Mar 2023 21:53:40 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/users/1
@@ -61,20 +61,20 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a0ff839f59953fb7d3706cc989b233a1"
+      - W/"22c7fab0d4ff6f870d13c938786a6a3c"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 0e932ebd-bd7a-4fb4-88ab-e4a80259f7ac
+      - ab8855a1-71e4-4d88-b25f-5d6c29ceaf64
       X-Runtime:
-      - '0.026579'
+      - '0.027540'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"104505147435508023263","username":"pitzelalex","email":"pitzelalex@gmail.com","name":"Alex
-        Pitzel","picture":"https://lh3.googleusercontent.com/a/AGNmyxZxvaMaqWjnwCfSs2_g9yETZREpYAM5GPNneX2pbw=s96-c"}}}'
-  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"107068340609172488382","username":"Trombo","email":"tscasady@gmail.com","name":"Thomas
+        Casady","picture":"https://lh3.googleusercontent.com/a/AGNmyxYSFsWaysPfRG_DFwwKdpLOFeFYRTM4KSSHVngq=s96-c"}}}'
+  recorded_at: Wed, 01 Mar 2023 21:53:40 GMT
 - request:
     method: get
     uri: http://localhost:5000/api/v1/media/3173903?user_id=1
@@ -100,9 +100,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - e7340f63-db48-4deb-86b4-19fdb91f86aa
+      - 2600b596-c5b9-4a74-a428-50d99bd85a6a
       X-Runtime:
-      - '0.315575'
+      - '0.361637'
       Transfer-Encoding:
       - chunked
     body:
@@ -114,5 +114,5 @@ http_interactions:
         with a sense of fearlessness and an unrelenting desire to secure his family''s
         financial future at any cost as he enters the dangerous world of drugs and
         crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None"}}}'
-  recorded_at: Wed, 01 Mar 2023 21:45:22 GMT
+  recorded_at: Wed, 01 Mar 2023 21:53:40 GMT
 recorded_with: VCR 6.1.0

@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: UTF-8
+      string: username=Drop_table+%3Aall+%28%29
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 450ccf88-5b59-4459-85e5-26e725bbc4fe
+      X-Runtime:
+      - '0.005571'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Invalid characters. Only - and _ allowed for special characters"}'
+  recorded_at: Thu, 02 Mar 2023 21:18:16 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: UTF-8
+      string: username=short
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - ac276d2c-9fe4-4654-8e64-5bf9406dd691
+      X-Runtime:
+      - '0.001299'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Username must be 6 - 36 characters in length"}'
+  recorded_at: Thu, 02 Mar 2023 21:18:16 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: UTF-8
+      string: username=a%5B%5D
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 7626f1d9-cc1c-4aa1-a87e-c40f61fa385d
+      X-Runtime:
+      - '0.001270'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"message":"Invalid characters. Only - and _ allowed for special characters,
+        Username must be 6 - 36 characters in length"}'
+  recorded_at: Thu, 02 Mar 2023 21:18:16 GMT
+recorded_with: VCR 6.1.0

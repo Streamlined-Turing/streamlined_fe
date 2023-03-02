@@ -21,6 +21,34 @@ RSpec.describe 'Onboarding Page', type: :feature do
       expect(current_path).to eq dashboard_path
       expect(page).to have_content('kerynn')
     end
+
+    it 'displays a flash message when I enter an invalid username', :vcr do
+      visit onboarding_path
+
+      fill_in 'username', with: 'Drop_table :all ()'
+
+      click_button 'Save'
+
+      expect(current_path).to eq onboarding_path
+
+      expect(page).to have_content('Invalid characters. Only - and _ allowed for special characters')
+
+      fill_in 'username', with: 'short'
+
+      click_button 'Save'
+
+      expect(current_path).to eq onboarding_path
+
+      expect(page).to have_content('Username must be 6 - 36 characters in length')
+
+      fill_in 'username', with: 'a[]'
+
+      click_button 'Save'
+
+      expect(current_path).to eq onboarding_path
+
+      expect(page).to have_content('Invalid characters. Only - and _ allowed for special characters, Username must be 6 - 36 characters in length')
+    end
   end
 
   describe 'as a visitor' do 

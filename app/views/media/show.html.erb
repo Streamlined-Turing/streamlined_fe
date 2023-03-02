@@ -1,9 +1,22 @@
 <h2><center><%= @media.title %></center></h2>
 
+
+
 <div class="row">
   <% if @media.poster %>
     <div class='poster col-md-3'>
       <%= image_tag(@media.poster, height:'100%', width:'100%') %>
+        <div id="add_to_list">
+          <% if @user %>
+            <div id="current_list">
+              Current List:
+              <%= @media.user_lists %>
+            </div>
+            <%= render partial: 'shared/drop_down_lists', locals: { user_id: @user.id, media_id: @media.id}  %>
+          <% else %>
+            Login/Register to add this to a list.
+          <% end %>
+        </div>
     </div>
   <% end %>
   <div class='col-md-9'>
@@ -40,14 +53,4 @@
   </div>
 </div>
 
-<div id="add_to_list">
-  <% if @user %>
-    <div id="current_list">
-      Current List:
-      <%= @media.user_lists %>
-    </div>
-    <%= render partial: 'shared/drop_down_lists', locals: { user_id: @user.id, media_id: @media.id}  %>
-  <% else %>
-    Login/Register to add this to a list.
-  <% end %>
-</div>
+

@@ -3,12 +3,12 @@ class UsersController < ApplicationController
 
   def show
     if params[:list] == 'Want to Watch'
-      @lists = MediaFacade.list_results(current_user, params[:list])
+      @media_list = MediaFacade.list_results(current_user, params[:list])
     elsif params[:list] == 'Watched'
-      @lists = MediaFacade.list_results(current_user, params[:list])
+      @media_list = MediaFacade.list_results(current_user, params[:list])
     else 
       params[:list] = 'Currently Watching'
-      @lists = MediaFacade.list_results(current_user, params[:list])
+      @media_list = MediaFacade.list_results(current_user, params[:list])
     end
 
     @list = params[:list]

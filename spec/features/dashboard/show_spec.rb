@@ -113,6 +113,26 @@ RSpec.describe 'user dashboard', :vcr, type: :feature do
 
       expect(page).to have_content("Lucky")
     end
+
+    it 'has a button to remove media from a list' do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+      visit dashboard_path
+
+      visit media_path(1602633)
+
+      click_button "Add to List"
+      click_link "Currently Watching"
+
+      visit dashboard_path
+
+      expect(page).to have_content("Lucky")
+
+      within('#media_results') do 
+        click_button "X"
+      end
+
+      expect(page).to_not have_content("Lucky")
+    end
   end
 
   describe 'as a visitor' do 

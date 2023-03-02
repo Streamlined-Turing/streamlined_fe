@@ -13,6 +13,7 @@
               <%= @media.user_lists %>
             </div>
             <%= render partial: 'shared/drop_down_lists', locals: { user_id: @user.id, media_id: @media.id, button_text: "Add to List"}  %>
+            <%= render partial: 'shared/delete_from_list', locals: { user_list: @media.user_lists, media_id: @media.id, button_text: "Remove from List"}  %>
           <% else %>
             <%= render partial: 'shared/visitor_drop_down', locals: { button_text: "Add to List" } %>
           <% end %>

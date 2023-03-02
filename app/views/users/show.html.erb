@@ -7,7 +7,7 @@
         <%= image_tag(@user.picture) %>
       </div>
       <p></p>
-<%= button_to 'Edit Profile', edit_dashboard_path, method: :get, local: true, class: "btn btn-info" %>
+      <%= button_to 'Edit Profile', edit_dashboard_path, method: :get, local: true, class: "btn btn-info" %>
     </div>
     <div class="col-sm-4 text-left">
       
@@ -45,6 +45,7 @@
           <p>This list is currently empty. Search for media to start adding!</p>
         <% else %>
           <% @media_list.each do |media| %>
+            <%= render partial: 'shared/delete_from_list', locals: { user_list: "Currently Watching", media_id: media.id, button_text: "X"}  %>
             <%= render partial: "shared/media_result", locals: {media: media} %>
           <% end %>
         <% end %>
@@ -69,6 +70,7 @@
         <p>This list is currently empty. Search for media to start adding!</p>
       <% else %>
         <% @media_list.each do |media| %>
+          <%= render partial: 'shared/delete_from_list', locals: { user_list: "Want to Watch", media_id: media.id, button_text: "X"}  %>
           <%= render partial: "shared/media_result", locals: {media: media} %>
         <% end %>
       <% end %>
@@ -88,8 +90,8 @@
         <p>This list is currently empty. Search for media to start adding!</p>
       <% else %>
         <% @media_list.each do |media| %>
+          <%= render partial: 'shared/delete_from_list', locals: { user_list: "Watched", media_id: media.id, button_text: "X"}  %>
           <%= render partial: "shared/media_result", locals: {media: media} %>
-
         <% end %>
       <% end %>
     </div>

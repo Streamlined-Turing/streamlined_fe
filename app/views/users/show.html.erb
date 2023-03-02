@@ -13,8 +13,12 @@
       <h2>Currently Watching</h2>
       <%= link_to 'Want to Watch', '/dashboard?list=Want+to+Watch', method: :get, local: true %>
       <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
-      <% if @lists.empty? %>
+      <% if @media_list.empty? %>
         <p>This list is currently empty. Search for media to start adding!</p>
+      <% else %>
+        <% @media_list.each do |media| %>
+          <%= render partial: "shared/media_result", locals: {media: media} %>
+        <% end %>
       <% end %>
     </div>
   <% elsif @list == 'Want to Watch' %>
@@ -22,8 +26,12 @@
       <h2>Want to Watch</h2>
       <%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %>
       <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
-      <% if @lists.empty? %>
+      <% if @media_list.empty? %>
         <p>This list is currently empty. Search for media to start adding!</p>
+      <% else %>
+        <% @media_list.each do |media| %>
+          <%= render partial: "shared/media_result", locals: {media: media} %>
+        <% end %>
       <% end %>
     </div>
   <% elsif @list == 'Watched' %>
@@ -31,8 +39,12 @@
       <h2>Watched</h2>
       <%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %>
       <%= link_to 'Want to Watch', '/dashboard?list=Want to Watch', method: :get, local: true %>
-      <% if @lists.empty? %>
+      <% if @media_list.empty? %>
         <p>This list is currently empty. Search for media to start adding!</p>
+      <% else %>
+        <% @media_list.each do |media| %>
+          <%= render partial: "shared/media_result", locals: {media: media} %>
+        <% end %>
       <% end %>
     </div>
   <% end %>

@@ -29,7 +29,7 @@
     <div id="currently_watching">
       <ul class="nav nav-tabs">
         <li class="active">
-          <a href="" data-toggle="tab" aria-expanded="true">Currently Watching
+          <a data-toggle="tab" aria-expanded="true">Currently Watching
           <span class="badge"><%= @media_list.count %></span>
           </a>
         </li>
@@ -45,7 +45,6 @@
           <p>This list is currently empty. Search for media to start adding!</p>
         <% else %>
           <% @media_list.each do |media| %>
-            
             <%= render partial: "shared/media_result", locals: {media: media} %>
           <% end %>
         <% end %>
@@ -58,7 +57,7 @@
           <%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %>
         </li>
         <li class="active">
-          <a href="" data-toggle="tab" aria-expanded="true">Want to Watch
+          <a data-toggle="tab" aria-expanded="true">Want to Watch
           <span class="badge"><%= @media_list.count %></span>
           </a>
         </li>
@@ -80,7 +79,7 @@
         <li class=""><%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %></li>
         <li class=""><%= link_to 'Want to Watch', '/dashboard?list=Want to Watch', method: :get, local: true %></li>
         <li class="active">
-          <a href="" data-toggle="tab" aria-expanded="true">Watched
+          <a data-toggle="tab" aria-expanded="true">Watched
           <span class="badge"><%= @media_list.count %></span>
           </a>
         </li>
@@ -90,6 +89,7 @@
       <% else %>
         <% @media_list.each do |media| %>
           <%= render partial: "shared/media_result", locals: {media: media} %>
+
         <% end %>
       <% end %>
     </div>

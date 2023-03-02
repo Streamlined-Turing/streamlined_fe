@@ -3,12 +3,13 @@ require 'rails_helper'
 RSpec.describe 'footer content' do
   it 'displays TMDB and watchmode logos with attribution', :vcr do
     visit root_path
+    
     within ".tmdb-logo" do
-      expect(page.find('img')[:src]).to eq('/assets/attribution/tmdb_logo-d96058e1921975014877e3200ded5108d6a3684ff478ea7bd7b8a5154095e410.png')
+      expect(page.find('img')[:src]).to eq('/assets/attribution/tmdb-logo-long-7cf604159ebb70df0b37aaf0cca032004ab1c70137645a12fc70755760c9f8c0.png')
     end
 
     within ".wm-logo" do
-      expect(page.find('img')[:src]).to eq('/assets/attribution/watchmode-small-logo-23e669c21e47a53b94e44d2b9c9d83ce7d18da81d699ca3c515e4c7f86dfc166.png')
+      expect(page.find('img')[:src]).to eq('/assets/attribution/watchmode_logo-ac77c09d8ff3a88973f4576454b6a0404c106ddc850da512f9029991d34453bb.png')
     end
 
     expect(page).to have_content('This website uses the TMDB API and streaming data is powered by Watchmode.com.')

@@ -51,6 +51,8 @@
       </iframe>
     <% end %>
   </div>
+  <%= render partial: 'shared/star_rating', locals: {user_id: current_user, media: @media} %>
+  
 </div>
 
 

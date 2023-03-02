@@ -1,0 +1,10 @@
+<%= form_with url: "/media/#{media.id}", method: :patch do |f| %>
+  <div class="rating">
+    <% (1..5).each do |value| %>
+      <%= f.radio_button :rating, value, id: "r#{value}", checked: (media.user_rating == value) %>
+      <%= label_tag "r#{value}", '' %>
+    <% end %>
+  </div>
+  <%= f.submit "Save Rating" %>
+<% end %>
+

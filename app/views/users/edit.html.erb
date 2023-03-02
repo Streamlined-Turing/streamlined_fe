@@ -1,10 +1,25 @@
-<%= form_with url: dashboard_path, method: :patch, local: true do |f| %>
-  <%= f.label :username, 'Please enter new Username:' %>
-  <%= f.text_field :username, value: @user.username %>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="form-group">
 
-  <%= f.submit 'Update Username' %>
-<% end %>
-<br>
-<p><%= button_to 'Delete Account', dashboard_path, method: :delete, local: true  %>
-Caution, this action is irreversible.
-</p>
+      <%= form_with url: dashboard_path, method: :patch, local: true do |f| %>
+        <%= f.label :username, 'Please enter new Username:', class:"control-label" %>
+        <div class="input-group">
+          <%= f.text_field :username, value: @user.username, required: true, class:"form-control" %>
+          <span class="input-group-btn">
+            <%= f.submit 'Update Username', class: "btn btn-default" %>
+          </span>
+        </div>
+      <% end %>
+      <br>
+      <center>
+        <p>
+        <%= button_to 'Delete Account', dashboard_path, method: :delete, local: true, class: "btn btn-danger" %>
+        <div class="text-danger">Caution, this action is irreversible.</div>
+        </p>
+      </center>
+    </div>
+  </div>
+</div>
+

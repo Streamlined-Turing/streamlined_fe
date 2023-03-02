@@ -32,6 +32,14 @@ RSpec.describe UserFacade do
 
       expect(user).to be_a User
     end
+
+    it 'returns the error message if an invalid username is sent', :vcr do
+      user_id = '1'
+
+      user = UserFacade.edit_user(user_id, 'a')
+
+      expect(user).to be_a String
+    end
   end
 
   describe '#delete' do

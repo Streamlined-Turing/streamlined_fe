@@ -21,7 +21,37 @@ RSpec.describe 'user dashboard edit', type: :feature do
       expect(page).to have_content('Username: new_username')
     end
 
-    it 'has a button to delete account', :vcr do 
+    it 'displays a flash message when I enter an invalid username', :vcr do
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_id)
+
+      visit edit_dashboard_path
+
+      fill_in 'username', with: 'Drop_table :all ()'
+
+      click_button 'Update Username'
+
+      expect(current_path).to eq edit_dashboard_path
+
+      expect(page).to have_content('Invalid characters. Only - and _ allowed for special characters')
+
+      fill_in 'username', with: 'short'
+
+      click_button 'Update Username'
+
+      expect(current_path).to eq edit_dashboard_path
+
+      expect(page).to have_content('Username must be 6 - 36 characters in length')
+
+      fill_in 'username', with: 'a[]'
+
+      click_button 'Update Username'
+
+      expect(current_path).to eq edit_dashboard_path
+
+      expect(page).to have_content('Invalid characters. Only - and _ allowed for special characters, Username must be 6 - 36 characters in length')
+    end
+
+    it 'has a button to delete account', :vcr do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_id)
 
       visit edit_dashboard_path

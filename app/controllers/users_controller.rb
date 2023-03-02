@@ -6,7 +6,7 @@ class UsersController < ApplicationController
       @media_list = MediaFacade.list_results(current_user, params[:list])
     elsif params[:list] == 'Watched'
       @media_list = MediaFacade.list_results(current_user, params[:list])
-    else 
+    else
       params[:list] = 'Currently Watching'
       @media_list = MediaFacade.list_results(current_user, params[:list])
     end
@@ -18,8 +18,14 @@ class UsersController < ApplicationController
 
   def update
     user = UserFacade.edit_user(current_user, params[:username])
-    session[:user_id] = user.id
-    redirect_to dashboard_path
+
+    if user.try(:id)
+      session[:user_id] = user.id
+      redirect_to dashboard_path
+    else
+      flash[:alert] = user
+      redirect_back(fallback_location: dashboard_path)
+    end
   end
 
   def destroy
@@ -37,6 +43,6 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       @user = UserFacade.get(current_user)
-    end 
+    end
   end
 end

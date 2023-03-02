@@ -1,5 +1,5 @@
   <div id="media_<%= media.id %>">
-    <h3><%= link_to media.title, media_path(media.id) %></h3>
+    <h4><%= link_to media.title, media_path(media.id) %></h4>
     <% if media.poster %>
       <p><%= link_to image_tag(media.poster), media_path(media.id)  %></p>
     <% end %>

@@ -1,18 +1,45 @@
-<div class="profile_pic">
-  <img src=<%= @user.picture %> alt="profile picture">
-</div>
-<p>Username: <%= @user.username %></p>
-<p>Email: <%= @user.email %></p>
-<p>Name: <%= @user.name %></p>
+<section class="text-center">
+  <div class="row">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-4">
+      <div class="profile_pic left">
+        <%= image_tag(@user.picture) %>
+      </div>
+      <p></p>
+<%= button_to 'Edit Profile', edit_dashboard_path, method: :get, local: true, class: "btn btn-info" %>
+    </div>
+    <div class="col-sm-4 text-left">
+      
+        <p class="user-details">Username: <%= @user.username %></p>
+        <p class="user-details">Email: <%= @user.email %></p>
+        <p class="user-details">Name: <%= @user.name %></p>
+      </ul>
+    </div>
+    <div class="col-sm-2">
+    </div>
+  </div>
+</section>
 
-<%= button_to 'Edit Profile', edit_dashboard_path, method: :get, local: true %>
+
+<hr>
 
 <section id='user_lists'>
   <% if @list == 'Currently Watching' %>
     <div id="currently_watching">
-      <h2>Currently Watching</h2>
-      <%= link_to 'Want to Watch', '/dashboard?list=Want+to+Watch', method: :get, local: true %>
-      <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a data-toggle="tab" aria-expanded="true">Currently Watching
+          <span class="badge"><%= @media_list.count %></span>
+          </a>
+        </li>
+        <li class="">
+          <%= link_to 'Want to Watch', '/dashboard?list=Want to Watch', method: :get, local: true %>
+        </li>
+        <li class="">
+          <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
+        </li>
+      </ul>
       <div id="media_results">
         <% if @media_list.empty? %>
           <p>This list is currently empty. Search for media to start adding!</p>
@@ -25,9 +52,19 @@
     </div>
   <% elsif @list == 'Want to Watch' %>
     <div id="want_to_watch">
-      <h2>Want to Watch</h2>
-      <%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %>
-      <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
+      <ul class="nav nav-tabs">
+        <li class="">
+          <%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %>
+        </li>
+        <li class="active">
+          <a data-toggle="tab" aria-expanded="true">Want to Watch
+          <span class="badge"><%= @media_list.count %></span>
+          </a>
+        </li>
+        <li class="">
+          <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
+        </li>
+      </ul>
       <% if @media_list.empty? %>
         <p>This list is currently empty. Search for media to start adding!</p>
       <% else %>
@@ -38,14 +75,21 @@
     </div>
   <% elsif @list == 'Watched' %>
     <div id="watched">
-      <h2>Watched</h2>
-      <%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %>
-      <%= link_to 'Want to Watch', '/dashboard?list=Want to Watch', method: :get, local: true %>
+      <ul class="nav nav-tabs">
+        <li class=""><%= link_to 'Currently Watching', '/dashboard?list=Currently+Watching', method: :get, local: true %></li>
+        <li class=""><%= link_to 'Want to Watch', '/dashboard?list=Want to Watch', method: :get, local: true %></li>
+        <li class="active">
+          <a data-toggle="tab" aria-expanded="true">Watched
+          <span class="badge"><%= @media_list.count %></span>
+          </a>
+        </li>
+      </ul>
       <% if @media_list.empty? %>
         <p>This list is currently empty. Search for media to start adding!</p>
       <% else %>
         <% @media_list.each do |media| %>
           <%= render partial: "shared/media_result", locals: {media: media} %>
+
         <% end %>
       <% end %>
     </div>

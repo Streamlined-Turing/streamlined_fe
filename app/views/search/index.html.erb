@@ -1,7 +1,7 @@
 <center><h1>Results For: <%= @media_query %></h1></center>
 <br>
 <div class="container-fluid">
-  <% @media_results.in_groups_of(3).each do |group| %>
+  <% @media_results.in_groups_of(3, false).each do |group| %>
     <div class="row">
       <% group.each do |media| %>
         <div class="col-lg-4">

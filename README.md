@@ -58,7 +58,7 @@ Circle CI
 ```
 ## Google Identity Services
 
-The application does not use Google authorization -- we have no need to make API calls on behalf of the user. Instead we authenticate using Google ID tokens. Using the provided button from google, a user can make an account with us, and google will send us a signed JWT. We verify and decode that JWT using the 'googleauth' gem. This decoded JWT provides us an authenticated user's profile information which we store.
+The application does not use Google authorization -- we have no need to make API calls on behalf of the user. Instead we authenticate using Google ID tokens. Using the provided button from google, a user can make an account with us, and google will send us a signed JWT. We verify and decode that JWT using the 'googleauth' gem. This decoded JWT provides us an authenticated user's profile information which we store in order to track a user's rating and lists.
 
 ## Moving Forward
 Additional features we would like to implement: 

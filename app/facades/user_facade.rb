@@ -7,7 +7,6 @@ class UserFacade
 
   def self.edit_user(current_user, username)
     response = UserService.edit_user(current_user, username)
-    # require 'pry'; binding.pry
     if response[:data]
       User.new(response[:data])
     else

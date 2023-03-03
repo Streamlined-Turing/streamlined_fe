@@ -30,20 +30,35 @@ RSpec.describe 'Landing page', type: :feature do
         end
       end
 
-      it 'has a section for 3 recommended trending media' do 
-        visit root_path
-          
-        within "#trending_media" do 
-          expect(page).to have_content("Trending Now")
-          expect(page).to have_content("Die Hart the Movie")
-          expect(page).to have_content("We Have a Ghost")
-          expect(page).to have_content("Knock at the Cabin")
+      describe 'trending media' do
+        it 'has a section for 3 recommended trending media' do 
+          visit root_path
+            
+          within "#trending_media" do 
+            expect(page).to have_content("Trending Now")
+            expect(page).to have_content("Die Hart the Movie")
+            expect(page).to have_content("We Have a Ghost")
+            expect(page).to have_content("Knock at the Cabin")
+          end
+
+          within "#media_1077280" do 
+            expect(page).to have_content("Die Hart the Movie")
+            expect(page).to have_css("img[src='https://image.tmdb.org/t/p/w500/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg']")
+            expect(page).to have_content("Vote Average: 6.3")
+          end
         end
 
-        within "#media_1077280" do 
-          expect(page).to have_content("Die Hart the Movie")
-          expect(page).to have_css("img[src='https://image.tmdb.org/t/p/w500/1EnBjTJ5utgT1OXYBZ8YwByRCzP.jpg']")
-          expect(page).to have_content("Vote Average: 6.3")
+        it 'has links to each trending media show page', :vcr do
+          visit root_path
+
+          within '#trending_media' do
+            expect(page).to have_link("Die Hart the Movie")
+            expect(page).to have_link("We Have a Ghost")
+            expect(page).to have_link("Knock at the Cabin")
+            click_link "We Have a Ghost"
+          end
+
+          expect(current_path).to eq media_path("movie-852096")
         end
       end
     end

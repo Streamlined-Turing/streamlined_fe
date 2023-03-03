@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/movie-852096?user_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2b0431666520f4b6d0a525376366dcbf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - abffbaa7-7e9a-4793-9bd6-42b29f872e18
+      X-Runtime:
+      - '0.441900'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1639606","type":"media","attributes":{"id":1639606,"title":"We
+        Have a Ghost","audience_score":6.4,"rating":"PG-13","media_type":"movie","description":null,"genres":[],"release_year":2023,"runtime":null,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/01639606_poster_w185.jpg","imdb_id":"tt7798604","tmdb_id":852096,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=qRcEeyyeXpY","user_lists":"None","user_rating":null}}}'
+  recorded_at: Fri, 03 Mar 2023 00:52:47 GMT
+recorded_with: VCR 6.1.0

@@ -57,4 +57,8 @@ class Media
   def trailer_id
     trailer.partition('=').last
   end
+
+  def watchmode_id
+    "#{@type}-#{@id}"
+  end
 end

@@ -7,7 +7,7 @@
         <% group.each do |media| %>
           <div class="col-lg-4">
           <div id="media_<%= media.id %>">
-            <h3><%= media.title %></h3>
+            <h3><%= link_to media.title, media_path(media.watchmode_id) %></h3>
             <img src=<%="https://image.tmdb.org/t/p/w500#{media.poster_path}"%>>
             <div class="lead">
               <p>Vote Average: <%= media.round_vote %></p>

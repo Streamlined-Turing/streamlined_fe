@@ -7,7 +7,7 @@
         <%= image_tag(@user.picture) %>
       </div>
       <p></p>
-<%= button_to 'Edit Profile', edit_dashboard_path, method: :get, local: true, class: "btn btn-info" %>
+      <%= button_to 'Edit Profile', edit_dashboard_path, method: :get, local: true, class: "btn btn-info" %>
     </div>
     <div class="col-sm-4 text-left">
       
@@ -40,15 +40,7 @@
           <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
         </li>
       </ul>
-      <div id="media_results">
-        <% if @media_list.empty? %>
-          <p>This list is currently empty. Search for media to start adding!</p>
-        <% else %>
-          <% @media_list.each do |media| %>
-            <%= render partial: "shared/media_result", locals: {media: media} %>
-          <% end %>
-        <% end %>
-      </div>
+      <%= render partial: '/shared/list_index', locals: { list_name: @list } %>
     </div>
   <% elsif @list == 'Want to Watch' %>
     <div id="want_to_watch">
@@ -65,13 +57,7 @@
           <%= link_to 'Watched', '/dashboard?list=Watched', method: :get, local: true %>
         </li>
       </ul>
-      <% if @media_list.empty? %>
-        <p>This list is currently empty. Search for media to start adding!</p>
-      <% else %>
-        <% @media_list.each do |media| %>
-          <%= render partial: "shared/media_result", locals: {media: media} %>
-        <% end %>
-      <% end %>
+      <%= render partial: '/shared/list_index', locals: { list_name: @list } %>
     </div>
   <% elsif @list == 'Watched' %>
     <div id="watched">
@@ -84,14 +70,7 @@
           </a>
         </li>
       </ul>
-      <% if @media_list.empty? %>
-        <p>This list is currently empty. Search for media to start adding!</p>
-      <% else %>
-        <% @media_list.each do |media| %>
-          <%= render partial: "shared/media_result", locals: {media: media} %>
-
-        <% end %>
-      <% end %>
+      <%= render partial: '/shared/list_index', locals: { list_name: @list } %>
     </div>
   <% end %>
 </section>

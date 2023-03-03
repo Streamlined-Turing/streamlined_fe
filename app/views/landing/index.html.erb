@@ -3,20 +3,20 @@
   <center><h2>Trending Now</h2></center>
   <div class="container-fluid">
     <% @trending_media.in_groups_of(3).each do |group| %>
-    <div class="row">
-      <% group.each do |media| %>
-        <div class="col-lg-4">
-        <div id="media_<%= media.id %>">
-          <h3><%= media.title %></h3>
-          <img src=<%="https://image.tmdb.org/t/p/w500#{media.poster_path}"%>>
-          <div class="lead">
-            <p>Vote Average: <%= media.round_vote %></p>
+      <div class="row">
+        <% group.each do |media| %>
+          <div class="col-lg-4">
+          <div id="media_<%= media.id %>">
+            <h3><%= media.title %></h3>
+            <img src=<%="https://image.tmdb.org/t/p/w500#{media.poster_path}"%>>
+            <div class="lead">
+              <p>Vote Average: <%= media.round_vote %></p>
+            </div>
           </div>
-        </div>
-        </div>
-      <% end %>
-    </div>
-      <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </section>
 

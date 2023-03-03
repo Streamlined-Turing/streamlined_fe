@@ -30,6 +30,10 @@ class MediaService
     end
   end
 
+  def self.delete_from_list(media_id, user_id)
+    conn.delete("/api/v1/users/#{user_id}/media/#{media_id}")
+  end
+
   private
 
   def self.conn

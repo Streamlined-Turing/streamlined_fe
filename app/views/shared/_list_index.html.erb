@@ -1,0 +1,22 @@
+<div id="media_results">
+  <% if @media_list.empty? %>
+    <center>
+      <h4>This list is currently empty. Search for media to start adding!</h4>
+      <%= image_tag 'retro-tv-static.png', height:'300px' %>
+    </center>
+  <% else %>
+    <div class="container-fluid">
+      <% @media_list.in_groups_of(4, false).each do |group| %>
+        <div class="row">
+          <% group.each do |media| %>
+            <div class="col-sm-3 well">
+                  <span class="align-right"><%= render partial: 'shared/delete_from_list', locals: { user_list: list_name, media_id: media.id, button_text: "X"}  %>
+                  </span>
+                  <%= render partial: "shared/media_result", locals: {media: media} %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

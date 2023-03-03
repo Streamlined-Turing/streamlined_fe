@@ -1,0 +1,432 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2c0c088dda708ca16faeb53ec80f164b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1441a118-4aaa-4fe8-89b2-9822d71386ed
+      X-Runtime:
+      - '0.079004'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":"josephrk","email":"j.king92@gmail.com","name":"Joe
+        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 21:20:19 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8c99931afc7147fd48754339d9f6dcad"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7291aeb3-ee59-45cd-9d7c-e4d44e3ca1d7
+      X-Runtime:
+      - '0.346728'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+        Rated","media_type":"movie","description":"May, a self help author with all
+        the answers, suddenly finds herself stalked by a masked man who mysteriously
+        reappears every night. Even when she kills him. May struggles to get help
+        from the people around her as she fights to stay alive. Is this paranoia,
+        or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"None","user_rating":null}}]}'
+  recorded_at: Thu, 02 Mar 2023 21:20:19 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2c0c088dda708ca16faeb53ec80f164b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 440833e2-dc95-4a6c-9d17-e2b3b1de109f
+      X-Runtime:
+      - '0.004555'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":"josephrk","email":"j.king92@gmail.com","name":"Joe
+        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 21:20:19 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/1602633?user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f4c3fd42ec1b9c04fb631b0af3aecc13"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 37f13c4d-c355-4bb8-ab42-3e853fe0e9f4
+      X-Runtime:
+      - '0.205058'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+        Rated","media_type":"movie","description":"May, a self help author with all
+        the answers, suddenly finds herself stalked by a masked man who mysteriously
+        reappears every night. Even when she kills him. May struggles to get help
+        from the people around her as she fights to stay alive. Is this paranoia,
+        or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"Currently
+        Watching","user_rating":null}}}'
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1/media/1602633?list=Currently%20Watching
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - b02d0c13-a668-43ba-81be-7575b97599f7
+      X-Runtime:
+      - '0.010423'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2c0c088dda708ca16faeb53ec80f164b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 84bf79fb-ae13-408c-8ccc-2c64857d1ed7
+      X-Runtime:
+      - '0.001972'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":"josephrk","email":"j.king92@gmail.com","name":"Joe
+        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/1602633?user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"f4c3fd42ec1b9c04fb631b0af3aecc13"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e522f6d3-3636-4363-aaf3-c8b33d840aec
+      X-Runtime:
+      - '0.223972'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+        Rated","media_type":"movie","description":"May, a self help author with all
+        the answers, suddenly finds herself stalked by a masked man who mysteriously
+        reappears every night. Even when she kills him. May struggles to get help
+        from the people around her as she fights to stay alive. Is this paranoia,
+        or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"Currently
+        Watching","user_rating":null}}}'
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2c0c088dda708ca16faeb53ec80f164b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 95a05462-7e7f-4a14-ab42-7e1522312471
+      X-Runtime:
+      - '0.047591'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":"josephrk","email":"j.king92@gmail.com","name":"Joe
+        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8c99931afc7147fd48754339d9f6dcad"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 27427f01-c961-4693-a0b6-84cd23ba830d
+      X-Runtime:
+      - '0.219808'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1602633","type":"media","attributes":{"id":1602633,"title":"Lucky","audience_score":5.3,"rating":"Not
+        Rated","media_type":"movie","description":"May, a self help author with all
+        the answers, suddenly finds herself stalked by a masked man who mysteriously
+        reappears every night. Even when she kills him. May struggles to get help
+        from the people around her as she fights to stay alive. Is this paranoia,
+        or is she doomed to accept her new reality?","genres":["Drama","Fantasy","Horror"],"release_year":2020,"runtime":83,"language":"en","sub_services":["Shudder","Shudder
+        (Via Amazon Prime)"],"poster":"https://cdn.watchmode.com/posters/01602633_poster_w185.jpg","imdb_id":"tt11701774","tmdb_id":670426,"tmdb_type":"movie","trailer":"https://www.youtube.com/watch?v=bGFnB-l_go8","user_lists":"None","user_rating":null}}]}'
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+- request:
+    method: delete
+    uri: http://localhost:5000/api/v1/users/1/media/1602633
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - ad0ef9a6-1418-45f8-8de3-b4ddca386f76
+      X-Runtime:
+      - '0.013472'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2c0c088dda708ca16faeb53ec80f164b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7957e867-c198-4745-a3d5-0fcf7df84c94
+      X-Runtime:
+      - '0.001936'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"117833646270849236918","username":"josephrk","email":"j.king92@gmail.com","name":"Joe
+        King","picture":"https://lh3.googleusercontent.com/a/AGNmyxY0U4YNnZ06zEl3URrARmOI2vHY6-fyGm2aFML3Vg=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1/lists?list=Currently%20Watching
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8fe32e407a1038ee38753b70e5374b3a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5a28c0fb-0952-4de4-982d-9b766ecbbbd4
+      X-Runtime:
+      - '0.004133'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[]}'
+  recorded_at: Thu, 02 Mar 2023 21:20:20 GMT
+recorded_with: VCR 6.1.0

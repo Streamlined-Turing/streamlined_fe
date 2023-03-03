@@ -151,6 +151,24 @@ RSpec.describe 'The Media Show page', :vcr, type: :feature do
         end
       end
 
+      it 'can delete media from a list' do
+        allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
+
+        visit media_path(1602633)
+        expect(page).to_not have_button("Remove from List")
+
+        within '#add_to_list' do
+          expect(page).to have_button("Add to List")
+
+          click_button "Add to List"
+          click_link "Watched"
+        end
+        click_button "Remove from List"
+
+        expect(page).to_not have_button("Remove from List")
+        expect(page).to have_content("Current List: None")
+      end
+
       it 'can update and display current user_rating for a piece of media', :vcr do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user['id'])
 

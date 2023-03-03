@@ -4,11 +4,13 @@
 The goal of this project is to create a successful web application from a student-led project idea. Our team has created an app to solve a real world problem, allows users to authenticate with a third-party service, and consume at least two other apis. This project has been developed using Service Oriented Architecture. The backend repo is available [here](https://github.com/Streamlined-Turing/streamlined_be).
 
 ## About StreamLined
-StreamLined is a tool to track movies and TV shows a user would like to watch, are currently watching, and also track media a user has watched. Once a user has created a StreamLined account, they will have access to a dashboard with three default lists to categorize their media: 'Currently Watching', 'Want to Watch', and 'Watched'. The user will be able to search for movies and TV shows by title, view the media details, and save to the appropriate list in their dashboard. Once a user has finished watching their show or movie, the user will be able to provide reviews and ratings. Users of this app will be to set their streaming services and search for their desired media based on the streaming service available to the user.
+StreamLined is your new go-to media tracking tool that enables users to organize their movie and TV show watching activity. Upon signing up for the application, users access a user-friendly dashboard with three default lists to categorize their media: 'Currently Watching,' 'Want to Watch,' and 'Watched.' The intuitive interface allows users to search for their desired media titles, view essential details, and save them to the appropriate list effortlessly. 
+
+StreamLined is the perfect tool for busy individuals who want to keep track of their favorite movies and TV shows with ease. Its simple interface and practical features make it an essential addition to any media lover's toolkit.
 
 ## Learning Goals
 * Authenticate users via OAuth
-* Further front end development; utilize Bootstrap.
+* Further front end development utilizing Bootstrap.
 * Build app using Service Oriented Architecture
 * Utilize Webmock and VCR for front end testing
 
@@ -20,13 +22,12 @@ This project requires Ruby 2.7.4
 3. `bundle install`
 4. To run this server, enter `rails s`
 5. Open a browser window and go to http://localhost:3000 to start viewing and adding media to your user lists!
-6. To run the testing suite, run `bundle exec rspec`
 
 Pull down the [Backend repo](https://github.com/Streamlined-Turing/streamlined_be). Set up instructions are in that repository's README.
 
 ## Deployment
 
-This project is hosted on [ ]
+This project is hosted [here](https://evening-spire-52687.herokuapp.com/).
 
 ## Built With
 ```
@@ -36,13 +37,34 @@ Webmock
 VCR
 RSpec
 Heroku
+Circle CI
 ```
 
-## Json Contract for Users
-![Screen Shot 2023-02-23 at 5 08 47 PM](https://user-images.githubusercontent.com/111480866/221071818-dd80a9c1-df3d-4840-afbd-6323cb49d8cb.png)
+## Json Contract for a User
+```
+{
+  data: {
+      id: '1',
+      type: 'user',
+      attributes: {
+            sub: '348734083740874',
+            username: 'jjones',
+            email: 'jjones@example.com',
+            name: 'June Jones',
+            picture: 'url'
+      }
+   }
+}   
+```
 
 ## Moving Forward
-*what is currently not working, but would like to add as features*
+Additional features we would like to implement: 
+* Ability to create a friend's list and view other user's lists.
+* Allow user to create and add to customized lists.
+* Give users ability to set their streaming services and search for media by streaming criteria.
+* User can search by genre.
+* Users can set goals and receive badges/awards as they meet those goals.
+* User can set alerts for a new season or sequel.
 
 ## Contributors 
 

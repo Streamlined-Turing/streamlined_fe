@@ -1,0 +1,338 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/3173903?user_id
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"626d2379cfe87874aed337f501f2101d"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8a6a3081-528b-4374-98ba-e14ce6b398b6
+      X-Runtime:
+      - '0.324931'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3173903","type":"media","attributes":{"id":3173903,"title":"Breaking
+        Bad","audience_score":9.3,"rating":"TV-MA","media_type":"tv_series","description":"When
+        Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III
+        cancer and given a prognosis of only two years left to live. He becomes filled
+        with a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"None","user_rating":null}}}'
+  recorded_at: Thu, 02 Mar 2023 23:46:48 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"22c7fab0d4ff6f870d13c938786a6a3c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6668c875-5170-490f-bf44-06b23c9ee633
+      X-Runtime:
+      - '0.001860'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"107068340609172488382","username":"Trombo","email":"tscasady@gmail.com","name":"Thomas
+        Casady","picture":"https://lh3.googleusercontent.com/a/AGNmyxYSFsWaysPfRG_DFwwKdpLOFeFYRTM4KSSHVngq=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:46:49 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/3173903?user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fe749233f9b33a8ec96a03a846d50a65"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1017f95d-193d-4e90-a5a8-f812d3f623f7
+      X-Runtime:
+      - '0.322571'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3173903","type":"media","attributes":{"id":3173903,"title":"Breaking
+        Bad","audience_score":9.3,"rating":"TV-MA","media_type":"tv_series","description":"When
+        Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III
+        cancer and given a prognosis of only two years left to live. He becomes filled
+        with a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"Want
+        to Watch","user_rating":3}}}'
+  recorded_at: Thu, 02 Mar 2023 23:46:49 GMT
+- request:
+    method: patch
+    uri: http://localhost:5000/api/v1/users/1/media/3173903?rating=3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 6e0ee781-0564-4828-b60e-91b90223d4a8
+      X-Runtime:
+      - '0.003915'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Thu, 02 Mar 2023 23:46:49 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"22c7fab0d4ff6f870d13c938786a6a3c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 87264bd3-f924-4676-b2f8-d28128f406f3
+      X-Runtime:
+      - '0.001775'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"107068340609172488382","username":"Trombo","email":"tscasady@gmail.com","name":"Thomas
+        Casady","picture":"https://lh3.googleusercontent.com/a/AGNmyxYSFsWaysPfRG_DFwwKdpLOFeFYRTM4KSSHVngq=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:46:49 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/3173903?user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fe749233f9b33a8ec96a03a846d50a65"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 89cb67d7-3036-41e9-97f6-dd7704a9cf03
+      X-Runtime:
+      - '0.320835'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3173903","type":"media","attributes":{"id":3173903,"title":"Breaking
+        Bad","audience_score":9.3,"rating":"TV-MA","media_type":"tv_series","description":"When
+        Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III
+        cancer and given a prognosis of only two years left to live. He becomes filled
+        with a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"Want
+        to Watch","user_rating":3}}}'
+  recorded_at: Thu, 02 Mar 2023 23:46:49 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/trending_media
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"ff8fe1f3d81a792ea8d65112923d861e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6e2c961f-7bd3-4611-a2a5-817af132de30
+      X-Runtime:
+      - '0.101690'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"82856","type":"trending_media","attributes":{"id":82856,"title":"The
+        Mandalorian","poster_path":"/eU1i6eHXlzMOlEq0ku1Rzq7Y4wA.jpg","media_type":"tv","vote_average":8.5}},{"id":"937278","type":"trending_media","attributes":{"id":937278,"title":"A
+        Man Called Otto","poster_path":"/130H1gap9lFfiTF9iDrqNIkFvC9.jpg","media_type":"movie","vote_average":7.648}},{"id":"906221","type":"trending_media","attributes":{"id":906221,"title":"Magic
+        Mike''s Last Dance","poster_path":"/5C9rerMqV1X0jnRdbbsM1BswVI2.jpg","media_type":"movie","vote_average":6.839}}]}'
+  recorded_at: Thu, 02 Mar 2023 23:46:50 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/users/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"22c7fab0d4ff6f870d13c938786a6a3c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7f5c00b4-1abe-4457-9a20-2801bf34af50
+      X-Runtime:
+      - '0.001895'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"1","type":"user","attributes":{"sub":"107068340609172488382","username":"Trombo","email":"tscasady@gmail.com","name":"Thomas
+        Casady","picture":"https://lh3.googleusercontent.com/a/AGNmyxYSFsWaysPfRG_DFwwKdpLOFeFYRTM4KSSHVngq=s96-c"}}}'
+  recorded_at: Thu, 02 Mar 2023 23:46:50 GMT
+- request:
+    method: get
+    uri: http://localhost:5000/api/v1/media/3173903?user_id=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fe749233f9b33a8ec96a03a846d50a65"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4346751c-6dac-4eb0-869a-8a13c39e0ecd
+      X-Runtime:
+      - '0.314350'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"3173903","type":"media","attributes":{"id":3173903,"title":"Breaking
+        Bad","audience_score":9.3,"rating":"TV-MA","media_type":"tv_series","description":"When
+        Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III
+        cancer and given a prognosis of only two years left to live. He becomes filled
+        with a sense of fearlessness and an unrelenting desire to secure his family''s
+        financial future at any cost as he enters the dangerous world of drugs and
+        crime.","genres":[],"release_year":2008,"runtime":45,"language":"en","sub_services":["Netflix"],"poster":"https://cdn.watchmode.com/posters/03173903_poster_w185.jpg","imdb_id":"tt0903747","tmdb_id":1396,"tmdb_type":"tv","trailer":"https://www.youtube.com/watch?v=5NpEA2yaWVQ","user_lists":"Want
+        to Watch","user_rating":3}}}'
+  recorded_at: Thu, 02 Mar 2023 23:46:50 GMT
+recorded_with: VCR 6.1.0

@@ -27,7 +27,7 @@ Pull down the [Backend repo](https://github.com/Streamlined-Turing/streamlined_b
 
 ## Deployment
 
-This project is hosted [here](https://evening-spire-52687.herokuapp.com/).
+This project is hosted [here](https://stream-lined.herokuapp.com/).
 
 ## Built With
 ```

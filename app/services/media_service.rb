@@ -10,8 +10,10 @@ class MediaService
     parse(conn.get("/api/v1/trending_media"))
   end
 
-  def self.media_search(media_query)
-    parse(conn.get("/api/v1/media?q=#{media_query}"))
+  def self.media_search(media_query, user_id = nil)
+    parse(conn.get("/api/v1/media") do |r|
+      r.params = {q: media_query, user_id: user_id}
+    end)
   end
 
   def self.list_search(current_user, list_query)

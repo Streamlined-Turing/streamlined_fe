@@ -18,9 +18,6 @@
             <%= render partial: 'shared/visitor_drop_down', locals: { button_text: "Add to List" } %>
           <% end %>
         </div>
-        <div id='star_rating'>
-          <%= render partial: 'shared/star_rating', locals: {user_id: current_user, media: @media} %>
-        </div>
     </div>
   <% end %>
   <div class='col-md-9'>
@@ -49,6 +46,11 @@
     <br>
     Media Type: <%= @media.formatted_type %>
     <br>
+        <div id='star_rating'>
+          <% if current_user %>
+            <%= render partial: 'shared/star_rating', locals: {user_id: current_user, media: @media} %>
+          <% end %>
+        </div>
     <% if @media.trailer %>
       <h5>Trailer</h5>
       <iframe width="600" height="336" src='https://www.youtube.com/embed/<%= @media.trailer_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen>

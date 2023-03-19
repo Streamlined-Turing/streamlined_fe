@@ -16,9 +16,9 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-//  * {
-//   border: 1px solid red;
-//  }
+  // * {
+  //  border: 1px solid red;
+  // }
 
 .app-container {
   padding: 20px 50px;
@@ -38,7 +38,7 @@ h2 {
 }
 
 //Star rating CSS
-@mixin star-rating( $filled-color: #F9BF3B, $empty-color: #444, $size: 30px, $width: 100px) {
+@mixin star-rating( $filled-color: #F9BF3B, $empty-color: #444, $size: 20px, $width: 100px) {
  $star--filled: ★;
  $star--empty: ☆;
  width: $width;
@@ -99,7 +99,6 @@ h2 {
 }
 
 .rating {
- margin: 10px auto;
  @include star-rating();
 }
 

@@ -12,8 +12,8 @@ class MediaFacade
     end
   end
 
-  def self.search_results(media_query)
-    data = MediaService.media_search(media_query)
+  def self.search_results(media_query, user_id = nil)
+    data = MediaService.media_search(media_query, user_id)
     limit_15 = data[:data].first(15)
     limit_15.map do |media_result_data|
       Media.new(media_result_data)
